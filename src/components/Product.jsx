@@ -9,8 +9,8 @@ for(let i = item.stars ; i < 5; i++) {
 }
     return (
     <div className="flex flex-col p-2 bg-gray-200 rounded-lg">
-        <div className="flex items-center justify-center">
-            <img className="h-[10rem] object-cover object-center" src={item.img} />
+        <div className="block">
+            <img className="h-[10rem] w-full object-contain object-center" src={item.img} />
         </div>
         <div className="flex flex-col">
             <p className="flex items-center">

@@ -8,7 +8,7 @@ let data = [
         title : 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...' , 
         price : 600 , 
         offprice : 590 ,
-        img : 'assets/newproducts/newproduct (2).png' , 
+        img : 'assets/newproducts/newproduct.png' , 
         id : 0 , 
     } ,
     {
@@ -18,7 +18,7 @@ let data = [
         title : 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...' , 
         price : 600 , 
         offprice : 590 ,
-        img : 'assets/newproducts/newproduct (3).png' , 
+        img : 'assets/newproducts/newproduct (5).png' , 
         id : 1 , 
     } ,
     {
