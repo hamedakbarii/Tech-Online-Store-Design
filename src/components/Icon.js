@@ -15,5 +15,40 @@ function Icon() {
     </svg>
   );
 }
-
-export { Icon };
+function LeftSideIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="8"
+      height="12"
+      fill="none"
+      viewBox="0 0 8 12"
+    >
+      <path
+        stroke="#fff"
+        strokeLinecap="round"
+        strokeWidth="2"
+        d="M7 1L2 6l5 5"
+      ></path>
+    </svg>
+  );
+}
+function RightSideIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="8"
+      height="12"
+      fill="none"
+      viewBox="0 0 8 12"
+    >
+      <path
+        stroke="#fff"
+        strokeLinecap="round"
+        strokeWidth="2"
+        d="M1 11l5-5-5-5"
+      ></path>
+    </svg>
+  );
+}
+export { Icon , LeftSideIcon , RightSideIcon};
