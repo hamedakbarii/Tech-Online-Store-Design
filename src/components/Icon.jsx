@@ -15,7 +15,7 @@ function Icon() {
     </svg>
   );
 }
-function LeftSideIcon({color}) {
+function LeftSideIcon({ color }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -118,4 +118,68 @@ function UnPickedStar() {
     </svg>
   );
 }
-export { Icon , LeftSideIcon , RightSideIcon , Aviable , OutOfStock , PickedStar , UnPickedStar};
+function ArrowDown() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="6"
+      height="5"
+      fill="none"
+      viewBox="0 0 6 5"
+    >
+      <path
+        stroke="#fff"
+        strokeLinecap="round"
+        strokeWidth="1.6"
+        d="M5 1.77l-2 2-2-2"
+      ></path>
+    </svg>
+  );
+}
+
+function Facebook() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      fill="none"
+      viewBox="0 0 16 16"
+    >
+      <path
+        fill="#fff"
+        d="M15.105.277H.895a.617.617 0 00-.619.617v14.211c0 .342.276.618.618.618h14.211a.617.617 0 00.618-.618V.895a.617.617 0 00-.618-.618zm-1.784 4.508h-1.234c-.967 0-1.154.46-1.154 1.135v1.49h2.309l-.301 2.33h-2.008v5.983H8.525V9.742H6.51V7.409h2.014V5.691c0-1.995 1.218-3.082 2.998-3.082.854 0 1.586.064 1.8.093v2.083h-.002z"
+      ></path>
+    </svg>
+  );
+}
+
+function Instagram() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      fill="none"
+      viewBox="0 0 16 16"
+    >
+      <path
+        fill="#fff"
+        d="M8 5.396A2.609 2.609 0 005.396 8 2.609 2.609 0 008 10.604 2.609 2.609 0 0010.603 8 2.609 2.609 0 008 5.396zM15.808 8c0-1.078.01-2.147-.05-3.223-.061-1.25-.346-2.36-1.26-3.273-.916-.916-2.024-1.2-3.274-1.26-1.078-.06-2.146-.05-3.222-.05-1.079 0-2.147-.01-3.223.05-1.25.06-2.36.346-3.274 1.26C.59 2.42.306 3.527.245 4.777.186 5.855.196 6.924.196 8s-.01 2.146.05 3.223c.061 1.25.346 2.359 1.26 3.273.916.916 2.024 1.2 3.274 1.26 1.078.06 2.146.05 3.223.05 1.078 0 2.146.01 3.222-.05 1.25-.06 2.36-.346 3.274-1.26.916-.916 1.199-2.023 1.26-3.273.062-1.077.05-2.145.05-3.223zM8 12.006A4 4 0 013.994 8 4 4 0 018 3.994 4 4 0 0112.005 8 4 4 0 018 12.006zm4.17-7.24a.934.934 0 110-1.872.934.934 0 110 1.872z"
+      ></path>
+    </svg>
+  );
+}
+
+export {
+  Icon,
+  LeftSideIcon,
+  RightSideIcon,
+  Aviable,
+  OutOfStock,
+  PickedStar,
+  UnPickedStar,
+  ArrowDown,
+  Facebook,
+  Instagram,
+};

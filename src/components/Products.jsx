@@ -82,6 +82,7 @@ let Products = () => {
                         <div className="absolute right-0 top-[50%] translate-y-[-50%] hover:pr-2 px-3 py-4 bg-[#6666667d] hover:bg-[#666666d6] transation-all duration-[0.2s] cursor-pointer  rounded-l-full flex items-center justify-center">
                             <RightSideIcon color="#ebebeb" />
                         </div>
+                        
                 </div>
             </div>
             </div>

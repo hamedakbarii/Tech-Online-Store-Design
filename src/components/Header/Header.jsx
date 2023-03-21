@@ -1,8 +1,9 @@
 import React from "react";
-import Button from "./Button";
-import Icon2 from "./Icon2";
+import Button from "../Button";
+import Icon2 from "../Icon2";
 import Li from "./Li";
-import Logo from "./Logo";
+import Logo from "../Logo";
+import NavbarTop from "./NavbarTop";
 
 export default function Header() {
   let navUl = [
@@ -17,7 +18,8 @@ export default function Header() {
 
   return (
     <div>
-      <nav className="flex justify-center items-center pt-2">
+      <NavbarTop />
+      <nav className="flex justify-between items-center px-3 py-2">
         <Logo />
 
         <div>
@@ -25,13 +27,12 @@ export default function Header() {
             {navUl.map((item) => (
               <Li key={item} data={item} />
             ))}
+            <Button
+              title="Our Deals"
+              border={"2px solid rgb(59 130 246 / var(--tw-text-opacity))"}
+            />
           </ul>
         </div>
-
-        <Button
-          title="Our Deals"
-          border={"2px solid rgb(59 130 246 / var(--tw-text-opacity))"}
-        />
 
         <div className="flex justify-center items-center gap-4">
           <Icon2 custom={"fas fa-search"} />
