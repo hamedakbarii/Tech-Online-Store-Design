@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import Products from "./components/Products";
 import Hero from "./Hero";
 import Banner from "./components/Banner";
+import CustomBuilds from "./components/CustomBuilds";
 export default function App() {
   return (
     <div>
@@ -10,6 +11,7 @@ export default function App() {
       <Hero />
       <Products />
       <Banner />
+      <CustomBuilds />
     </div>
   );
 }
