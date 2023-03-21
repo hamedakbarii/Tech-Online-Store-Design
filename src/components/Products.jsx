@@ -1,4 +1,4 @@
-import { Aviable, OutOfStock, PickedStar, UnPickedStar } from "./Icon";
+import { Aviable, LeftSideIcon, OutOfStock, PickedStar, RightSideIcon, UnPickedStar } from "./Icon";
 import Product from "./Product";
 let data = [
     {
@@ -64,16 +64,26 @@ let data = [
 ]
 let Products = () => {
     return (
-        <div className="container flex flex-col mx-auto">
+        <div className="relative container flex flex-col mx-auto">
             <h2 className="mt-6 text-xl font-semibold">
                 New Products
             </h2>
-            <div className="grid grid-cols-6 gap-2">
+            <div className="relative grid grid-cols-6 gap-2 px-4">
                 {
                     data.map((item) =>
                         <Product key={item.id} item={item} />
                     )
                 }
+                <div className="absolute top-0 left-0 w-full h-full">
+                    <div className="absolute w-full h-full top-[1.1rem] left-0 text-2xl">
+                        <div className="absolute left-0 top-[50%] translate-y-[-50%] hover:pr-2 px-3 py-4 bg-[#6666667d] hover:bg-[#666666d6] transation-all duration-[0.2s] cursor-pointer  rounded-r-full flex items-center justify-center">
+                            <LeftSideIcon color="#ebebeb"/>
+                        </div>
+                        <div className="absolute right-0 top-[50%] translate-y-[-50%] hover:pr-2 px-3 py-4 bg-[#6666667d] hover:bg-[#666666d6] transation-all duration-[0.2s] cursor-pointer  rounded-l-full flex items-center justify-center">
+                            <RightSideIcon color="#ebebeb" />
+                        </div>
+                </div>
+            </div>
             </div>
         </div>
     )

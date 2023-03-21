@@ -8,9 +8,9 @@ for(let i = item.stars ; i < 5; i++) {
     b.push(<UnPickedStar />) ; 
 }
     return (
-    <div className="flex flex-col p-2 bg-gray-200 rounded-lg">
+    <div className="flex flex-col p-2">
         <div className="block">
-            <img className="h-[10rem] w-full object-contain object-center" src={item.img} />
+            <img className="h-[8rem] w-full object-contain object-center" src={item.img} />
         </div>
         <div className="flex flex-col">
             <p className="flex items-center">

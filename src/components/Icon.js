@@ -15,19 +15,19 @@ function Icon() {
     </svg>
   );
 }
-function LeftSideIcon() {
+function LeftSideIcon({color}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="8"
+      width="12"
       height="12"
       fill="none"
-      viewBox="0 0 8 12"
+      viewBox="0 0 12 12"
     >
       <path
-        stroke="#fff"
+        stroke={color}
         strokeLinecap="round"
-        strokeWidth="2"
+        strokeWidth="3"
         d="M7 1L2 6l5 5"
       ></path>
     </svg>
@@ -37,15 +37,15 @@ function RightSideIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="8"
+      width="12"
       height="12"
       fill="none"
-      viewBox="0 0 8 12"
+      viewBox="0 0 12 12"
     >
       <path
         stroke="#fff"
         strokeLinecap="round"
-        strokeWidth="2"
+        strokeWidth="3"
         d="M1 11l5-5-5-5"
       ></path>
     </svg>
