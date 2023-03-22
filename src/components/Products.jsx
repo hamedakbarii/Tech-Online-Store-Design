@@ -60,7 +60,10 @@ let data = [
         offprice : 590 ,
         img : 'assets/newproducts/newproduct.png' , 
         id : 5 , 
-    }
+    },
+   
+  
+    
 ]
 let Products = () => {
     return (

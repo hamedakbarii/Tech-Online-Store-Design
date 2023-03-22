@@ -1,12 +1,68 @@
-import React from 'react'
-import CustomBuildsImg from './CustomBuildsImg'
-const CustomBuilds = () => {
-  return (
-    <section className='grid grid-cols-6'>
-        <CustomBuildsImg src={'./assets/CustomBuilds/image30.svg'} />
-        
-    </section>
-  ) 
-}
+import React from "react";
+import CustomBuildsImg from "./CustomBuildsImg";
+import Product from "./Product";
 
-export default CustomBuilds
+const CustomBuilds = () => {
+  let productInfo = [
+    {
+      avaiblity: false,
+      stars: 4,
+      review: 10,
+      title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
+      price: 600,
+      offprice: 590,
+      img: "assets/CustomBuilds/case-1.png",
+      id: 6,
+    },
+    {
+      avaiblity: false,
+      stars: 4,
+      review: 10,
+      title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
+      price: 600,
+      offprice: 590,
+      img: "assets/CustomBuilds/case-2.png",
+      id: 7,
+    },
+    {
+      avaiblity: false,
+      stars: 3,
+      review: 10,
+      title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
+      price: 600,
+      offprice: 590,
+      img: "assets/CustomBuilds/case-3.png",
+      id: 8,
+    },
+    {
+      avaiblity: false,
+      stars: 5,
+      review: 10,
+      title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
+      price: 600,
+      offprice: 590,
+      img: "assets/CustomBuilds/case-4.png",
+      id: 9,
+    },
+    {
+      avaiblity: false,
+      stars: 2,
+      review: 10,
+      title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
+      price: 600,
+      offprice: 590,
+      img: "assets/CustomBuilds/case-5.png",
+      id: 10,
+    },
+  ];
+  return (
+    <section className="container grid grid-cols-6 p-2">
+      <CustomBuildsImg src={"./assets/CustomBuilds/image30.png"} />
+      {productInfo.map((item) => (
+        <Product key={item.id} item={item} />
+      ))}
+    </section>
+  );
+};
+
+export default CustomBuilds;
