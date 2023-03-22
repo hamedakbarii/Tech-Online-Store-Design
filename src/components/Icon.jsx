@@ -140,6 +140,7 @@ function ArrowDown() {
 function Facebook() {
   return (
     <svg
+      className="cursor-pointer"
       xmlns="http://www.w3.org/2000/svg"
       width="16"
       height="16"
@@ -157,6 +158,7 @@ function Facebook() {
 function Instagram() {
   return (
     <svg
+      className="cursor-pointer"
       xmlns="http://www.w3.org/2000/svg"
       width="16"
       height="16"
@@ -166,6 +168,45 @@ function Instagram() {
       <path
         fill="#fff"
         d="M8 5.396A2.609 2.609 0 005.396 8 2.609 2.609 0 008 10.604 2.609 2.609 0 0010.603 8 2.609 2.609 0 008 5.396zM15.808 8c0-1.078.01-2.147-.05-3.223-.061-1.25-.346-2.36-1.26-3.273-.916-.916-2.024-1.2-3.274-1.26-1.078-.06-2.146-.05-3.222-.05-1.079 0-2.147-.01-3.223.05-1.25.06-2.36.346-3.274 1.26C.59 2.42.306 3.527.245 4.777.186 5.855.196 6.924.196 8s-.01 2.146.05 3.223c.061 1.25.346 2.359 1.26 3.273.916.916 2.024 1.2 3.274 1.26 1.078.06 2.146.05 3.223.05 1.078 0 2.146.01 3.222-.05 1.25-.06 2.36-.346 3.274-1.26.916-.916 1.199-2.023 1.26-3.273.062-1.077.05-2.145.05-3.223zM8 12.006A4 4 0 013.994 8 4 4 0 018 3.994 4 4 0 0112.005 8 4 4 0 018 12.006zm4.17-7.24a.934.934 0 110-1.872.934.934 0 110 1.872z"
+      ></path>
+    </svg>
+  );
+}
+
+function Search() {
+  return (
+    <svg
+      className="cursor-pointer"
+      xmlns="http://www.w3.org/2000/svg"
+      width="17"
+      height="16"
+      fill="none"
+      viewBox="0 0 17 16"
+    >
+      <path
+        fill="#000"
+        stroke="#000"
+        strokeWidth="0.2"
+        d="M2.95 1.991a6.433 6.433 0 008.425 9.686l3.331 3.332h0a.892.892 0 101.262-1.262h0l-3.332-3.331a6.434 6.434 0 00-9.685-8.425zm0 0l.071.071-.07-.07zm7.839 1.263a4.65 4.65 0 11-6.523 6.63 4.65 4.65 0 016.523-6.63z"
+      ></path>
+    </svg>
+  );
+}
+
+function Shop() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      className="w-6 h-6 cursor-pointer"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
       ></path>
     </svg>
   );
@@ -182,4 +223,6 @@ export {
   ArrowDown,
   Facebook,
   Instagram,
+  Search,
+  Shop,
 };

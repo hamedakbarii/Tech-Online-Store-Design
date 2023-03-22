@@ -1,9 +1,9 @@
 import React from "react";
 import Button from "../Button";
-import Icon2 from "../Icon2";
 import Li from "./Li";
 import Logo from "../Logo";
 import NavbarTop from "./NavbarTop";
+import { Search, Shop } from "../Icon";
 
 export default function Header() {
   let navUl = [
@@ -27,20 +27,22 @@ export default function Header() {
             {navUl.map((item) => (
               <Li key={item} data={item} />
             ))}
-            <Button
-              title="Our Deals"
-              border={"2px solid rgb(59 130 246 / var(--tw-text-opacity))"}
-            />
+            <Button title="Our Deals" border={"2px solid #0156FF"} />
           </ul>
         </div>
 
         <div className="flex justify-center items-center gap-4">
-          <Icon2 custom={"fas fa-search"} />
-          <Icon2 custom={"fas fa-shop "} />
+          <Search />
+          <div className="relative">
+            <Shop />
+            <span className="absolute font-semibold text-[.7rem] -top-2 -right-2 bg-[#0156FF] text-white rounded-full w-4 h-4 flex justify-center items-center">
+              2
+            </span>
+          </div>
           <img
             src="./assets/profile/hamed.jpg"
             alt="hamed"
-            className="rounded-full w-10"
+            className="rounded-full w-10 cursor-pointer"
           />
         </div>
       </nav>

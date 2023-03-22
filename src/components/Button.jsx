@@ -5,7 +5,7 @@ export default function Button(props) {
     <div>
       <button
         style={{ border: props.border }}
-        className="p-1 rounded-xl text-blue-500 mx-2"
+        className="py-1 transition-all px-5 rounded-2xl font-semibold text-[#0156FF] mx-2 hover:bg-[#0156FF] hover:text-white"
       >
         {props.title}
       </button>
