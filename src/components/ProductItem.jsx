@@ -1,9 +1,10 @@
 import React from "react";
-import Product from "./Product";
+import ProductSection from "./ProductSection";
+import ProductsContainer from "./ProductsContainer";
 import ProductSectionBanner from "./ProductSectionBanner";
-
-const ProductSection = (children) => {
-  let productInfo = [
+import Product from "./Product";
+const ProductItem = () => {
+  let MsiProductInfo = [
     {
       avaiblity: false,
       stars: 4,
@@ -11,7 +12,7 @@ const ProductSection = (children) => {
       title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
       price: 600,
       offprice: 590,
-      img: "assets/CustomBuilds/case-1.png",
+      img: "assets/MsiLaptops/MsiLaptop (1).png",
       id: 6,
     },
     {
@@ -21,7 +22,7 @@ const ProductSection = (children) => {
       title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
       price: 600,
       offprice: 590,
-      img: "assets/CustomBuilds/case-2.png",
+      img: "assets/MsiLaptops/MsiLaptop (2).png",
       id: 7,
     },
     {
@@ -31,7 +32,7 @@ const ProductSection = (children) => {
       title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
       price: 600,
       offprice: 590,
-      img: "assets/CustomBuilds/case-3.png",
+      img: "assets/MsiLaptops/MsiLaptop (3).png",
       id: 8,
     },
     {
@@ -41,7 +42,7 @@ const ProductSection = (children) => {
       title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
       price: 600,
       offprice: 590,
-      img: "assets/CustomBuilds/case-4.png",
+      img: "assets/MsiLaptops/MsiLaptop (4).png",
       id: 9,
     },
     {
@@ -51,20 +52,24 @@ const ProductSection = (children) => {
       title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
       price: 600,
       offprice: 590,
-      img: "assets/CustomBuilds/case-5.png",
+      img: "assets/MsiLaptops/MsiLaptop (5).png",
       id: 10,
     },
   ];
-  
-
   return (
-    <section className="container grid grid-cols-6 p-2">
-      <ProductSectionBanner src={"assets/CustomBuilds/image30.png"} title={'Custom Builds'} />
-      {productInfo.map((item) => (
-        <Product key={item.id} item={item} />
-      ))}
-    </section>
+    <div>
+      <ProductSection />
+      <ProductsContainer>
+        <ProductSectionBanner
+          src={"assets/MsiLaptops/MsiLaptopBanner.png"}
+          title={"Msi Laptops"}
+        />
+        {MsiProductInfo.map((item) => (
+          <Product key={item.id} item={item} />
+        ))}
+      </ProductsContainer>
+    </div>
   );
 };
 
-export default ProductSection;
+export default ProductItem;
