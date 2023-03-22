@@ -1,8 +1,8 @@
 import React from "react";
-import CustomBuildsImg from "./CustomBuildsImg";
 import Product from "./Product";
+import ProductSectionBanner from "./ProductSectionBanner";
 
-const CustomBuilds = () => {
+const ProductSection = (children) => {
   let productInfo = [
     {
       avaiblity: false,
@@ -55,9 +55,10 @@ const CustomBuilds = () => {
       id: 10,
     },
   ];
+
   return (
     <section className="container grid grid-cols-6 p-2">
-      <CustomBuildsImg src={"./assets/CustomBuilds/image30.png"} />
+      <ProductSectionBanner src={"assets/CustomBuilds/image30.png"} />
       {productInfo.map((item) => (
         <Product key={item.id} item={item} />
       ))}
@@ -65,4 +66,4 @@ const CustomBuilds = () => {
   );
 };
 
-export default CustomBuilds;
+export default ProductSection;
