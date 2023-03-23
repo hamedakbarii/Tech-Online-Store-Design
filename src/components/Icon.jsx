@@ -1,15 +1,14 @@
-function Icon() {
+let Icon =({color}) => {
   return (
     <svg
-      className="mx-4"
       xmlns="http://www.w3.org/2000/svg"
-      width="34"
+      width="41"
       height="41"
       fill="none"
       viewBox="0 0 34 41"
     >
       <path
-        fill="#0156FF"
+        fill={color}
         d="M17.033.945L.297 10.864V23.07l16.736 9.918 13.426-7.63v3.625l-13.426 8.01L.297 26.887v4.387L17.033 41l16.736-9.727V19.065l-13.425 7.82v-3.814l13.425-8.011v-4.196L17.033.945z"
       ></path>
     </svg>
@@ -211,7 +210,57 @@ function Shop() {
     </svg>
   );
 }
-
+function ShopingCart() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="21"
+      height="19"
+      fill="none"
+      viewBox="0 0 21 19"
+    >
+      <path
+        fill="#fff"
+        d="M12.877 18.214a2.268 2.268 0 100-4.537 2.268 2.268 0 000 4.537zm-7.938 0a2.268 2.268 0 100-4.536 2.268 2.268 0 000 4.536zM19.725 2.249a1.09 1.09 0 000-2.18h-1.306c-1.023 0-1.907.71-2.13 1.708l-1.42 6.398a2.182 2.182 0 01-2.13 1.708h-8.52L2.585 3.339h10.598a1.09 1.09 0 000-2.18H2.584A2.18 2.18 0 00.468 3.87l1.635 6.541a2.181 2.181 0 002.117 1.653h8.519a4.362 4.362 0 004.258-3.416l1.422-6.399h1.306z"
+      ></path>
+    </svg>
+  );
+}
+function UserIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      fill="none"
+      viewBox="0 0 32 32"
+    >
+      <circle cx="16" cy="16" r="15" stroke="#fff" strokeWidth="2"></circle>
+      <path
+        fill="#fff"
+        d="M16 10a3 3 0 110 6 3 3 0 010-6zm0 7.5c3.315 0 6 1.343 6 3V22H10v-1.5c0-1.657 2.685-3 6-3z"
+      ></path>
+    </svg>
+  );
+}
+function Magnfier() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      fill="none"
+      viewBox="0 0 16 16"
+    >
+      <path
+        fill="#CACDD8"
+        stroke="#CACDD8"
+        strokeWidth="0.2"
+        d="M2.69 2.684a6.1 6.1 0 007.984 9.186l3.152 3.154h0a.85.85 0 001.203-1.203h0l-3.153-3.152A6.101 6.101 0 002.69 2.683zm0 0l.07.07-.07-.07zm7.425 1.203a4.4 4.4 0 11-6.17 6.273 4.4 4.4 0 016.17-6.273z"
+      ></path>
+    </svg>
+  );
+}
 export {
   Icon,
   LeftSideIcon,
@@ -225,4 +274,7 @@ export {
   Instagram,
   Search,
   Shop,
+  ShopingCart , 
+  UserIcon , 
+  Magnfier , 
 };

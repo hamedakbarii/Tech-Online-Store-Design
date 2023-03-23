@@ -3,8 +3,6 @@ import { Icon } from "./Icon";
 
 export default function Logo() {
   return (
-    <div>
-      <Icon />
-    </div>
+      <Icon color="#0156FF" />
   );
 }
