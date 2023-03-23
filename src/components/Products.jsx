@@ -71,7 +71,7 @@ let Products = () => {
             <h2 className="mt-6 text-xl font-semibold">
                 New Products
             </h2>
-            <div className="relative grid grid-cols-6 gap-2 px-4">
+            <div className="relative grid grid-cols-6 gap-3 px-4">
                 {
                     data.map((item) =>
                         <Product key={item.id} item={item} />

@@ -8,16 +8,16 @@ for(let i = item.stars ; i < 5; i++) {
     b.push(<UnPickedStar />) ; 
 }
     return (
-    <div className="flex flex-col p-2">
-        <div className="block">
-            <img className="h-[8rem] w-full object-contain object-center" src={item.img} />
+    <div className="flex flex-col p-2 bg-gray-100 rounded-lg">
+        <div className="flex items-center justify-center">
+            <img className="h-[9rem] w-full object-contain object-center" src={item.img} />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col mt-2">
             <p className="flex items-center">
                 {
                     item.avaiblity ? <Aviable /> : <OutOfStock />
                 }
-                <span className="ml-3 text-lg">
+                <span className="ml-1 text-sm">
                     {
                         item.avaiblity ? <span className="text-[#78A962]">In Stock</span> : <span className="text-[#C94D3F]">Check Availability</span>
                     }

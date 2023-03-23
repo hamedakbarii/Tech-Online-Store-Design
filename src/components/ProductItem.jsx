@@ -57,7 +57,7 @@ const ProductItem = () => {
     },
   ];
   return (
-    <div>
+    <div className="container mx-auto">
       <ProductSection />
       <ProductsContainer>
         <ProductSectionBanner
