@@ -10,7 +10,7 @@ const NavbarTop = () => {
         <div className="absolute z-10 p-3 rounded-full left-3 top-[5%] bg-[#0156FF]">
           <Logo color="white" />
         </div>
-        <div className="flex items-center p-2 text-[.8rem] ml-[4.5rem]">
+        <div className="flex items-center p-2 text-[.8rem] ml-[4.2rem]">
           <p className="text-[#ACACAC]">
             Mon-Thu : <span className="text-white"> 9:00 AM - 5:30 PM</span>
           </p>
