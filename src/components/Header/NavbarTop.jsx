@@ -7,7 +7,7 @@ const NavbarTop = () => {
   return (
     <section className="bg-[#000] w-full">
       <div className="flex justify-between items-center text-white p-2 w-full tablet:container mx-auto relative">
-        <div className="absolute z-10 p-3 rounded-full left-3 top-[5%] bg-[#0156FF]">
+        <div className="absolute z-10 p-3 rounded-full left-3 top-[5%] bg-[#0156FF] scale-[.85]">
           <Logo color="white" />
         </div>
         <div className="flex items-center p-2 text-[.8rem] ml-[4.2rem]">
