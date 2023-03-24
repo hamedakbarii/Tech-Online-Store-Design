@@ -71,12 +71,12 @@ let data = [
 ];
 let Products = () => {
   return (
-    <div className="relative container flex flex-col mx-auto">
+    <div className="relative container flex flex-col mx-auto px-4 tablet:px-0">
       <div className="flex justify-between items-center">
         <h2 className="mt-6 text-xl font-semibold">New Products</h2>
         <h4 className="underline text-[#0156FF]">See All Products</h4>
       </div>
-      <div className="relative grid grid-cols-6 gap-3 px-4">
+      <div className="relative grid tablet:grid-cols-6 grid-cols-2 gap-3 px-4">
         {data.map((item) => (
           <Product key={item.id} item={item} />
         ))}

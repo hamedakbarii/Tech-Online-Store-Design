@@ -1,7 +1,7 @@
-import { LeftSideIcon , RightSideIcon } from "./components/Icon";
+import { LeftSideIcon , RightSideIcon } from "./Icon";
 let Hero = () => {
     return (
-        <div className="container mx-auto mt-4">
+        <div className="container mx-auto mt-4 px-4 tablet:px-0">
             <div className="relative overflow-hidden">
                 <img src="./assets/hero-banner.png" className="w-full" />
                 <div className="absolute w-full h-full top-0 left-0 text-2xl">

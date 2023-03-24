@@ -9,11 +9,21 @@ for(let i = item.stars ; i < 5; i++) {
 }
     return (
     <div className="flex flex-col p-2 bg-gray-100 rounded-lg">
+        <p className="tablet:hidden flex items-center">
+            {
+                item.avaiblity ? <Aviable /> : <OutOfStock />
+            }
+            <span className="ml-1 text-sm">
+                {
+                    item.avaiblity ? <span className="text-[#78A962]">In Stock</span> : <span className="text-[#C94D3F]">Check Availability</span>
+                }
+            </span>
+        </p>
         <div className="flex items-center justify-center">
             <img className="h-[9rem] w-full object-contain object-center" src={item.img} />
         </div>
         <div className="flex flex-col mt-2">
-            <p className="flex items-center">
+            <p className="tablet:flex hidden items-center">
                 {
                     item.avaiblity ? <Aviable /> : <OutOfStock />
                 }
