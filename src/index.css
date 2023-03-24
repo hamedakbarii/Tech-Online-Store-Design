@@ -35,3 +35,6 @@ code {
   background-image: url(./leftArrow.svg) !important;
   left: 0 !important;
 }
+.swiper-scrollbar {
+  display: none !important;
+}

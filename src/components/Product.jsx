@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { PickedStar , UnPickedStar , OutOfStock , Aviable } from './Icon';
-let item = [
+let ItemList = [
     {
       avaiblity: true,
       stars: 2,
@@ -70,7 +70,7 @@ let item = [
       img: "assets/newproducts/newproduct.png",
       id: 5,
     },
-  ];
+]
 let CalculateStars = ({stars}) => {
     let b = [] ; 
 for(let i = 0 ; i < stars ; i++) {
@@ -87,19 +87,19 @@ for(let i = stars ; i < 5; i++) {
         </p>
     )
 }
-let Product = () => {
+let Product = ({ItemList , spaceBetween , slidesPerView}) => {
     return (
         <Swiper
-        modules={[Navigation, A11y]}
-        spaceBetween={10}
-        slidesPerView={2}
+        modules={[Navigation]}
+        spaceBetween={spaceBetween}
+        slidesPerView={slidesPerView}
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         className="w-full"
       >
-          {
-            item.map((item)=>
+          {ItemList &&
+            ItemList.map((item)=>
             <SwiperSlide className="flex flex-col p-2 bg-gray-100 rounded-lg">
                 <p className="tablet:hidden flex items-center">
                     {
