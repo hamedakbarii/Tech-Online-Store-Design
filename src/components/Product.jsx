@@ -125,7 +125,7 @@ let Product = () => {
                             }
                         </span>
                     </p>
-                    <div className="tablet:flex-row flex flex-col items-center flex-wrap justify-center">
+                    <div className="tablet:flex-row flex flex-col items-center flex-wrap tablet:justify-between justify-center">
                         <span className="flex items-center mr-3 mt-1">
                             <CalculateStars stars={item.stars} />
                         </span>
