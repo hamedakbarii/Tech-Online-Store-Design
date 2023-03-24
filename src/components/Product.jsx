@@ -91,7 +91,7 @@ let Product = () => {
     return (
         <Swiper
         modules={[Navigation, A11y]}
-        spaceBetween={50}
+        spaceBetween={10}
         slidesPerView={2}
         navigation
         pagination={{ clickable: true }}
@@ -125,7 +125,7 @@ let Product = () => {
                             }
                         </span>
                     </p>
-                    <div className="flex items-center">
+                    <div className="tablet:flex-row flex flex-col items-center flex-wrap justify-center">
                         <span className="flex items-center mr-3 mt-1">
                             <CalculateStars stars={item.stars} />
                         </span>
