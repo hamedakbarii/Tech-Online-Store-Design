@@ -121,8 +121,8 @@ function ArrowDown() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="6"
-      height="5"
+      width="14"
+      height="14"
       fill="none"
       viewBox="0 0 6 5"
     >
@@ -320,6 +320,24 @@ function SupportHeadset() {
     </svg>
   );
 }
+function MessageIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="28"
+      height="28"
+      fill="none"
+      viewBox="0 0 28 28"
+    >
+      <path
+        fill="#fff"
+        d="M14 .667c7.511 0 13.333 5.502 13.333 12.933 0 7.432-5.822 12.933-13.333 12.933a14.54 14.54 0 01-3.86-.512 1.063 1.063 0 00-.712.052l-2.646 1.168a1.067 1.067 0 01-1.497-.943l-.073-2.372a1.065 1.065 0 00-.358-.76C2.26 20.846.667 17.487.667 13.6.667 6.17 6.489.667 14 .667zM5.993 17.382c-.375.597.358 1.269.919.843l4.207-3.193a.8.8 0 01.964-.003l3.115 2.336a2 2 0 002.892-.533l3.917-6.214c.375-.597-.358-1.269-.92-.842l-4.206 3.193a.8.8 0 01-.964.002l-3.115-2.336a2 2 0 00-2.892.534l-3.917 6.213z"
+      ></path>
+    </svg>
+  );
+}
+
+
 
 export {
   Icon,
@@ -340,4 +358,5 @@ export {
   PriceTag , 
   DropUser , 
   SupportHeadset ,
+  MessageIcon  ,
 };
