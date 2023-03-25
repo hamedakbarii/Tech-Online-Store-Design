@@ -117,7 +117,7 @@ function UnPickedStar() {
     </svg>
   );
 }
-function ArrowDown() {
+function ArrowDown({color}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +127,7 @@ function ArrowDown() {
       viewBox="0 0 6 5"
     >
       <path
-        stroke="#fff"
+        stroke={color ? color : 'white'}
         strokeLinecap="round"
         strokeWidth="1.6"
         d="M5 1.77l-2 2-2-2"
@@ -337,7 +337,24 @@ function MessageIcon() {
   );
 }
 
-
+function CloseIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="15"
+      height="14"
+      fill="none"
+      viewBox="0 0 15 14"
+    >
+      <path
+        stroke="#000"
+        strokeLinecap="round"
+        strokeWidth="2"
+        d="M1.806 1l11.92 11.92M13.726 1L1.806 12.92"
+      ></path>
+    </svg>
+  );
+}
 
 export {
   Icon,
@@ -359,4 +376,5 @@ export {
   DropUser , 
   SupportHeadset ,
   MessageIcon  ,
+  CloseIcon , 
 };
