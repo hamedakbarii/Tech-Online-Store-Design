@@ -57,14 +57,14 @@ const ProductSection = (children) => {
   ];
 
   return (
-    <section className="container grid grid-cols-6 p-2 gap-3">
+    <section className="container flex p-2 gap-3">
       <ProductSectionBanner
         src={"assets/CustomBuilds/image30.png"}
         title={"Custom Builds"}
       />
-      {productInfo.map((item) => (
-        <Product key={item.id} item={item} />
-      ))}
+      {
+        <Product ItemList={productInfo} slidesPerView={2} spaceBetween={50} />
+      }
     </section>
   );
 };
