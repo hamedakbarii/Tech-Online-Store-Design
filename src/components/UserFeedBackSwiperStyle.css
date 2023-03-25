@@ -1,0 +1,6 @@
+.swiper-pagination {
+    right: 1.5rem !important;
+    left: auto !important;
+    width: fit-content !important;
+    bottom: 1.5rem !important;
+}
