@@ -1,5 +1,6 @@
 import React from "react";
 import Product from "./Product";
+import ProductsContainer from "./ProductsContainer";
 import ProductSectionBanner from "./ProductSectionBanner";
 
 const ProductSection = (children) => {
@@ -57,15 +58,15 @@ const ProductSection = (children) => {
   ];
 
   return (
-    <section className="container flex p-2 gap-3">
+    <ProductsContainer>
       <ProductSectionBanner
         src={"assets/CustomBuilds/image30.png"}
         title={"Custom Builds"}
       />
       {
-        <Product ItemList={productInfo} slidesPerView={2} spaceBetween={50} />
+        <Product ItemList={productInfo} slidesPerView={1.5} spaceBetween={50} />
       }
-    </section>
+    </ProductsContainer>
   );
 };
 
