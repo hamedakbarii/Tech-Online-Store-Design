@@ -22,7 +22,7 @@ let OurServices = () => {
                     Product Support
                 </h4>
                 <p className="text-lg text-center">
-                    Up to 3 years on-site warranty available for your peace of mind.
+                    Up to 3 yearrs on-site warranty available for your peace of mind.
                 </p>
             </div>
             <div className="flex flex-col items-center gap-2">
