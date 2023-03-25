@@ -1,5 +1,3 @@
-import React from "react";
-import ProductSection from "./ProductSection";
 import ProductsContainer from "./ProductsContainer";
 import ProductSectionBanner from "./ProductSectionBanner";
 import Product from "./Product";
@@ -57,18 +55,15 @@ const ProductItem = () => {
     },
   ];
   return (
-    <div className="container mx-auto">
-      <ProductSection />
       <ProductsContainer>
         <ProductSectionBanner
           src={"assets/MsiLaptops/MsiLaptopBanner.png"}
           title={"Msi Laptops"}
         />
-        {MsiProductInfo.map((item) => (
-          <Product key={item.id} item={item} />
-        ))}
+        {
+          <Product ItemList={MsiProductInfo} slidesPerView={1.5} spaceBetween={50} />
+        }
       </ProductsContainer>
-    </div>
   );
 };
 
