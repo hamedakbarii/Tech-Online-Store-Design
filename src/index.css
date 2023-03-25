@@ -33,7 +33,7 @@ code {
 }
 .swiper-button-prev {
   background-image: url(./leftArrow.svg) !important;
-  left: 0 !important;
+  left: 0px !important;
 }
 .swiper-scrollbar {
   display: none !important;
