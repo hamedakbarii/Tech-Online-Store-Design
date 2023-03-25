@@ -9,6 +9,7 @@ import Desktop from "./components/Desktop";
 import ProductLogo from "./components/ProductLogo";
 import UserFeedBack from "./components/UserFeedBack";
 import OurServices from "./components/OurServices";
+import Footer from "./components/Footer/Footer";
 export default function App() {
   return (
     <div>
@@ -22,6 +23,7 @@ export default function App() {
       <ProductLogo />
       <UserFeedBack />
       <OurServices />
+      <Footer />
     </div>
   );
 }
