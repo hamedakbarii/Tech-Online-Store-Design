@@ -3,7 +3,16 @@ import Button from "../Button";
 import Li from "./Li";
 import Logo from "../Logo";
 import NavbarTop from "./NavbarTop";
-import { ArrowDown, CloseIcon, Magnfier, Search, Shop, UserIcon ,ShopingCart , Icon } from "../Icon";
+import {
+  ArrowDown,
+  CloseIcon,
+  Magnfier,
+  Search,
+  Shop,
+  UserIcon,
+  ShopingCart,
+  Icon,
+} from "../Icon";
 import HamburgerMenue from "./HamburgerMenu";
 export default function Header() {
   let navUl = [
@@ -15,7 +24,7 @@ export default function Header() {
     "All Other Products",
     "Repairs",
   ];
-  const [ActiveHamburger , setActiveHamburger] = useState(false) ; 
+  const [ActiveHamburger, setActiveHamburger] = useState(false);
   return (
     <div className="relative">
       <NavbarTop />
@@ -26,87 +35,77 @@ export default function Header() {
         <div className="flex items-center justify-between container mx-auto px-2 gap-4">
           <div className="flex items-center gap-2">
             <HamburgerMenue HandleHamburgerActivation={setActiveHamburger} />
-            {
-              ActiveHamburger ? 
-              <div className="absolute -top-[3.9rem] left-0 w-[80%] bg-white px-5 py-2">
-              <div className="flex flex-col">
-                <div className="flex items-center justify-between ">
+            {ActiveHamburger ? (
+              <div className="absolute -top-[3.9rem] left-0 w-full bg-white px-5 py-2">
+                <div className="flex flex-col">
+                  <div className="flex items-center justify-between ">
                     <span>
-                        <Icon color={'#0156FF'} />
+                      <Icon color={"#0156FF"} />
                     </span>
-                    <span onClick={()=>{setActiveHamburger(false)}}>
-                        <CloseIcon />
+                    <span
+                      onClick={() => {
+                        setActiveHamburger(false);
+                      }}
+                    >
+                      <CloseIcon />
                     </span>
-                </div> 
-                <span className="border-b-2 border-gray-400 mt-4">
+                  </div>
 
-                </span>
-                <div className="flex flex-col mt-4 gap-2">
-                  <div className="flex items-center justify-between">
-                    <p className="text-lg font-base">
-                      Laptops
-                    </p>
-                    <span className="-rotate-[90deg]">
-                      <ArrowDown color={'black'} />
-                    </span>
+                  <span className="border-b-2 border-gray-400 mt-4"></span>
+
+                  <div className="flex flex-col mt-4 gap-2">
+                    <div className="flex items-center justify-between">
+                      <p className="text-lg font-base">Laptops</p>
+                      <span className="-rotate-[90deg]">
+                        <ArrowDown color={"black"} />
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <p className="text-lg font-base">Desktop PCs</p>
+                      <span className="-rotate-[90deg]">
+                        <ArrowDown color={"black"} />
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <p className="text-lg font-base">Networking Devices</p>
+                      <span className="-rotate-[90deg]">
+                        <ArrowDown color={"black"} />
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <p className="text-lg font-base">Printers & Scanners</p>
+                      <span className="-rotate-[90deg]">
+                        <ArrowDown color={"black"} />
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <p className="text-lg font-base">PC Parts</p>
+                      <span className="-rotate-[90deg]">
+                        <ArrowDown color={"black"} />
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <p className="text-lg font-base">All Other Products</p>
+                      <span className="-rotate-[90deg]">
+                        <ArrowDown color={"black"} />
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <p className="text-lg font-base">Repairs</p>
+                      <span className="-rotate-[90deg]">
+                        <ArrowDown color={"black"} />
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <p className="text-lg font-base">
-                      Desktop PCs
-                    </p>
-                    <span className="-rotate-[90deg]">
-                      <ArrowDown color={'black'} />
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <p className="text-lg font-base">
-                      Networking Devices
-                    </p>
-                    <span className="-rotate-[90deg]">
-                      <ArrowDown color={'black'} />
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <p className="text-lg font-base">
-                      Printers & Scanners
-                    </p>
-                    <span className="-rotate-[90deg]">
-                      <ArrowDown color={'black'} />
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <p className="text-lg font-base">
-                      PC Parts
-                    </p>
-                    <span className="-rotate-[90deg]">
-                      <ArrowDown color={'black'} />
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <p className="text-lg font-base">
-                       All Other Products
-                    </p>
-                    <span className="-rotate-[90deg]">
-                      <ArrowDown color={'black'} />
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <p className="text-lg font-base">
-                      Repairs
-                    </p>
-                    <span className="-rotate-[90deg]">
-                      <ArrowDown color={'black'} />
-                    </span>
-                  </div>
+
+                  <button className="text-secondaryBlue border-2 border-secondaryBlue w-max py-1 px-4 mt-6 mb-4 text-lg font-semibold rounded-full transation-all duration-[.2s] bg-white hover:bg-secondaryBlue hover:text-white text-secondaryBlue">
+                    Our Deals
+                  </button>
                 </div>
-                <button className='text-secondaryBlue border-2 border-secondaryBlue w-max py-1 px-4 mt-6 text-lg font-semibold rounded-full transation-all duration-[.2s] bg-white hover:bg-secondaryBlue hover:text-white text-secondaryBlue'>
-                  Our Deals
-                </button>
               </div>
+            ) : null}
           </div>
-              : null
-            }
-          </div>
+
           <div className="flex items-center w-full bg-white p-2 py-1 rounded-full">
             <Magnfier />
             <input
