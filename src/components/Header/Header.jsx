@@ -25,9 +25,11 @@ export default function Header() {
     "Repairs",
   ];
   const [ActiveHamburger, setActiveHamburger] = useState(false);
+  const [ActiveUserProfileMenu, setActiveUserProfileMenu] = useState(false);
   return (
     <div className="relative">
       <NavbarTop />
+
       <nav
         className="xlHeader:container w-full block mx-auto px-4 py-2 
       xlHeader:bg-white bg-[#0156FF] relative z-10"
@@ -119,6 +121,7 @@ export default function Header() {
             <UserIcon />
           </div>
         </div>
+
         <div className="xlHeader:flex items-center justify-between hidden">
           <Logo />
           <ul className="flex justify-center items-center px-2">
