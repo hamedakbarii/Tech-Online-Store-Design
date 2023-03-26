@@ -226,7 +226,7 @@ function ShopingCart() {
     </svg>
   );
 }
-function UserIcon() {
+function UserIcon({HandleUserDataShow , UserDataShow}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -234,6 +234,9 @@ function UserIcon() {
       height="32"
       fill="none"
       viewBox="0 0 32 32"
+      onClick={()=>{
+        UserDataShow ? HandleUserDataShow(false) : HandleUserDataShow(true) 
+      }}
     >
       <circle cx="16" cy="16" r="15" stroke="#fff" strokeWidth="2"></circle>
       <path

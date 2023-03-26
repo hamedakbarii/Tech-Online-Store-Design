@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Button from "../Button";
 import Li from "./Li";
 import Logo from "../Logo";
 import NavbarTop from "./NavbarTop";
@@ -14,6 +13,7 @@ import {
   Icon,
 } from "../Icon";
 import HamburgerMenue from "./HamburgerMenu";
+import UserProfileMenu from "./UserProfileMenu";
 export default function Header() {
   let navUl = [
     "Laptops",
@@ -118,7 +118,10 @@ export default function Header() {
           </div>
           <div className="flex items-center gap-2">
             <ShopingCart />
-            <UserIcon />
+            <UserIcon HandleUserDataShow={setActiveUserProfileMenu} UserDataShow={ActiveUserProfileMenu} />
+            {
+              ActiveUserProfileMenu ? <UserProfileMenu /> : null
+            }
           </div>
         </div>
 
