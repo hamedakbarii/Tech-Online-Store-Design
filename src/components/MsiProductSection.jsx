@@ -60,9 +60,11 @@ const ProductItem = () => {
           src={"assets/MsiLaptops/MsiLaptopBanner.png"}
           title={"Msi Laptops"}
         />
-        {
-          <Product ItemList={MsiProductInfo} slidesPerView={1.5} spaceBetween={50} />
-        }
+        <div className="pl-2 mt-4">
+          {
+            <Product ItemList={MsiProductInfo} slidesPerView={1.5} spaceBetween={30} />
+          }
+        </div>
       </ProductsContainer>
   );
 };

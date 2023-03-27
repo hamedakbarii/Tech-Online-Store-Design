@@ -2,7 +2,7 @@ let ProductLogoArray = ['./assets/ModelLogo/Roccat.png' , './assets/ModelLogo/Ms
  , './assets/ModelLogo/Maltake.png' , './assets/ModelLogo/Adata.png' , './assets/ModelLogo/Hp.png' , './assets/ModelLogo/Gigabyte.png']
 let ProductLogo = () => {
     return (
-        <div className="grid grid-cols-2 p-2 gap-3 container mx-auto place-items-center	">
+        <div className="grid grid-cols-2 px-2 gap-3 container mx-auto place-items-center mt-8">
             {
                 ProductLogoArray.map((itemLogo)=>
                 

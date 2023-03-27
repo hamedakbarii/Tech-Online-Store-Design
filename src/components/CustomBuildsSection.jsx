@@ -56,16 +56,17 @@ const ProductSection = (children) => {
       id: 10,
     },
   ];
-
   return (
     <ProductsContainer>
       <ProductSectionBanner
         src={"assets/CustomBuilds/image30.png"}
         title={"Custom Builds"}
       />
-      {
-        <Product ItemList={productInfo} slidesPerView={1.5} spaceBetween={50} />
-      }
+      <div className="pl-2 mt-4">
+        {
+          <Product ItemList={productInfo} slidesPerView={1.5} spaceBetween={30} />
+        }
+      </div>
     </ProductsContainer>
   );
 };

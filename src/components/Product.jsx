@@ -105,7 +105,7 @@ let Product = ({ ItemList, spaceBetween, slidesPerView }) => {
                 )}
               </span>
             </p>
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center mt-2">
               <img
                 className="h-[9rem] w-full object-contain object-center"
                 src={item.img}

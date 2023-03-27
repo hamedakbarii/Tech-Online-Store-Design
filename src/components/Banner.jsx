@@ -2,8 +2,8 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <section className="bg-[#F5F7FF] p-2 flex justify-center gap-3">
-      <div className="iconSvg" style={{ position: "relative" }}>
+    <section className="bg-[#F5F7FF] p-2 flex flex-col justify-center items-center gap-3 mt-4">
+      <div className="iconSvg relative">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="77"
@@ -41,7 +41,7 @@ const Banner = () => {
         </svg>
       </div>
 
-      <h4>own it now, up to 6 months interest free learn more</h4>
+      <h4 className="text-center">own it now, up to 6 months interest free learn more</h4>
     </section>
   );
 };

@@ -3,10 +3,10 @@ import { ArrowDown, Facebook, Instagram } from "../Icon";
 export default function Footer() {
   return (
     <>
-      <footer className="bg-[#020203] pt-2 mt-2">
-        <div className="pt-6 flex justify-center items-center">
+      <footer className="bg-[#020203] mt-6 pt-2">
+        <div className="flex justify-center items-center">
           <div className="flex justify-center items-start flex-col">
-            <h2 className="font-semibold text-white text-xl ">
+            <h2 className="font-semibold text-white text-[1.35rem] [word-spacing:.1rem]">
               Sign Up To Our Newsletter.
             </h2>
             <h4 className="font-light text-[#FFFFFF] ">
@@ -15,13 +15,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-4 flex justify-evenly items-center">
+        <div className="pt-4 px-2 flex justify-evenly items-center gap-2">
           <input
             type="email"
             placeholder="Your Email"
-            className="bg-transparent border-solid border-2 text-white placeholder:text-white rounded px-4 py-2"
+            className="pl-2 bg-transparent border-solid border-2 text-white placeholder:text-white rounded py-2 w-3/5"
           />
-          <button className="text-white bg-[#0156FF] px-6 py-2 text-lg font-semibold rounded-3xl transition-all ease-in-out duration-300 hover:bg-white hover:text-[#0156FF]">
+          <button className="text-white bg-[#0156FF] py-2 w-2/5 text-lg font-semibold rounded-3xl transition-all ease-in-out duration-300 hover:bg-white hover:text-[#0156FF]">
             Subscribe
           </button>
         </div>

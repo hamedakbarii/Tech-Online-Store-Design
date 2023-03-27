@@ -57,9 +57,11 @@ let GamingMonitor = () => {
     return(
         <ProductsContainer>
             <ProductSectionBanner src={"./assets/GamingMonitor/GamingMonitorBanner.png"} title={"Gaming Monitor"} />
-            {
-                <Product ItemList={DesktopProductInfo} slidesPerView={1.5} spaceBetween={50} />
-            }
+            <div className="pl-2 mt-4">
+              {
+                  <Product ItemList={DesktopProductInfo} slidesPerView={1.5} spaceBetween={50} />
+              }
+            </div>
         </ProductsContainer>
     )
 }

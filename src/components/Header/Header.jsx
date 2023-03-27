@@ -34,11 +34,11 @@ export default function Header() {
         className="xlHeader:container w-full block mx-auto px-4 py-2 
       xlHeader:bg-white bg-[#0156FF] relative z-10"
       >
-        <div className="flex items-center justify-between container mx-auto px-2 gap-4">
+        <div className="flex items-center justify-between container mx-auto px-2 gap-4 w-full">
           <div className="flex items-center gap-2">
             <HamburgerMenue HandleHamburgerActivation={setActiveHamburger} />
             {ActiveHamburger ? (
-              <div className="absolute -top-[3.9rem] left-0 w-full bg-white px-5 py-2">
+              <div className="absolute top-0 left-0 w-full bg-white px-5 py-2 ">
                 <div className="flex flex-col">
                   <div className="flex items-center justify-between ">
                     <span>
@@ -107,7 +107,6 @@ export default function Header() {
               </div>
             ) : null}
           </div>
-
           <div className="flex items-center w-full bg-white p-2 py-1 rounded-full">
             <Magnfier />
             <input

@@ -36,7 +36,7 @@ let UserFeedBackData = [
 
 let UserFeedBack = () => {
     return(
-        <div className='container mx-auto px-4'>
+        <div className='container mx-auto px-4 mt-4'>
             <Swiper
                 modules={[Navigation, Pagination,A11y]}
                 spaceBetween={50}
@@ -63,7 +63,7 @@ let UserFeedBack = () => {
                                         item.user
                                     }
                                 </span>
-                                <button className='text-secondaryBlue border-2 border-secondaryBlue w-max py-1 px-4 mt-6 text-lg font-semibold rounded-full transation-all duration-[.2s] hover:bg-secondaryBlue hover:text-white'>
+                                <button className='z-20 text-secondaryBlue border-2 border-secondaryBlue w-max py-1 px-4 mt-6 text-lg font-semibold rounded-full transation-all duration-[.2s] hover:bg-secondaryBlue hover:text-white'>
                                     Leave Us A Review
                                 </button>
                             </div>

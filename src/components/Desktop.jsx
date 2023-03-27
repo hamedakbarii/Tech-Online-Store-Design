@@ -57,9 +57,11 @@ let Desktop = () => {
     return(
         <ProductsContainer>
             <ProductSectionBanner src={"./assets/Desktop/DesktopLaptop.png"} title={"Desktops"} />
-            {
-                <Product ItemList={DesktopProductInfo} slidesPerView={1.5} spaceBetween={50} />
-            }
+            <div className="pl-2 mt-4">
+              {
+                  <Product ItemList={DesktopProductInfo} slidesPerView={1.5} spaceBetween={30} />
+              }
+            </div>
         </ProductsContainer>
     )
 }
