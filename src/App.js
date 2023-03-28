@@ -13,6 +13,7 @@ import Footer from "./components/Footer/Footer";
 import { ArrowDown, MessageIcon } from "./components/Icon";
 import GamingMonitor from "./components/GamingMonitor";
 import ProductsPage from "./components/ProductsPage";
+
 export default function App() {
   return (
     <div className="relative">
@@ -31,12 +32,13 @@ export default function App() {
       <ProductsPage />
       <div className="flex flex-col fixed right-4 bottom-8 z-[20] gap-2">
         <span className="w-12 h-12 bg-secondaryBlue flex items-center justify-center rounded-full rotate-[180deg]">
-           <ArrowDown />
+          <ArrowDown />
         </span>
         <span className="w-12 h-12 bg-secondaryBlue flex items-center justify-center rounded-full">
-           <MessageIcon  />
+          <MessageIcon />
         </span>
       </div>
+      
     </div>
   );
 }

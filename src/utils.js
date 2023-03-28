@@ -191,3 +191,4 @@ export let products =  [
       },
       
   ];
+  export const filterItems = ['category','price','color','FilterName','Brands'];

@@ -1,4 +1,4 @@
-let Icon =({color}) => {
+let Icon = ({ color }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,7 +13,7 @@ let Icon =({color}) => {
       ></path>
     </svg>
   );
-}
+};
 function LeftSideIcon({ color }) {
   return (
     <svg
@@ -117,7 +117,7 @@ function UnPickedStar() {
     </svg>
   );
 }
-function ArrowDown({color}) {
+function ArrowDown({ color }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +127,7 @@ function ArrowDown({color}) {
       viewBox="0 0 6 5"
     >
       <path
-        stroke={color ? color : 'white'}
+        stroke={color ? color : "white"}
         strokeLinecap="round"
         strokeWidth="1.6"
         d="M5 1.77l-2 2-2-2"
@@ -226,7 +226,7 @@ function ShopingCart() {
     </svg>
   );
 }
-function UserIcon({HandleUserDataShow , UserDataShow}) {
+function UserIcon({ HandleUserDataShow, UserDataShow }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -234,8 +234,8 @@ function UserIcon({HandleUserDataShow , UserDataShow}) {
       height="32"
       fill="none"
       viewBox="0 0 32 32"
-      onClick={()=>{
-        UserDataShow ? HandleUserDataShow(false) : HandleUserDataShow(true) 
+      onClick={() => {
+        UserDataShow ? HandleUserDataShow(false) : HandleUserDataShow(true);
       }}
     >
       <circle cx="16" cy="16" r="15" stroke="#fff" strokeWidth="2"></circle>
@@ -358,6 +358,24 @@ function CloseIcon() {
     </svg>
   );
 }
+function ArrowDown2() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="6"
+      height="5"
+      fill="none"
+      viewBox="0 0 6 5"
+    >
+      <path
+        stroke="#000"
+        strokeLinecap="round"
+        strokeWidth="1.6"
+        d="M4.92 1l-2 2-2-2"
+      ></path>
+    </svg>
+  );
+}
 
 export {
   Icon,
@@ -372,12 +390,13 @@ export {
   Instagram,
   Search,
   Shop,
-  ShopingCart , 
-  UserIcon , 
-  Magnfier , 
-  PriceTag , 
-  DropUser , 
-  SupportHeadset ,
-  MessageIcon  ,
-  CloseIcon , 
+  ShopingCart,
+  UserIcon,
+  Magnfier,
+  PriceTag,
+  DropUser,
+  SupportHeadset,
+  MessageIcon,
+  CloseIcon,
+  ArrowDown2
 };
