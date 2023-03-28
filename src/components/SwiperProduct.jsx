@@ -1,5 +1,5 @@
 // import Swiper core and required modules
-import { Navigation,} from "swiper";
+import { Navigation } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -71,7 +71,7 @@ let ItemList = [
     id: 5,
   },
 ];
-let CalculateStars = ({ stars }) => {
+export let CalculateStars = ({ stars }) => {
   let b = [];
   for (let i = 0; i < stars; i++) {
     b.push(<PickedStar />);

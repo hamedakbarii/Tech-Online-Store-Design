@@ -12,10 +12,11 @@ import OurServices from "./components/OurServices";
 import Footer from "./components/Footer/Footer";
 import { ArrowDown, MessageIcon } from "./components/Icon";
 import GamingMonitor from "./components/GamingMonitor";
+import ProductsPage from "./components/ProductsPage";
 export default function App() {
   return (
     <div className="relative">
-      <Header />
+      {/* <Header />
       <Hero />
       <Products />
       <Banner />
@@ -26,7 +27,8 @@ export default function App() {
       <ProductLogo />
       <UserFeedBack />
       <OurServices />
-      <Footer />
+      <Footer /> */}
+      <ProductsPage />
       <div className="flex flex-col fixed right-4 bottom-8 z-[20] gap-2">
         <span className="w-12 h-12 bg-secondaryBlue flex items-center justify-center rounded-full rotate-[180deg]">
            <ArrowDown />
