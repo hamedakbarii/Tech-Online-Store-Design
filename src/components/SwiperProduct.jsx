@@ -1,5 +1,5 @@
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation,} from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -81,7 +81,7 @@ let CalculateStars = ({ stars }) => {
   }
   return <p className="flex items-center">{b}</p>;
 };
-let Product = ({ ItemList, spaceBetween, slidesPerView }) => {
+let SwiperProduct = ({ ItemList, spaceBetween, slidesPerView }) => {
   return (
     <Swiper
       modules={[Navigation]}
@@ -141,7 +141,7 @@ let Product = ({ ItemList, spaceBetween, slidesPerView }) => {
     </Swiper>
   );
 };
-export default Product;
+export default SwiperProduct;
 /*
 
 

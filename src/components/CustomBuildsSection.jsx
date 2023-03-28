@@ -1,5 +1,5 @@
 import React from "react";
-import Product from "./Product";
+import SwiperProduct from "./SwiperProduct";
 import ProductsContainer from "./ProductsContainer";
 import ProductSectionBanner from "./ProductSectionBanner";
 
@@ -64,7 +64,7 @@ const ProductSection = (children) => {
       />
       <div className="pl-2 mt-4">
         {
-          <Product ItemList={productInfo} slidesPerView={1.5} spaceBetween={30} />
+          <SwiperProduct ItemList={productInfo} slidesPerView={1.5} spaceBetween={30} />
         }
       </div>
     </ProductsContainer>

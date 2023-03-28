@@ -1,6 +1,6 @@
 import ProductsContainer from "./ProductsContainer";
 import ProductSectionBanner from "./ProductSectionBanner";
-import Product from "./Product";
+import SwiperProduct from "./SwiperProduct";
 let DesktopProductInfo = [
     {
       avaiblity: false,
@@ -59,7 +59,7 @@ let GamingMonitor = () => {
             <ProductSectionBanner src={"./assets/GamingMonitor/GamingMonitorBanner.png"} title={"Gaming Monitor"} />
             <div className="pl-2 mt-4">
               {
-                  <Product ItemList={DesktopProductInfo} slidesPerView={1.5} spaceBetween={50} />
+                  <SwiperProduct ItemList={DesktopProductInfo} slidesPerView={1.5} spaceBetween={50} />
               }
             </div>
         </ProductsContainer>

@@ -1,4 +1,4 @@
-import Product from "./Product";
+import SwiperProduct from "./SwiperProduct";
 let ProductList = [
   {
     avaiblity: true,
@@ -70,7 +70,7 @@ let Products = () => {
           <h4 className="underline text-[#0156FF] text-black">See All Products</h4>
         </div>
 
-        {<Product ItemList={ProductList} slidesPerView={2} spaceBetween={10} />}
+        {<SwiperProduct ItemList={ProductList} slidesPerView={2} spaceBetween={10} />}
       </div>
     </>
   );
