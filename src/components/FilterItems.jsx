@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import Filter from "./Filter";
 
 const FilterItems = () => {
+  const [showFilter, setShowFilter] = useState(false);
   return (
     <div className="p-2 flex flex-col gap-4">
       <div>
         <h3>MSI PS Series (20)</h3>
       </div>
       <div className="flex justify-between items-center gap-2">
-        <button className="w-48 h-16 text-center border border-[#CACDD8]">Filter</button>
+        <button
+          className="w-48 h-16 text-center border border-[#CACDD8]"
+          onClick={() => setShowFilter(!showFilter)}
+        >
+          Filter
+        </button>
         <select className="w-48 h-16 text-center border border-[#CACDD8]">
           Sort By:
           <option value="">Position</option>
@@ -17,6 +24,7 @@ const FilterItems = () => {
           <option value="">Name</option>
         </select>
       </div>
+      {showFilter ? <Filter setShowFilter={setShowFilter}/> : null}
     </div>
   );
 };

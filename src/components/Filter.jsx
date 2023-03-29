@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import { filterItems } from "../utils";
 import { ArrowDown2, CloseIcon } from "./Icon";
 
-const Filter = () => {
-  
-  
+const Filter = ({setShowFilter}) => {
+
   return (
     <div>
       <div className="flex justify-between items-center border-b">
         <h3 className="text-xl font-semibold  p-2">Filter By</h3>
-        <span>
+        <span onClick={() => setShowFilter(false)}>
           <CloseIcon />
         </span>
       </div>
@@ -21,6 +20,9 @@ const Filter = () => {
           </span>
         </div>
       ))}
+      <button className="text-white bg-[#0156FF] px-10 py-2 font-semibold flex m-auto rounded-3xl">
+        Apply Filters
+      </button>
     </div>
   );
 };

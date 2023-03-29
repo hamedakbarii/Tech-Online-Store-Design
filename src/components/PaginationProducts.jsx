@@ -12,7 +12,7 @@ const PaginationProducts = () => {
         Items 1-35 of 61
       </h4>
 
-      <Filter />
+      {/* <Filter /> */}
 
       <div className="w-full grid grid-cols-2 gap-2 p-2">
         {products.map((product) => (
