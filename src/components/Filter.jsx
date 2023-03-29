@@ -1,9 +1,17 @@
 import React, { useState } from "react";
 import { filterItems } from "../utils";
 import { ArrowDown2, CloseIcon } from "./Icon";
-
-const Filter = ({setShowFilter}) => {
-
+import { filterOptions } from "../utils";
+const Filter = ({ setShowFilter }) => {
+  const filterItemsHandler = (event) => {
+    let itemName = event.target.textContent;
+    let selectedName = filterOptions.filter((item => Object.entries(item)[0][0] == itemName));
+    {console.log(selectedName);}
+    {itemName == selectedName &&
+    // selectedName.filter(data => console.log(data))
+    console.log('yes');
+    }
+  };
   return (
     <div>
       <div className="flex justify-between items-center border-b">
@@ -13,15 +21,18 @@ const Filter = ({setShowFilter}) => {
         </span>
       </div>
       {filterItems.map((item) => (
-        <div className="flex justify-between items-center p-2 font-semibold">
+        <div
+          className="flex justify-between items-center p-2 font-semibold"
+          onClick={(event) => filterItemsHandler(event)}
+        >
           <span>{item}</span>
           <span className="text-xs font-light">
             <ArrowDown2 />
           </span>
         </div>
       ))}
-      <button className="text-white bg-[#0156FF] px-10 py-2 font-semibold flex m-auto rounded-3xl">
-        Apply Filters
+      <button className="text-white border-2 border-[#0156FF] bg-[#0156FF] px-10 py-2 font-semibold flex m-auto rounded-3xl transition-all ease-in-out duration-300 hover:bg-white hover:text-[#0156FF]">
+        Apply Filters(2)
       </button>
     </div>
   );

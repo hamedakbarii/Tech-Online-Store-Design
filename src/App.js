@@ -30,14 +30,14 @@ export default function App() {
       <OurServices />
       <Footer /> */}
       <ProductsPage />
-      <div className="flex flex-col fixed right-4 bottom-8 z-[20] gap-2">
+      {/* <div className="flex flex-col fixed right-4 bottom-8 z-[20] gap-2">
         <span className="w-12 h-12 bg-secondaryBlue flex items-center justify-center rounded-full rotate-[180deg]">
           <ArrowDown />
         </span>
         <span className="w-12 h-12 bg-secondaryBlue flex items-center justify-center rounded-full">
           <MessageIcon />
         </span>
-      </div>
+      </div> */}
       
     </div>
   );
