@@ -5,12 +5,12 @@ import { filterOptions } from "../utils";
 const Filter = ({ setShowFilter }) => {
   const filterItemsHandler = (event) => {
     let itemName = event.target.textContent;
-    let selectedName = filterOptions.filter((item => Object.entries(item)[0][0] == itemName));
-    {console.log(selectedName);}
-    {itemName == selectedName &&
-    // selectedName.filter(data => console.log(data))
-    console.log('yes');
-    }
+    // let selectedName = filterOptions.filter((item => Object.entries(item)[0][0] == itemName));
+    let filteredItem = filterOptions.filter(item => item.title == itemName)
+    // console.log(itemName);
+    filteredItem[0].items.map(data => (
+      console.log(data)
+    ))
   };
   return (
     <div>

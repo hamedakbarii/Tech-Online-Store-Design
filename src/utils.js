@@ -191,9 +191,13 @@ export let products = [
   },
 ];
 export const filterOptions = [
-  { Category: ["CUSTOM PCS", "MSI ALL-IN-ONE PCS", "HP/COMPAQ PCS"] },
   {
-    Price: [
+    title: "Category",
+    items: ["CUSTOM PCS", "MSI ALL-IN-ONE PCS", "HP/COMPAQ PCS"],
+  },
+  {
+    title: "Price",
+    items: [
       "$0.00 - $1,000.00",
       "$1,000.00 - $2,000.00",
       "$2,000.00 - $3,000.00",
@@ -205,19 +209,22 @@ export const filterOptions = [
     ],
   },
   {
-    Color: ["black", "red"],
+    title: "Color",
+    items: ["black", "red"],
   },
   {
-    FilterName: ["laptop", "Case", "Monitor"],
+    title: "FilterName",
+    items: ["laptop", "Case", "Monitor"],
   },
   {
-    Brands: ["MSI", "ADATA", "RAZOR", "GIGABYTE"],
+    title: "Brands",
+    items: ["MSI", "ADATA", "RAZOR", "GIGABYTE"],
   },
 ];
 export const filterItems = [
-  "category",
-  "price",
-  "color",
+  "Category",
+  "Price",
+  "Color",
   "FilterName",
   "Brands",
 ];
