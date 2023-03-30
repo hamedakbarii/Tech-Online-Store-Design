@@ -96,7 +96,7 @@ export default function ContactUs() {
         <div className="flex justify-start items-start gap-2">
           <Watch />
 
-          <div>
+          <div className="w-[80%]">
             <h3 className="font-semibold">We are open:</h3>
             <h4>
               Monday - Thursday: 9:00 AM - 5:30 PM Friday 9:00 AM - 6:00 PM
