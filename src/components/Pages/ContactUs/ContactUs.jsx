@@ -1,5 +1,7 @@
+import Footer from "../../Footer/Footer";
 import Header from "../../Header/Header";
-
+import { Email, Location, Phone, Watch } from "../../Icon";
+import OurServices from "../../OurServices";
 export default function ContactUs() {
   return (
     <>
@@ -73,6 +75,45 @@ export default function ContactUs() {
           className="text-white border-2 self-start border-[#0156FF] cursor-pointer bg-[#0156FF] px-10 py-2 font-semibold flex rounded-3xl transition-all ease-in-out duration-300 hover:bg-white hover:text-[#0156FF]"
         />
       </form>
+
+      <div className="bg-[#F5F7FF]  m-4 p-2 flex flex-col gap-4">
+        <div className="flex justify-start items-start gap-2">
+          <Location />
+
+          <div>
+            <h3 className="font-semibold">Address:</h3>
+            <h4>1234 Street Adress, City Address, 1234</h4>
+          </div>
+        </div>
+        <div className="flex justify-start items-start gap-2">
+          <Phone />
+
+          <div>
+            <h3 className="font-semibold">Phone:</h3>
+            <h4>(00)1234 5678</h4>
+          </div>
+        </div>
+        <div className="flex justify-start items-start gap-2">
+          <Watch />
+
+          <div>
+            <h3 className="font-semibold">We are open:</h3>
+            <h4>
+              Monday - Thursday: 9:00 AM - 5:30 PM Friday 9:00 AM - 6:00 PM
+              Saturday: 11:00 AM - 5:00 PM
+            </h4>
+          </div>
+        </div>
+        <div className="flex justify-start items-start gap-2">
+          <Email />
+          <div>
+            <h3 className="font-semibold">E-mail:</h3>
+            <h4>shop@email.com</h4>
+          </div>
+        </div>
+      </div>
+      <OurServices />
+      <Footer />
     </>
   );
 }

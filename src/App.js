@@ -20,7 +20,7 @@ export default function App() {
   return (
     <div className="relative">
       {/* <Header /> */}
-      {/*  <Hero />
+       {/* <Hero />
       <Products />
       <Banner />
       <ProductSection />
@@ -31,7 +31,7 @@ export default function App() {
       <UserFeedBack />
       <OurServices />
       <Footer /> 
-      <ProductsPage />*/}
+      <ProductsPage /> */}
       <ContactUs />
       {/* <ProductPage /> */}
       {/* <div className="flex flex-col fixed right-4 bottom-8 z-[20] gap-2">
