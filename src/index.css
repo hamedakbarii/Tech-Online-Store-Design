@@ -40,3 +40,24 @@ code {
 .swiper-scrollbar {
   display: none !important;
 }
+@layer utilities {
+
+  .clip-path-inset0 {
+
+    clip-path: inset(0);
+
+  }
+  .gradientBlack {
+    background: linear-gradient(180deg, #00000000 15%, rgba(0,0,0,1) 60%);
+  }
+  .lineargradiant {
+    background: radial-gradient(50% 50% at 50% 50%, #242528 0%, #040404 100%);
+  }
+
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+td {
+  text-align: center;
+}
