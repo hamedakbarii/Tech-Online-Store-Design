@@ -3,7 +3,7 @@ import { ArrowDown, Facebook, Instagram } from "../Icon";
 export default function Footer() {
   return (
     <>
-      <footer className="bg-[#020203] mt-6 pt-2">
+      <footer className="bg-[#020203] p-4">
         <div className="flex justify-center items-center">
           <div className="flex justify-center items-start flex-col">
             <h2 className="font-semibold text-white text-[1.35rem] [word-spacing:.1rem]">
