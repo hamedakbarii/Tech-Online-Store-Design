@@ -20,7 +20,7 @@ import Register from "./components/Pages/Register/Register";
 export default function App() {
   return (
     <div className="relative">
-      {/* <Header /> */}
+      <Header />
        {/* <Hero />
       <Products />
       <Banner />
@@ -33,9 +33,9 @@ export default function App() {
       <OurServices />
       <Footer /> 
       <ProductsPage /> */}
-      {/* <ContactUs /> */}
-      <Register />
-      {/* <ProductPage /> */}
+      {/* <ContactUs /> 
+      <Register />*/}
+      <ProductPage />
       {/* <div className="flex flex-col fixed right-4 bottom-8 z-[20] gap-2">
         <span className="w-12 h-12 bg-secondaryBlue flex items-center justify-center rounded-full rotate-[180deg]">
           <ArrowDown />

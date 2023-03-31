@@ -3,9 +3,13 @@ import { ArrowDown, Comparison, GraphicRtxIcon, HeartLike, IntelIconSvg, LongArr
 import WomanBehindLaptop from '../WomanBehindLaptop.png' ; 
 import OurServices from './OurServices' ; 
 import Footer from './Footer/Footer' ; 
+
+
+
+
 let AboutProduct = () => {
     return (
-        <div className="flex flex-col px-4 pt-4">
+        <div className="flex flex-col px-4 pt-4 animate-Accardion origin-top overflow-hidden">
         <p className="font-[400] mt-2">
                 MSI MPG Trident 3 10SC-005AU Intel i7 10700F, 2060 SUPER, 16GB RAM, 512GB SSD, 2TB HDD, Windows 10 Home, Gaming Keyboard and Mouse 3 Years Warranty Gaming Desktop
         </p>
@@ -27,9 +31,9 @@ let AboutProduct = () => {
         </div>
     </div>
     <div className="px-4 mt-2 flex items-center justify-between">
-        <p className="text-lg font-semibold flex">
+        <p className="text-lg font-semibold flex flex-col justify-center items-center tablet:flex-row">
             Have a Question? 
-            <span className="font-[500] text-secondaryBlue underline ml-2"> Contanct Us </span>
+            <span className="font-[500] text-secondaryBlue underline tablet:ml-2"> Contanct Us </span>
         </p>
         <span>
             SKU D5515AI
@@ -40,7 +44,7 @@ let AboutProduct = () => {
 }
 let ProductDetails = () => {
     return (
-        <div className="px-4 flex flex-col gap-2 mt-4 ">
+        <div className="px-4 flex flex-col gap-2 mt-4 animate-Accardion origin-top overflow-hidden">
         <p>
             •  Intel Core i7-10700F
         </p>
@@ -62,7 +66,7 @@ let ProductDetails = () => {
 }
 let ProductSpec = () => {
     return (
-        <div className="px-4 mt-4 w-full">
+        <div className="px-4 mt-4 w-full animate-Accardion origin-top overflow-hidden">
         <table className="w-full">
             <tr>
                 <td>
@@ -84,31 +88,51 @@ let ProductSpec = () => {
     </div>
     )
 }
-function ClassNameAdderHandler (classname) {
-    //after:border-b-black
-    if(classname.classList.contains('after:border-b-black') || classname.parentElement.classList.contains('after:border-b-black')){
-        if(classname.nodeName === "DIV"){
-            classname.classList.add('after:border-b-gray-500') ; 
-            classname.classList.add('text-gray-600') ; 
-        }
-        if(classname.nodeName === "SPAN"){
-            classname.parentElement.classList.add('after:border-b-gray-500') ; 
-            classname.parentElement.classList.add('text-gray-600') ; 
-        }
-    }else {
-        if(classname.nodeName === "DIV"){
-            classname.classList.add('after:border-b-black') ; 
-            classname.classList.add('text-black') ; 
-        }
-        if(classname.nodeName === "SPAN"){
-            classname.classList.add('after:border-b-black') ; 
-            classname.classList.add('text-black') ; 
-        }
-    }
-}
+
 const ProductPage =() => {
     const [productCount , setProductCount] = useState(1) ; 
-    const [productSec , setProductSec] = useState(null)
+    const [productSec , setProductSec] = useState('About Product') ; 
+    const [ProductInformationChanger  , setProductInformationChanger] = useState([
+        {
+            title : 'About Product' , 
+            active : true ,  
+            index : 0 , 
+        } , 
+        {
+            title : 'Details' , 
+            active : false ,  
+            index : 1 , 
+        } , 
+        {
+            title : 'Specs' , 
+            active : false ,  
+            index : 2 , 
+        }
+    ])
+    const [ProductInformationChangerIndex , setProductInformationChangerIndex] = useState(0) ;
+    let ProductInformationFunctionHandler = (index , item) => {
+        let temp = [
+            {
+                title : 'About Product' , 
+                active : false ,  
+                index : 0 , 
+            } , 
+            {
+                title : 'Details' , 
+                active : false ,  
+                index : 1 , 
+            } , 
+            {
+                title : 'Specs' , 
+                active : false ,  
+                index : 2 , 
+            }
+        ] ; 
+        setProductInformationChanger([
+            ...temp , temp[index].active = true
+        ]) ; 
+        setProductSec(item) ; 
+    }
     return (
         <div className="flex flex-col container mx-auto mt-4">
             <div className="block relative flex flex-col items-center justify-center">
@@ -131,26 +155,30 @@ const ProductPage =() => {
             */}
             <div className="flex flex-col mt-4">
                 <div className="flex items-center">
-                    <div onClick={(e)=>{setProductSec('about')
-                                        ClassNameAdderHandler(e.target)}} className="text-black font-[550] flex flex-col after:border-b-2 after:border-b-black after:block after:content-[''] px-2">
-                        <span className="pb-2">
-                            About Product
-                        </span>
-                    </div>
-                    <div onClick={(e)=>{setProductSec('details')
-                ClassNameAdderHandler(e.target)}} className="text-gray-500 font-[550] flex flex-col after:border-b-2 after:border-b-gray-400 after:block after:content-[''] px-2">
-                        <span className="pb-2">
-                            Details
-                        </span>
-                    </div>
-                    <div onClick={(e)=>{setProductSec('spec')
-                ClassNameAdderHandler(e.target)}} className="text-gray-500 font-[550] flex flex-col after:border-b-2 after:border-b-gray-400 after:block after:content-[''] px-2">
-                        <span className="pb-2">
-                            Specs
-                        </span>
-                    </div>
+                    {
+                        ProductInformationChanger.map((item,index)=>
+                        
+                            item.active ?                             
+                            <div className="block cursor-pointer">
+                                <span activate--data={item.active ? 'active' : 'deactive'} onClick={(e)=>{ProductInformationFunctionHandler(index , item.title)}} className="pb-2 px-2 translate-y-0 text-black font-[550] flex flex-col after:border-b-2 after:border-b-black after:block after:content-[''] transation-all duration-[.5s]">
+                                    {
+                                        item.title
+                                    }
+                                </span>
+                            </div> :
+                            <div className="block cursor-pointer">
+                                <span activate--data={item.active ? 'active' : 'deactive'} onClick={(e)=>{ProductInformationFunctionHandler(index , item.title)}} className="pb-2 px-2 translate-y-2 text-gray-500 font-[550] flex flex-col after:border-b-2 after:border-b-transparent after:block after:content-[''] transation-all duration-[.5s]">
+                                    {
+                                    item.title
+                                    }
+                                </span>
+                            </div>
+                        
+
+                        )
+                    }
                 </div>
-                <div onClick={()=>{setProductSec('spec')}} className="block px-4 mt-2">
+                <div className="block px-4 mt-2">
                     <h3 className="text-3xl font-bold mt-2">
                         MSI MPG Trident 3
                     </h3>
@@ -159,9 +187,9 @@ const ProductPage =() => {
                     </p>
                 </div>
                 {
-                    productSec === "about" 
-                    ? <AboutProduct /> : productSec === "details" 
-                    ? <ProductDetails /> : productSec === "spec" ? <ProductSpec /> : null
+                    productSec === 'About Product'
+                    ? <AboutProduct /> : productSec === 'Details'
+                    ? <ProductDetails /> : productSec === 'Specs' ? <ProductSpec /> : null
                 }
                 <div className="px-4 flex flex-col gap-2">
                     <div className="flex items-center justify-between gap-4 mt-4">
@@ -182,12 +210,14 @@ const ProductPage =() => {
                                 }} className="p-2"><ArrowDown color="gray" size="10" /></span>
                             </div>
                         </div>
+                        <div className="flex tablet:flex-row flex-col w-full gap-2">
                         <button className="h-12 px-6 w-[100%] flex items-center justify-center bg-secondaryBlue text-white border-2 border-transparent transation-all duration-[.2s] hover:text-secondaryBlue hover:bg-transparent hover:border-secondaryBlue rounded-full text-lg font-semibold">
                             Add to Cart
                         </button>
                         <button className="h-12 px-6 w-[100%] flex items-center justify-center bg-[#FFB800] text-white border-2 border-transparent transation-all duration-[.2s] hover:text-secondaryBlue hover:bg-transparent hover:border-[#FFB800] rounded-full text-lg font-semibold">
                             <PayPalIconSvg />
                         </button>
+                        </div>
                     </div>
                     <div className="w-full flex justify-center text-lg font-semibold mt-2">
                         <p>
@@ -219,7 +249,7 @@ const ProductPage =() => {
                     </div>
                 </div>
             </div>
-            <div className="px-4 h-[20rem] bg-[length:100%_100%] bg-no-repeat bg-right-bottom" style={{ backgroundImage: `url(${WomanBehindLaptop})`,}}>
+            <div className="px-4 h-[18rem] bg-[length:100%_100%] bg-no-repeat bg-right-bottom" style={{ backgroundImage: `url(${WomanBehindLaptop})`,}}>
                 <div className="flex flex-col gap-4 mt-10">
                     <div className="flex items-center justify-between w-[80%] max-w-[15rem] border border-gray-400 rounded p-2">
                         <span>

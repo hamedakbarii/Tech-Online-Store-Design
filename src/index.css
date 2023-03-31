@@ -48,7 +48,7 @@ code {
 
   }
   .gradientBlack {
-    background: linear-gradient(180deg, #00000000 15%, rgba(0,0,0,1) 60%);
+    background: linear-gradient(180deg, #00000000 15%, rgba(0,0,0,1) 50%);
   }
   .lineargradiant {
     background: radial-gradient(50% 50% at 50% 50%, #242528 0%, #040404 100%);
