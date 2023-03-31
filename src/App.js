@@ -15,6 +15,7 @@ import GamingMonitor from "./components/GamingMonitor";
 import ProductsPage from "./components/ProductsPage";
 import ProductPage from "./components/ProductPage";
 import ContactUs from "./components/Pages/ContactUs/ContactUs";
+import Register from "./components/Pages/Register/Register";
 
 export default function App() {
   return (
@@ -32,7 +33,8 @@ export default function App() {
       <OurServices />
       <Footer /> 
       <ProductsPage /> */}
-      <ContactUs />
+      {/* <ContactUs /> */}
+      <Register />
       {/* <ProductPage /> */}
       {/* <div className="flex flex-col fixed right-4 bottom-8 z-[20] gap-2">
         <span className="w-12 h-12 bg-secondaryBlue flex items-center justify-center rounded-full rotate-[180deg]">

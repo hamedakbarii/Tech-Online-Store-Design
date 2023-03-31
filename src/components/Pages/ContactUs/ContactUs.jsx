@@ -11,7 +11,7 @@ export default function ContactUs() {
           Home <span className="text-[##0156FF]">›</span> Contact Us
         </span>
       </div>
-
+      
       <div className="flex flex-col justify-center items-start p-2">
         <h2 className="font-bold text-2xl">Contact Us</h2>
         <span className="pt-2 text-lg">
