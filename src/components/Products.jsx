@@ -64,7 +64,7 @@ let ProductList = [
 let Products = () => {
   return (
     <>
-      <div className="relative container flex flex-col mx-auto px-4 tablet:px-0">
+      <div className="relative container flex flex-col mx-auto px-2 tablet:px-0">
         <div className="flex justify-between items-center p-4">
           <h2 className="text-xl font-semibold">New Products</h2>
           <h4 className="underline text-[#0156FF] text-black">See All Products</h4>

@@ -94,7 +94,7 @@ let SwiperProduct = ({ ItemList, spaceBetween, slidesPerView }) => {
     >
       {ItemList &&
         ItemList.map((item) => (
-          <SwiperSlide className="flex flex-col p-2 bg-gray-100 rounded-lg">
+          <SwiperSlide className="flex flex-col p-2 bg-[#F5F7FF] rounded-lg">
             <p className="tablet:hidden flex items-center">
               {item.avaiblity ? <Aviable /> : <OutOfStock />}
               <span className="ml-1 text-sm">

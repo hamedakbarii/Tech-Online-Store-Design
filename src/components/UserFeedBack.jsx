@@ -46,7 +46,7 @@ let UserFeedBack = () => {
                 scrollbar={{ draggable: true }}
                 className="relative"
             >
-                <span className='w-full h-full top-0 left-0 absolute bg-[#eff5ff]'>
+                <span className='w-full h-full top-0 left-0 absolute bg-[#eff5ff] rounded-lg'>
 
                 </span>
                 {UserFeedBackData &&
