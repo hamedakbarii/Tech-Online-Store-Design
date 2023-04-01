@@ -1,6 +1,5 @@
 import React from "react";
-
-import OurServices from "../OurServices";
+import OurServices from "../components/OurServices";
 
 const Register = () => {
   return (

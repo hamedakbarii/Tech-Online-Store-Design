@@ -14,8 +14,8 @@ import { ArrowDown, MessageIcon } from "./components/Icon";
 import GamingMonitor from "./components/GamingMonitor";
 import ProductsPage from "./components/ProductsPage";
 import ProductPage from "./components/ProductPage";
-import ContactUs from "./components/Pages/ContactUs";
-import Register from "./components/Pages/Register";
+import ContactUs from "./Pages/ContactUs";
+import Register from "../src/Pages/Register";
 import router from "./routes";
 import { useRoutes } from "react-router-dom";
 export default function App() {

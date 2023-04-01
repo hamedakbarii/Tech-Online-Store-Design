@@ -1,8 +1,9 @@
-import ContactUs from "./components/Pages/ContactUs";
-import Home from "./components/Pages/Home";
-import Product from "./components/Pages/Product";
-import Register from "./components/Pages/Register";
-import ShoppingCart from "./components/Pages/ShoppingCart";
+import Home from "./Pages/Home";
+import ContactUs from "./Pages/ContactUs";
+
+import Product from "./Pages/Product";
+import Register from "./Pages/Register";
+import ShoppingCart from "./Pages/ShoppingCart";
 let router = [
   { path: "/", element: <Home /> },
   { path: "/product", element: <Product /> },
