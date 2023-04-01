@@ -18,23 +18,14 @@ import ContactUs from "./Pages/ContactUs";
 import Register from "../src/Pages/Register";
 import router from "./routes";
 import { useRoutes } from "react-router-dom";
+import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
 export default function App() {
   let routes = useRoutes(router);
   return (
     <div className="relative">
       <Header />
-      {/* <Hero />
-      <Products />
-      <Banner />
-      <ProductSection />
-      <ProductItem />
-      <Desktop />
-      <GamingMonitor />
-      <ProductLogo />
-      <UserFeedBack />
-      <OurServices />
-      <Footer /> 
-      <ProductsPage /> */}
+
+      {/* <ProductsPage />  */}
       {/* <ContactUs /> 
       <Register />*/}
       {/* <ProductPage /> */}
@@ -46,7 +37,8 @@ export default function App() {
           <MessageIcon />
         </span>
       </div> */}
-      {routes}
+      {/* {routes} */}
+      <ShoppingCart />
       <Footer />
     </div>
   );
