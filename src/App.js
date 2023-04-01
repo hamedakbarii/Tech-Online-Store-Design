@@ -14,14 +14,16 @@ import { ArrowDown, MessageIcon } from "./components/Icon";
 import GamingMonitor from "./components/GamingMonitor";
 import ProductsPage from "./components/ProductsPage";
 import ProductPage from "./components/ProductPage";
-import ContactUs from "./components/Pages/ContactUs/ContactUs";
-import Register from "./components/Pages/Register/Register";
-
+import ContactUs from "./components/Pages/ContactUs";
+import Register from "./components/Pages/Register";
+import router from "./routes";
+import { useRoutes } from "react-router-dom";
 export default function App() {
+  let routes = useRoutes(router);
   return (
     <div className="relative">
       <Header />
-       {/* <Hero />
+      {/* <Hero />
       <Products />
       <Banner />
       <ProductSection />
@@ -35,7 +37,7 @@ export default function App() {
       <ProductsPage /> */}
       {/* <ContactUs /> 
       <Register />*/}
-      <ProductPage />
+      {/* <ProductPage /> */}
       {/* <div className="flex flex-col fixed right-4 bottom-8 z-[20] gap-2">
         <span className="w-12 h-12 bg-secondaryBlue flex items-center justify-center rounded-full rotate-[180deg]">
           <ArrowDown />
@@ -44,6 +46,8 @@ export default function App() {
           <MessageIcon />
         </span>
       </div> */}
+      {routes}
+      <Footer />
     </div>
   );
 }

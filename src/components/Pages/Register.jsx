@@ -1,12 +1,10 @@
 import React from "react";
-import Footer from "../../Footer/Footer";
-import Header from "../../Header/Header";
-import OurServices from "../../OurServices";
+
+import OurServices from "../OurServices";
 
 const Register = () => {
   return (
     <div>
-      <Header />
       <div className="p-4">
         <span>
           Home <span className="text-[##0156FF]">›</span> Customer Login
@@ -67,8 +65,6 @@ const Register = () => {
       <section className="bg-[#F5F7FF] w-full p-2">
         <OurServices />
       </section>
-
-      <Footer />
     </div>
   );
 };
