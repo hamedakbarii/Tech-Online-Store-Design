@@ -5,9 +5,9 @@ import ShoppingCartSummerySection from "./ShoppingCartSummerySection";
 
 const ShoppingCart = () => {
   return (
-    <div>
+    <div className="container mx-auto px-2">
       <ShoppingCartRouter />
-      <h3 className="p-2 mb-4">Shopping Cart</h3>
+      <h1 className="mb-4 text-2xl font-semibold">Shopping Cart</h1>
       <ShoppingCartSummerySection />
     </div>
   );

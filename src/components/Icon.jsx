@@ -376,12 +376,12 @@ function ArrowDown2() {
     </svg>
   );
 }
-export function ArrowUp() {
+export function ArrowUp({size}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="6"
-      height="5"
+      width={size?size:'6'}
+      height={size?size:'6'}
       fill="none"
       viewBox="0 0 6 5"
     >
