@@ -376,7 +376,24 @@ function ArrowDown2() {
     </svg>
   );
 }
-
+export function ArrowUp() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="6"
+      height="5"
+      fill="none"
+      viewBox="0 0 6 5"
+    >
+      <path
+        stroke="#000"
+        strokeLinecap="round"
+        strokeWidth="1.6"
+        d="M1 4.115l2-2 2 2"
+      ></path>
+    </svg>
+  );
+}
 function HeartLike() {
   return (
     <svg
