@@ -19,7 +19,7 @@ module.exports = {
         },
       },
       animation: {
-        'Accardion': 'Accardion .5s linear forwards',
+        'Accardion': 'Accardion .3s ease forwards',
       },
     },
   },

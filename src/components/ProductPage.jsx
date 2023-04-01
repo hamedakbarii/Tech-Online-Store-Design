@@ -128,8 +128,9 @@ const ProductPage =() => {
                 index : 2 , 
             }
         ] ; 
+        temp[index].active = true ; 
         setProductInformationChanger([
-            ...temp , temp[index].active = true
+            ...temp 
         ]) ; 
         setProductSec(item) ; 
     }
@@ -173,8 +174,6 @@ const ProductPage =() => {
                                     }
                                 </span>
                             </div>
-                        
-
                         )
                     }
                 </div>
