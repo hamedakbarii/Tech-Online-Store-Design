@@ -12,7 +12,7 @@ const ShoppingCart = () => {
       <div className="flex items-center justify-center gap-2 mt-4">
         <ZipIcon />
         <a className="max-w-[12rem] text-sm leading-5 flex items-center before:h-7 before:mr-2 before:block before:content-[''] before:border before:rounded-full before:border-secondaryBlue ">
-            <span>own it now, up to 6 months interest free <span>learn more</span></span>
+            <span>own it now, up to 6 months interest free <span className="underline">learn more</span></span>
         </a>
       </div>
     </div>
