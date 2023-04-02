@@ -1,9 +1,11 @@
-import React from 'react'
-
+import React from "react";
+import ShoppingCartComp from "../components/ShoppingCart/ShoppingCartComp";
 const ShoppingCart = () => {
   return (
-    <div>ShoppingCart</div>
-  )
-}
+    <div>
+      <ShoppingCartComp />
+    </div>
+  );
+};
 
-export default ShoppingCart
+export default ShoppingCart;

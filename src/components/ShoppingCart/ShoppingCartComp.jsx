@@ -1,10 +1,9 @@
 import React from "react";
-import { ZipIcon } from "../Icon";
 import ShoppingCartRouter from "./ShoppingCartRouter";
 import ShoppingCartSummerySection from "./ShoppingCartSummerySection";
 import CartShoppingCart from "./CartShoppingCart";
 
-const ShoppingCart = () => {
+const ShoppingCartComp = () => {
   return (
     <div className="container mx-auto px-2">
       <ShoppingCartRouter />
@@ -21,4 +20,4 @@ const ShoppingCart = () => {
   );
 };
 
-export default ShoppingCart;
+export default ShoppingCartComp;
