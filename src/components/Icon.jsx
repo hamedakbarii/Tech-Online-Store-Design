@@ -117,7 +117,7 @@ function UnPickedStar() {
     </svg>
   );
 }
-function ArrowDown({ color  , size}) {
+function ArrowDown({ color, size }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -376,12 +376,12 @@ function ArrowDown2() {
     </svg>
   );
 }
-export function ArrowUp({size}) {
+export function ArrowUp({ size }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={size?size:'6'}
-      height={size?size:'6'}
+      width={size ? size : "6"}
+      height={size ? size : "6"}
       fill="none"
       viewBox="0 0 6 5"
     >
@@ -640,9 +640,6 @@ function PayPalIconSvg() {
   );
 }
 
-
-
-
 function LongArrow() {
   return (
     <svg
@@ -659,7 +656,6 @@ function LongArrow() {
     </svg>
   );
 }
-
 
 function IntelIconSvg() {
   return (
@@ -725,7 +721,56 @@ function GraphicRtxIcon() {
     </svg>
   );
 }
-
+export function DeleteIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="27"
+      height="27"
+      fill="none"
+      viewBox="0 0 27 27"
+    >
+      <circle
+        cx="13.488"
+        cy="13.488"
+        r="12.488"
+        fill="#fff"
+        stroke="#CACDD8"
+        strokeWidth="2"
+      ></circle>
+      <path
+        stroke="#A2A2A2"
+        strokeLinecap="round"
+        strokeWidth="2"
+        d="M9.442 9.442l8.767 8.767M18.209 9.442l-8.767 8.767"
+      ></path>
+    </svg>
+  );
+}
+export function EditIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="27"
+      height="27"
+      fill="none"
+      viewBox="0 0 27 27"
+    >
+      <circle
+        cx="13.5"
+        cy="13.5"
+        r="12.5"
+        fill="#fff"
+        stroke="#CACDD8"
+        strokeWidth="2"
+      ></circle>
+      <path
+        fill="#A1A1A1"
+        d="M8.163 19.904h.075l3.462-.316a1.66 1.66 0 001.004-.473l7.471-7.471a1.594 1.594 0 00-.058-2.25L17.843 7.12a1.66 1.66 0 00-2.208-.059l-7.472 7.472a1.66 1.66 0 00-.473 1.004L7.333 19a.83.83 0 00.83.905zM16.69 8.282l2.266 2.266-1.66 1.619-2.225-2.225 1.619-1.66zM9.3 15.678l4.673-4.64 2.242 2.241-4.65 4.65-2.49.232.225-2.483z"
+      ></path>
+    </svg>
+  );
+}
 export {
   Icon,
   LeftSideIcon,
@@ -752,8 +797,8 @@ export {
   Comparison,
   NovelLetter,
   ZipIcon,
-  PayPalIconSvg , 
-  LongArrow , 
-  IntelIconSvg , 
-  GraphicRtxIcon , 
+  PayPalIconSvg,
+  LongArrow,
+  IntelIconSvg,
+  GraphicRtxIcon,
 };
