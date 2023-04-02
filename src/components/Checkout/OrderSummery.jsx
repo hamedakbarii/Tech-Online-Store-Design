@@ -3,7 +3,7 @@ import { ArrowUp } from "../Icon";
 import OrderSummeryProduct from "./OrderSummeryProduct";
 const OrderSummery = () => {
   return (
-    <div className="m-auto bg-[#F5F9FF] max-w-xs rounded-sm p-2">
+    <div className="container mx-auto bg-[#F5F9FF] rounded-sm p-2 w-[345px]">
       <h3 className="font-semibold border-b border-gray-300 py-4">
         Order Summary
       </h3>
