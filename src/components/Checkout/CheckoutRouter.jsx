@@ -2,7 +2,7 @@ import React from "react";
 
 const CheckoutRouter = () => {
   return (
-    <div>
+    <div className="p-2">
       <span>
         Home › ShoppingCart › Checkout Process 
         Series
