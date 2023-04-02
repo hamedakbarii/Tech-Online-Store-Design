@@ -3,7 +3,7 @@ import React from "react";
 const CheckoutForm = () => {
   return (
     <>
-      <form className="flex flex-col justify-center gap-2 p-2">
+      <form className="flex flex-col justify-center gap-2 p-3">
         <div className="flex flex-col border-b border-gray-300">
           <label className="font-semibold" htmlFor="Email">
             Email Address
@@ -138,7 +138,6 @@ const CheckoutForm = () => {
             Next
           </button>
         </div>
-        <div></div>
       </form>
     </>
   );
