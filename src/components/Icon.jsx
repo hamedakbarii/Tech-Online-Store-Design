@@ -1,9 +1,9 @@
-let Icon = ({ color }) => {
+let Icon = ({ color , size }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="41"
-      height="41"
+      width={size ? size :"41"}
+      height={size ? size :"41"}
       fill="none"
       viewBox="0 0 34 41"
     >
@@ -771,6 +771,61 @@ export function EditIcon() {
     </svg>
   );
 }
+
+const FillHeart = ({color,size}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size?size:'12'}
+      height={size?size:'12'}
+      fill="none"
+      viewBox="0 0 11 10"
+    >
+      <path
+        fill={color?color:'white'}
+        d="M5.315 1.727C3.624-.795.2.58.2 3.327c0 2.062 4.694 5.29 5.115 5.71.425-.42 4.885-3.648 4.885-5.71 0-2.727-3.19-4.122-4.885-1.6z"
+      ></path>
+    </svg>
+  );
+}
+
+const FillStar = ({color,size}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size?size:'14'}
+      height={size?size:'14'}
+      fill="none"
+      viewBox="0 0 14 13"
+    >
+      <path
+        fill={color?color:"#fff"}
+        d="M6.701.418a.2.2 0 01.367 0L8.7 4.146a.2.2 0 00.163.119l4.05.401a.2.2 0 01.114.349L9.988 7.72a.2.2 0 00-.063.192l.87 3.976a.2.2 0 01-.297.216l-3.513-2.056a.2.2 0 00-.202 0l-3.512 2.056a.2.2 0 01-.297-.216l.87-3.976a.2.2 0 00-.062-.192L.74 5.015a.2.2 0 01.113-.349l4.05-.401a.2.2 0 00.164-.119L6.7.418z"
+      ></path>
+    </svg>
+  );
+}
+
+
+const Truck = ({color,size}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size?size:"13"}
+      height={size?size:"10"}
+      fill="none"
+      viewBox="0 0 13 10"
+    >
+      <path
+        fill={color?color:"#fff"}
+        d="M1.136.8A1.136 1.136 0 000 1.936v6.25h1.136a1.705 1.705 0 003.41 0h3.409a1.705 1.705 0 103.409 0H12.5v-2.84l-1.704-2.273H9.09V.8H1.136zm7.955 3.125h1.42l1.12 1.42H9.09v-1.42zm-6.25 3.41a.852.852 0 110 1.704.852.852 0 010-1.705zm6.818 0a.852.852 0 110 1.703.852.852 0 010-1.704z"
+      ></path>
+    </svg>
+  );
+}
+
+
+
 export {
   Icon,
   LeftSideIcon,
@@ -801,4 +856,7 @@ export {
   LongArrow,
   IntelIconSvg,
   GraphicRtxIcon,
+  FillHeart , 
+  FillStar , 
+  Truck , 
 };

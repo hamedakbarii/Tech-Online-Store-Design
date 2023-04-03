@@ -2,7 +2,7 @@ import { DropUser, PriceTag, SupportHeadset } from "./Icon";
 
 let OurServices = () => {
   return (
-    <div className="container bg-[#F5F7FF] mt-3 p-3 grid grid-cols gap-3 w-full">
+    <div className="container mt-3 p-3 grid grid-cols gap-3 w-full">
       <div className="flex flex-col items-center gap-2">
         <div className="p-4 bg-secondaryBlue rounded-full">
           <SupportHeadset />
