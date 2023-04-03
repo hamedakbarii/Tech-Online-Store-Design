@@ -20,6 +20,7 @@ import router from "./routes";
 import { useRoutes } from "react-router-dom";
 import ShoppingCart from "./components/ShoppingCart/ShoppingCartComp";
 import AboutUs from "./components/AboutUs";
+import FAQ from "./components/FAQ";
 export default function App() {
   let routes = useRoutes(router);
   return (
@@ -39,9 +40,10 @@ export default function App() {
         </span>
       </div> */}
      {/* {routes}
-       <ShoppingCart /> */}
+       <ShoppingCart /> 
 
-       <AboutUs />
+       <AboutUs />*/}
+       <FAQ />
       <Footer />
     </div>
   );
