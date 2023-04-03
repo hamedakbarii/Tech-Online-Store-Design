@@ -5,17 +5,17 @@ import OurServices from "../components/OurServices";
 const UserAccount = () => {
   return (
     <>
-      <div className="flex justify-between items-center bg-[#F5F7FF] container mx-auto my-4 p-2 border-b-2 border-b-gray-300">
+      <div className="flex justify-between items-center bg-[#F5F7FF]  mx-2 my-4 p-2 border-b-2 border-b-gray-300">
         <h2 className="font-bold text-black ">Account Dashboard</h2>
         <ArrowDown2 />
       </div>
 
-      <div className="flex flex-col justify-center items-start gap-2 border-b-2 border-gray-300 my-2 container mx-auto py-2">
+      <div className="flex flex-col justify-center items-start gap-2 border-b-2 border-gray-300 m-2 py-2">
         <h1 className="font-bold text-2xl">My Dashboard</h1>
         <h3 className="text-[#212121] font-normal">Account Information</h3>
       </div>
 
-      <div className="border-b-2 border-gray-300 container mx-auto">
+      <div className="border-b-2 border-gray-300 m-2">
         <div className="container mx-auto flex flex-col justify-center items-start gap-4 py-2">
           <h3 className="font-bold text-black">Contact Information</h3>
 
@@ -52,7 +52,7 @@ const UserAccount = () => {
         </div>
       </div>
 
-      <div className="container mx-auto py-4 flex flex-col justify-center items-start gap-6">
+      <div className="m-2 py-4 flex flex-col justify-center items-start gap-6">
         <div className="flex flex-col justify-center items-start gap-4">
           <h3 className="font-bold">Default Billing Address</h3>
           <p className="font-semibold text-[#000000] w-56">
@@ -74,7 +74,7 @@ const UserAccount = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center items-center gap-2 container mx-auto">
+      <div className="flex flex-col justify-center items-center gap-2 m-2">
         <div className="bg-[#F5F7FF] flex flex-col justify-center items-center gap-4 w-full p-2">
           <h1 className="font-bold text-xl">Compare Products</h1>
           <h3 className="font-normal">You have no items to compare.</h3>
