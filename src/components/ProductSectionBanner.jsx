@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link, link} from "react-router-dom"
 const ProductSectionBanner = (props) => {
   return (
     <div className="text-white relative">
@@ -8,7 +8,9 @@ const ProductSectionBanner = (props) => {
         <h4 className="text-white text-center text-3xl tablet:max-w-[7rem] w-full">
           {props.title}
         </h4>
-        <span className="absolute bottom-3 underline">See All Products</span>
+        <span className="absolute bottom-3 underline">
+         <Link to="/product"> See All Products</Link>
+         </span>
       </div>
     </div>
   );

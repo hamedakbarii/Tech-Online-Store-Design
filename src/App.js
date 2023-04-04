@@ -39,11 +39,11 @@ export default function App() {
           <MessageIcon />
         </span>
       </div> */}
-     {/* {routes}
-       <ShoppingCart /> 
+     {routes}
+       {/* <ShoppingCart /> 
 
-       <AboutUs />*/}
-       <FAQ />
+       <AboutUs /> */}
+       {/* <FAQ /> */}
       <Footer />
     </div>
   );

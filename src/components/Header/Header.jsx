@@ -119,7 +119,7 @@ export default function Header() {
             <ShopingCart />
             <UserIcon HandleUserDataShow={setActiveUserProfileMenu} UserDataShow={ActiveUserProfileMenu} />
             {
-              ActiveUserProfileMenu ? <UserProfileMenu /> : null
+              ActiveUserProfileMenu ? <UserProfileMenu toggleProfile={setActiveUserProfileMenu}/> : null
             }
           </div>
         </div>

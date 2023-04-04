@@ -9,12 +9,10 @@ const ProductsPage = ({ children }) => {
   const [showFilter, setShowFilter] = useState(false);
   return (
     <>
-      <Header />
       <ProductRouter />
       <FilterItems />
 
       <PaginationProducts />
-      <Footer />
     </>
   );
 };
