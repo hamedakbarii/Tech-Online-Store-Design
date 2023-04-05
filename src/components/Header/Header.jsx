@@ -14,6 +14,7 @@ import {
 } from "../Icon";
 import HamburgerMenue from "./HamburgerMenu";
 import UserProfileMenu from "./UserProfileMenu";
+import { Link } from "react-router-dom";
 export default function Header() {
   let navUl = [
     "Laptops",
@@ -116,11 +117,16 @@ export default function Header() {
             />
           </div>
           <div className="flex items-center gap-2">
-            <ShopingCart />
-            <UserIcon HandleUserDataShow={setActiveUserProfileMenu} UserDataShow={ActiveUserProfileMenu} />
-            {
-              ActiveUserProfileMenu ? <UserProfileMenu toggleProfile={setActiveUserProfileMenu}/> : null
-            }
+            <Link to="./shoppingcart">
+              <ShopingCart />
+            </Link>
+            <UserIcon
+              HandleUserDataShow={setActiveUserProfileMenu}
+              UserDataShow={ActiveUserProfileMenu}
+            />
+            {ActiveUserProfileMenu ? (
+              <UserProfileMenu toggleProfile={setActiveUserProfileMenu} />
+            ) : null}
           </div>
         </div>
 
