@@ -1,20 +1,15 @@
+import { useState } from "react";
 import { ArrowDown, Facebook, Instagram } from "../Icon";
-
-
-let FooterAccardionHandler = (e) => {
-  if(
-    e.currentTarget.nextElementSibling.dataset.active === 'active'
-  ){
-    e.currentTarget.nextElementSibling.style.height=`${0}px` ; 
-    e.currentTarget.nextElementSibling.dataset.active = 'deactive'
-  }else {
-    e.currentTarget.nextElementSibling.style.height=`${e.currentTarget.nextElementSibling.scrollHeight+10}px` ;
-    e.currentTarget.nextElementSibling.dataset.active = 'active' ; 
-  }
-}
-
-
-
+import AccardionSection from "./Accardion";
+let Accardion = [{
+  title : 'Pc Parts' , 
+  accardionContent : [
+    'CPUS' , 'Add On Cards' , 'Hard Drives (Internal)' , 'Graphic Cards' , 'Keyboards / Mice' , 
+    'Cases / Power Supplies / Cooling' , 'RAM (Memory)' , 'Software' , 'Speakers / Headsets' , 'Motherboards' ,
+  ] , 
+  isAccardionOpen : false , 
+  accardionContentHeight : `0` ,
+}]
 export default function Footer() {
   return (
     <>
@@ -47,25 +42,9 @@ export default function Footer() {
             <ArrowDown />
           </div>
 
-          <div className="flex flex-col border-b-[#A2A6B0] border-b-[1px] cursor-pointer w-full">
-            <div className="flex justify-between items-center p-2 " onClick={(e)=>{FooterAccardionHandler(e)}}>
-              <h3 className="text-white">Pc Parts</h3>
-              <ArrowDown />
-            </div>
-            <div className="flex flex-col text-white gap-1 pl-4 overflow-hidden h-0 transition-all duration-[.3s]">
-              <a><span>CPUS</span></a>
-              <a><span>Add On Cards</span></a>
-              <a><span>Hard Drives (Internal)</span></a>
-              <a><span>Graphic Cards</span></a>
-              <a><span>Keyboards / Mice</span></a>
-              <a><span>Cases / Power Supplies / Cooling</span></a>
-              <a><span>RAM (Memory)</span></a>
-              <a><span>Software</span></a>
-              <a><span>Speakers / Headsets</span></a>
-              <a><span>Motherboards</span></a>
-            </div>
+          <div className="flex flex-col border-b-[#A2A6B0] border-b-[1px] cursor-pointer w-full"> 
+            <AccardionSection Data={Accardion} key="accardion" duration={0.5}/>
           </div>
-
           <div className="flex justify-between items-center border-b-[#A2A6B0] border-b-[1px] rounded-b cursor-pointer w-full p-2">
             <h3 className="text-white">Desktop PCs</h3>
             <ArrowDown />
