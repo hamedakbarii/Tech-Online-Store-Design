@@ -39,7 +39,7 @@ let DesktopProductInfo = [
       title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
       price: 600,
       offprice: 590,
-      img: "assets/GamingMonitor/GamingMonitor.png1",
+      img: "assets/GamingMonitor/GamingMonitor1.png",
       id: 9,
     },
     {
