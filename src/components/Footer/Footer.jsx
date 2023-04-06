@@ -52,7 +52,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col border-b-[#A2A6B0] border-b-[1px] cursor-pointer w-full"> 
-            <AccardionSection Data={Accardion} key="accardion" duration={'duration-[1000ms]'}/>
+            <AccardionSection Data={Accardion} key="accardion" />
           </div>
           <div className="flex justify-between items-center border-b-[#A2A6B0] border-b-[1px] rounded-b cursor-pointer w-full p-2">
             <h3 className="text-white">Desktop PCs</h3>
@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col border-b-[#A2A6B0] border-b-[1px] cursor-pointer w-full"> 
-            <AccardionSection Data={LaptopAccardion} key="Accardion Laptop" duration={'duration-[1000ms]'} />
+            <AccardionSection Data={LaptopAccardion} key="Accardion Laptop" />
           </div>
 
           <div className="flex justify-between items-center border-b-[#A2A6B0] border-b-[1px] rounded-b cursor-pointer w-full p-2">

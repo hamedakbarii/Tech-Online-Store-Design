@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ArrowDown, ArrowUp } from "../Icon";
-const Accardion = ({Data , duration}) => {
+const Accardion = ({Data}) => {
 const [Accardion , setAccardion] = useState(Data) ;
 let FooterAccardionHandler = (id , e) => {
     let Temp = [...Data] ; 
@@ -24,7 +24,7 @@ setAccardion(Temp) ;
                         </div>
                         {
                             item.isAccardionOpen ?                             
-                                <div style={{height:`${Number(item.accardionContentHeight)}px`}} className={`flex flex-col text-white gap-2 pl-4 overflow-hidden transition-all ${duration} [&>*:last-child]:pb-4`} key="acc"> 
+                                <div style={{transitionDuration:`${item.accardionContentHeight*3}ms`,height:`${Number(item.accardionContentHeight)}px`}} className={`flex flex-col text-white gap-2 pl-4 overflow-hidden transition-all [&>*:last-child]:pb-4`} key="acc"> 
                             {
                                 item.accardionContent.map((accardion)=>
                                     <a>
@@ -38,7 +38,7 @@ setAccardion(Temp) ;
                             }
                                 </div> 
                                 :                             
-                                <div style={{height:`0px`}} className={`flex flex-col text-white gap-2 pl-4 overflow-hidden transition-all ${duration} [&>*:last-child]:pb-4`} key="acc"> 
+                                <div style={{transitionDuration:`${item.accardionContentHeight*3}ms`,height:`0px`}} className={`flex flex-col text-white gap-2 pl-4 overflow-hidden transition-all [&>*:last-child]:pb-4`} key="acc"> 
                                 {
                                     item.accardionContent.map((accardion)=>
                                         <a>
