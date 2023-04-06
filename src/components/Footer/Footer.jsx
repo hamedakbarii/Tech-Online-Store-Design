@@ -5,9 +5,18 @@ let Accardion = [{
   title : 'Pc Parts' , 
   accardionContent : [
     'CPUS' , 'Add On Cards' , 'Hard Drives (Internal)' , 'Graphic Cards' , 'Keyboards / Mice' , 
+    'Cases / Power Supplies / Cooling' , 'RAM (Memory)' , 'Software' , 'Speakers / Headsets' , 'Motherboards' ,    'CPUS' , 'Add On Cards' , 'Hard Drives (Internal)' , 'Graphic Cards' , 'Keyboards / Mice' , 
     'Cases / Power Supplies / Cooling' , 'RAM (Memory)' , 'Software' , 'Speakers / Headsets' , 'Motherboards' ,
   ] , 
   isAccardionOpen : false , 
+  accardionContentHeight : `0` ,
+}]
+let LaptopAccardion = [{
+  title : 'Laptops' , 
+  accardionContent : [
+    'asus' , 'lenovo' , 'dell' , 'hp' , 'Apple'
+  ] , 
+  isAccardionOpen : false ,
   accardionContentHeight : `0` ,
 }]
 export default function Footer() {
@@ -43,16 +52,15 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col border-b-[#A2A6B0] border-b-[1px] cursor-pointer w-full"> 
-            <AccardionSection Data={Accardion} key="accardion" duration={0.5}/>
+            <AccardionSection Data={Accardion} key="accardion" duration={'duration-[1000ms]'}/>
           </div>
           <div className="flex justify-between items-center border-b-[#A2A6B0] border-b-[1px] rounded-b cursor-pointer w-full p-2">
             <h3 className="text-white">Desktop PCs</h3>
             <ArrowDown />
           </div>
 
-          <div className="flex justify-between items-center border-b-[#A2A6B0] border-b-[1px] rounded-b cursor-pointer w-full p-2">
-            <h3 className="text-white">Laptops</h3>
-            <ArrowDown />
+          <div className="flex flex-col border-b-[#A2A6B0] border-b-[1px] cursor-pointer w-full"> 
+            <AccardionSection Data={LaptopAccardion} key="Accardion Laptop" duration={'duration-[1000ms]'} />
           </div>
 
           <div className="flex justify-between items-center border-b-[#A2A6B0] border-b-[1px] rounded-b cursor-pointer w-full p-2">
