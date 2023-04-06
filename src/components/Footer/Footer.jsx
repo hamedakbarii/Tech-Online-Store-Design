@@ -1,24 +1,65 @@
 import { useState } from "react";
 import { ArrowDown, Facebook, Instagram } from "../Icon";
 import AccardionSection from "./Accardion";
-let Accardion = [{
-  title : 'Pc Parts' , 
-  accardionContent : [
-    'CPUS' , 'Add On Cards' , 'Hard Drives (Internal)' , 'Graphic Cards' , 'Keyboards / Mice' , 
-    'Cases / Power Supplies / Cooling' , 'RAM (Memory)' , 'Software' , 'Speakers / Headsets' , 'Motherboards' ,    'CPUS' , 'Add On Cards' , 'Hard Drives (Internal)' , 'Graphic Cards' , 'Keyboards / Mice' , 
-    'Cases / Power Supplies / Cooling' , 'RAM (Memory)' , 'Software' , 'Speakers / Headsets' , 'Motherboards' ,
-  ] , 
-  isAccardionOpen : false , 
-  accardionContentHeight : `0` ,
-}]
-let LaptopAccardion = [{
-  title : 'Laptops' , 
-  accardionContent : [
-    'asus' , 'lenovo' , 'dell' , 'hp' , 'Apple'
-  ] , 
-  isAccardionOpen : false ,
-  accardionContentHeight : `0` ,
-}]
+let Accardion = [
+  {
+    title: "Pc Parts",
+    accardionContent: [
+      "CPUS",
+      "Add On Cards",
+      "Hard Drives (Internal)",
+      "Graphic Cards",
+      "Keyboards / Mice",
+      "Cases / Power Supplies / Cooling",
+      "RAM (Memory)",
+      "Software",
+      "Speakers / Headsets",
+      "Motherboards",
+    ],
+    isAccardionOpen: false,
+    accardionContentHeight: `0`,
+  },
+];
+let LaptopAccardion = [
+  {
+    title: "Laptops",
+    accardionContent: ["Asus", "Lenovo", "Dell", "Hp", "Apple"],
+    isAccardionOpen: false,
+    accardionContentHeight: `0`,
+  },
+];
+
+let Information = [
+  {
+    title: "Information",
+    accardionContent: ["Phone", "Sponsor", "Details", "Softwar", "Hardwar"],
+    isAccardionOpen: false,
+    accardionContentHeight: `0`,
+  },
+];
+
+let DesktopPCs = [
+  {
+    title: "DesktopPCs",
+    accardionContent: ["Mac", "Linux", "Windows", "Apple-Mac", "Hardwar"],
+    isAccardionOpen: false,
+    accardionContentHeight: `0`,
+  },
+];
+
+let Address = [
+  {
+    title: "Address",
+    accardionContent: [
+      "1234 Street Adress, City Address, 1234",
+      "(00)1234 5678",
+      "shop@email.com",
+    ],
+    isAccardionOpen: false,
+    accardionContentHeight: `0`,
+  },
+];
+
 export default function Footer() {
   return (
     <>
@@ -46,26 +87,23 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col justify-center items-center p-2 px-6 gap-6 mt-4">
-          <div className="flex justify-between items-center border-b-[#A2A6B0] border-b-[1px] rounded-b cursor-pointer w-full p-2">
-            <h3 className="text-white">Information</h3>
-            <ArrowDown />
+          <div className="flex flex-col border-b-[#A2A6B0] border-b-[1px] cursor-pointer w-full">
+            <AccardionSection Data={Information} key="accardion information" />
           </div>
 
-          <div className="flex flex-col border-b-[#A2A6B0] border-b-[1px] cursor-pointer w-full"> 
+          <div className="flex flex-col border-b-[#A2A6B0] border-b-[1px] cursor-pointer w-full">
             <AccardionSection Data={Accardion} key="accardion" />
           </div>
-          <div className="flex justify-between items-center border-b-[#A2A6B0] border-b-[1px] rounded-b cursor-pointer w-full p-2">
-            <h3 className="text-white">Desktop PCs</h3>
-            <ArrowDown />
+          <div className="flex flex-col border-b-[#A2A6B0] border-b-[1px] cursor-pointer w-full">
+            <AccardionSection Data={DesktopPCs} key="accardion desktop pcs" />
           </div>
 
-          <div className="flex flex-col border-b-[#A2A6B0] border-b-[1px] cursor-pointer w-full"> 
+          <div className="flex flex-col border-b-[#A2A6B0] border-b-[1px] cursor-pointer w-full">
             <AccardionSection Data={LaptopAccardion} key="Accardion Laptop" />
           </div>
 
-          <div className="flex justify-between items-center border-b-[#A2A6B0] border-b-[1px] rounded-b cursor-pointer w-full p-2">
-            <h3 className="text-white">Address</h3>
-            <ArrowDown />
+          <div className="flex flex-col border-b-[#A2A6B0] border-b-[1px] cursor-pointer w-full">
+            <AccardionSection Data={Address} key="Accardion address" />
           </div>
         </div>
 
