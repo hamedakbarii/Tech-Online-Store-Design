@@ -38,7 +38,7 @@ setAccardion(Temp) ;
                             }
                                 </div> 
                                 :                             
-                                <div style={{transitionDuration:`${item.accardionContentHeight*3}ms`,height:`0px`}} className={`flex flex-col text-white gap-2 pl-4 overflow-hidden transition-all [&>*:last-child]:pb-4`} key="acc"> 
+                                <div style={{transitionDuration:`${800}ms`,height:`0px`}} className={`flex flex-col text-white gap-2 pl-4 overflow-hidden transition-all [&>*:last-child]:pb-4`} key="acc"> 
                                 {
                                     item.accardionContent.map((accardion)=>
                                         <a>
