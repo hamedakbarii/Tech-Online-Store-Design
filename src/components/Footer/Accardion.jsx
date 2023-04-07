@@ -35,7 +35,7 @@ const Accardion = ({ Data }) => {
                   transitionDuration: `${item.accardionContentHeight * 3}ms`,
                   height: `${Number(item.accardionContentHeight)}px`,
                 }}
-                className={`flex flex-col text-white gap-2 pl-4 overflow-hidden transition-all ease-linear [&>*:last-child]:pb-4`}
+                className={`flex flex-col text-white gap-2 pl-4 overflow-hidden transition-all [&>*:last-child]:pb-4`}
                 key="acc"
               >
                 {item.accardionContent.map((accardion) => (
@@ -47,7 +47,7 @@ const Accardion = ({ Data }) => {
             ) : (
               <div
                 style={{ transitionDuration: `${800}ms`, height: `0px` }}
-                className={`flex flex-col text-white gap-2 pl-4 overflow-hidden transition-all ease-linear [&>*:last-child]:pb-4`}
+                className={`flex flex-col text-white gap-2 pl-4 overflow-hidden transition-all [&>*:last-child]:pb-4`}
                 key="acc"
               >
                 {item.accardionContent.map((accardion) => (
