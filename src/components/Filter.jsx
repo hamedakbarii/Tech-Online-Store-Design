@@ -1,16 +1,14 @@
 import React, { useState } from "react";
-import { filterItems } from "../utils";
+
 import { ArrowDown2, CloseIcon } from "./Icon";
 import { filterOptions } from "../utils";
 const Filter = ({ setShowFilter }) => {
   const filterItemsHandler = (event) => {
-    let itemName = event.target.textContent;
+    let itemName = event.currentTarget.textContent;
     // let selectedName = filterOptions.filter((item => Object.entries(item)[0][0] == itemName));
-    let filteredItem = filterOptions.filter(item => item.title == itemName)
+    let filteredItem = filterOptions.filter((item) => item.title == itemName);
     // console.log(itemName);
-    filteredItem[0].items.map(data => (
-      console.log(data)
-    ))
+    filteredItem[0].items.map((data) => console.log(data));
   };
   return (
     <div>
@@ -20,15 +18,33 @@ const Filter = ({ setShowFilter }) => {
           <CloseIcon />
         </span>
       </div>
-      {filterItems.map((item) => (
+      {filterOptions.map((item) => (
         <div
           className="flex justify-between items-center p-2 font-semibold"
-          onClick={(event) => filterItemsHandler(event)}
+          // onClick={(event) => filterItemsHandler(event)}
         >
-          <span>{item}</span>
-          <span className="text-xs font-light">
-            <ArrowDown2 />
-          </span>
+          <details className="w-full">
+            <summary className="w-full list-none flex items-center justify-between">
+              {item.title}
+              <span className="text-xs font-light">
+                <ArrowDown2 />
+              </span>
+            </summary>
+            {item.title === "Color" ? (
+              <div className="flex p-2 gap-2">
+                
+                <div className="w-4 h-4 rounded-full bg-black"></div>
+                <div className="w-4 h-4 rounded-full bg-red-800"></div>
+              </div>
+            ) : (
+              <>
+                {item.items.map((category) => (
+                  <p className="p-2 text-sm">{category}</p>
+                ))}
+              </>
+            )}
+          </details>
+          {/* <span>{item}</span> */}
         </div>
       ))}
       <button className="text-white border-2 border-[#0156FF] bg-[#0156FF] px-10 py-2 font-semibold flex m-auto rounded-3xl transition-all ease-in-out duration-300 hover:bg-white hover:text-[#0156FF]">

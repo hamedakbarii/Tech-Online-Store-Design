@@ -18,6 +18,7 @@ let router = [
   { path: "/checkout", element: <Checkout /> },
   { path: "/aboutus", element: <AboutUs /> },
   { path: "/useraccount", element: <UserAccount /> },
+  
 ];
 
 export default router;
