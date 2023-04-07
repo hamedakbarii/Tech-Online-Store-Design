@@ -5,10 +5,32 @@ import OurServices from "../components/OurServices";
 const UserAccount = () => {
   return (
     <>
-      <div className="flex justify-between items-center bg-[#F5F7FF]  mx-2 my-4 p-2 border-b-2 border-b-gray-300">
-        <h2 className="font-bold text-black ">Account Dashboard</h2>
-        <ArrowDown2 />
-      </div>
+      <details className="flex list-none justify-between items-center bg-[#F5F7FF]  mx-2 my-4 p-2 open:transition-all open:duration-1000">
+        <summary className="flex justify-between items-center font-semibold open:transition-all open:duration-1000">
+          Account Dashboard
+          <ArrowDown2 />
+        </summary>
+        <div className="m-2">
+          <div className="border-b py-2 border-[#CACDD8] flex flex-col justify-center items-start text-sm text-[#666666]">
+            <span className="py-1">Account Dashboard</span>
+            <span className="py-1">Account Information</span>
+            <span className="py-1">Address Book</span>
+            <span className="py-1">My Orders</span>
+          </div>
+
+          <div className="border-b py-2 border-[#CACDD8] flex flex-col justify-center items-start text-sm text-[#666666]">
+            <span className="py-1">My Downloadable Products</span>
+            <span className="py-1">Stored Payment Methods</span>
+            <span className="py-1">Billing Agrements</span>
+            <span className="py-1">My Wish List</span>
+          </div>
+
+          <div className="py-2 flex flex-col justify-center items-start text-sm text-[#666666]">
+            <span className="py-1">My Product Reviews</span>
+            <span className="py-1">Newsletter Subscriptions</span>
+          </div>
+        </div>
+      </details>
 
       <div className="flex flex-col justify-center items-start gap-2 border-b-2 border-gray-300 m-2 py-2">
         <h1 className="font-bold text-2xl">My Dashboard</h1>
