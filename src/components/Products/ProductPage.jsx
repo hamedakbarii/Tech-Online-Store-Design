@@ -126,7 +126,7 @@ const ProductPage = () => {
   };
   return (
     <div className="flex flex-col container mx-auto mt-4">
-      <div className="block relative flex flex-col items-center justify-center">
+      <div className=" relative flex flex-col items-center justify-center">
         <img
           src="/assets/CustomBuilds/case-2.png"
           className="object-cover object-center "
@@ -152,7 +152,7 @@ const ProductPage = () => {
         <div className="flex items-center">
           {ProductInformationChanger.map((item, index) =>
             item.active ? (
-              <div className="block cursor-pointer">
+              <div key={item} className="block cursor-pointer">
                 <span
                   activate--data={item.active ? "active" : "deactive"}
                   onClick={(e) => {

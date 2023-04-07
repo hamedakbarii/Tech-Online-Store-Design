@@ -3,13 +3,6 @@ import React, { useState } from "react";
 import { ArrowDown2, CloseIcon } from "./Icon";
 import { filterOptions } from "../utils";
 const Filter = ({ setShowFilter }) => {
-  const filterItemsHandler = (event) => {
-    let itemName = event.currentTarget.textContent;
-    // let selectedName = filterOptions.filter((item => Object.entries(item)[0][0] == itemName));
-    let filteredItem = filterOptions.filter((item) => item.title == itemName);
-    // console.log(itemName);
-    filteredItem[0].items.map((data) => console.log(data));
-  };
   return (
     <div>
       <div className="flex justify-between items-center border-b">
@@ -32,7 +25,6 @@ const Filter = ({ setShowFilter }) => {
             </summary>
             {item.title === "Color" ? (
               <div className="flex p-2 gap-2">
-                
                 <div className="w-4 h-4 rounded-full bg-black"></div>
                 <div className="w-4 h-4 rounded-full bg-red-800"></div>
               </div>
