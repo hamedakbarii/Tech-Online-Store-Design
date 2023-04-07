@@ -80,7 +80,7 @@ let ProductSpec = () => {
   );
 };
 
-const ProductPage = () => {
+const ProductPage = ({data}) => {
   const [productCount, setProductCount] = useState(1);
   const [productSec, setProductSec] = useState("About Product");
   const [ProductInformationChanger, setProductInformationChanger] = useState([

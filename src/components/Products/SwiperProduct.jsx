@@ -10,68 +10,8 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { PickedStar, UnPickedStar, OutOfStock, Aviable } from "../Icon";
 import { Link } from "react-router-dom";
-let ItemList = [
-  {
-    avaiblity: true,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/newproducts/newproduct.png",
-    id: 0,
-  },
-  {
-    avaiblity: true,
-    stars: 5,
-    review: 1,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/newproducts/newproduct (5).png",
-    id: 1,
-  },
-  {
-    avaiblity: false,
-    stars: 3,
-    review: 100,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/newproducts/newproduct (4).png",
-    id: 2,
-  },
-  {
-    avaiblity: true,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/newproducts/newproduct (5).png",
-    id: 3,
-  },
-  {
-    avaiblity: true,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/newproducts/newproduct (6).png",
-    id: 4,
-  },
-  {
-    avaiblity: false,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/newproducts/newproduct.png",
-    id: 5,
-  },
-];
+import { useContext } from "react";
+import { ProductToBuy } from "../../App";
 export let CalculateStars = ({ stars }) => {
   let b = [];
   for (let i = 0; i < stars; i++) {
@@ -83,6 +23,7 @@ export let CalculateStars = ({ stars }) => {
   return <p className="flex items-center">{b}</p>;
 };
 let SwiperProduct = ({ ItemList, spaceBetween, slidesPerView }) => {
+  const store = useContext(ProductToBuy) ; 
   return (
     <Swiper
       modules={[Navigation]}
@@ -94,8 +35,9 @@ let SwiperProduct = ({ ItemList, spaceBetween, slidesPerView }) => {
       className="w-full"
     >
       {ItemList &&
-        ItemList.map((item) => (
+        ItemList.map((item,id) => (
           <SwiperSlide className="flex flex-col p-2 bg-[#F5F7FF] rounded-lg">
+            <Link to={`/product/${item.categoryTitle}/${item.id}`} data-cate={item.categoryTitle} data-id={item.id} onClick={()=>{store[1]('4343334')}}>
             <p className="tablet:hidden flex items-center">
               {item.avaiblity ? <Aviable /> : <OutOfStock />}
               <span className="ml-1 text-sm">
@@ -137,6 +79,7 @@ let SwiperProduct = ({ ItemList, spaceBetween, slidesPerView }) => {
                 <span className="text-lg font-semibold">${item.offprice}</span>
               </p>
             </div>
+            </Link>
           </SwiperSlide>
         ))}
     </Swiper>

@@ -7,198 +7,8 @@ export let products = [
     price: 600,
     offprice: 590,
     img: "assets/newproducts/newproduct.png",
-    id: 0,
-  },
-  {
-    avaiblity: true,
-    stars: 5,
-    review: 1,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/newproducts/newproduct (5).png",
-    id: 1,
-  },
-  {
-    avaiblity: false,
-    stars: 3,
-    review: 100,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/newproducts/newproduct (4).png",
-    id: 2,
-  },
-  {
-    avaiblity: true,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/newproducts/newproduct (5).png",
-    id: 3,
-  },
-  {
-    avaiblity: true,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/newproducts/newproduct (6).png",
-    id: 4,
-  },
-  {
-    avaiblity: false,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/newproducts/newproduct.png",
-    id: 5,
-  },
-  {
-    avaiblity: false,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/MsiLaptops/MsiLaptop (1).png",
-    id: 6,
-  },
-  {
-    avaiblity: false,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/MsiLaptops/MsiLaptop (2).png",
-    id: 7,
-  },
-  {
-    avaiblity: false,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/MsiLaptops/MsiLaptop (3).png",
-    id: 8,
-  },
-  {
-    avaiblity: false,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/MsiLaptops/MsiLaptop (4).png",
-    id: 9,
-  },
-  {
-    avaiblity: false,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/MsiLaptops/MsiLaptop (5).png",
-    id: 10,
-  },
-  {
-    avaiblity: false,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/MsiLaptops/MsiLaptop (1).png",
-    id: 11,
-  },
-  {
-    avaiblity: false,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/MsiLaptops/MsiLaptop (2).png",
-    id: 12,
-  },
-  {
-    avaiblity: false,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/newproducts/newproduct.png",
-    id: 13,
-  },
-  {
-    avaiblity: false,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/newproducts/newproduct.png",
-    id: 14,
-  },
-  {
-    avaiblity: false,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/newproducts/newproduct.png",
-    id: 15,
-  },
-  {
-    avaiblity: false,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/newproducts/newproduct.png",
-    id: 16,
-  },
-  {
-    avaiblity: false,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/newproducts/newproduct.png",
-    id: 17,
-  },
-  {
-    avaiblity: false,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/newproducts/newproduct.png",
-    id: 18,
-  },
-  {
-    avaiblity: true,
-    stars: 2,
-    review: 10,
-    title: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-    price: 600,
-    offprice: 590,
-    img: "assets/newproducts/newproduct.png",
     id: 19,
-    newproducts: true
+    categoryTitle : "newCategory"
   },
   {
     avaiblity: true,
@@ -209,7 +19,7 @@ export let products = [
     offprice: 590,
     img: "assets/newproducts/newproduct (5).png",
     id: 20,
-    newproducts: true
+    categoryTitle : "newCategory"
   },
   {
     avaiblity: false,
@@ -220,7 +30,7 @@ export let products = [
     offprice: 590,
     img: "assets/newproducts/newproduct (4).png",
     id: 21,
-    newproducts: true
+    categoryTitle : "newCategory"
   },
   {
     avaiblity: true,
@@ -231,7 +41,7 @@ export let products = [
     offprice: 590,
     img: "assets/newproducts/newproduct (5).png",
     id: 22,
-    newproducts: true
+    categoryTitle : "newCategory"
   },
   {
     avaiblity: true,
@@ -242,7 +52,7 @@ export let products = [
     offprice: 590,
     img: "assets/newproducts/newproduct (6).png",
     id: 23,
-    newproducts: true
+    categoryTitle : "newCategory"
   },
   {
     avaiblity: false,
@@ -253,7 +63,7 @@ export let products = [
     offprice: 590,
     img: "assets/newproducts/newproduct.png",
     id: 24,
-    newproducts: true
+    categoryTitle : "newCategory"
   },
   {
     avaiblity: false,
@@ -476,15 +286,12 @@ export let products = [
     categoryTitle: "gamingmonitor"
   },
 ];
- export let newProducts = products.filter(item => item.newproducts);
+ export let newProducts = products.filter(item => item.categoryTitle === 'newCategory');
  export let customBuildsProducts = products.filter(item => item.categoryTitle === "custombuilds");
  export let MsiProductsInfo = products.filter(item => item.categoryTitle === "Msiproductinfo");
  export let desktopProductsInfo = products.filter(item => item.categoryTitle === "Desktops");
  export let gamingMonitorProducts = products.filter(item => item.categoryTitle === "gamingmonitor");
  
-
-
-
 
 // fifth section product of home page 
 export let gamingMonitor = [
