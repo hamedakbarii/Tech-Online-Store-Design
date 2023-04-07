@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { products } from "../../utils.js";
-
+import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 
 const PaginationProducts = () => {
@@ -14,7 +14,9 @@ const PaginationProducts = () => {
 
       <div className="w-full grid grid-cols-2 gap-2 p-2">
         {products.map((product) => (
+          <Link to={`/product/${product.id}`}>
           <ProductCard key={product.id} {...product} />
+          </Link>
         ))}
       </div>
     </div>

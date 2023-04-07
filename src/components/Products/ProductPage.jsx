@@ -10,7 +10,7 @@ import {
   PayPalIconSvg,
   ZipIcon,
 } from "./../Icon";
-import WomanBehindLaptop from "../WomanBehindLaptop.png";
+import WomanBehindLaptop from "../../WomanBehindLaptop.png";
 import OurServices from "../OurServices";
 
 let AboutProduct = () => {
@@ -128,7 +128,7 @@ const ProductPage = () => {
     <div className="flex flex-col container mx-auto mt-4">
       <div className="block relative flex flex-col items-center justify-center">
         <img
-          src="./assets/CustomBuilds/case-2.png"
+          src="/assets/CustomBuilds/case-2.png"
           className="object-cover object-center "
         />
         <div className="absolute top-2 left-4 flex flex-col items-center gap-2">
@@ -241,7 +241,7 @@ const ProductPage = () => {
         <div className="clip-path-inset0 relative">
           <img
             className="w-full h-full fixed top-0 left-0 object-cover"
-            src="./assets/Cpu/intelCpu.png"
+            src="/assets/Cpu/intelCpu.png"
           />
         </div>
         <div className="px-4 z-[10]">

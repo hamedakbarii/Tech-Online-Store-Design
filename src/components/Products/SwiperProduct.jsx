@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { PickedStar, UnPickedStar, OutOfStock, Aviable } from "../Icon";
+import { Link } from "react-router-dom";
 let ItemList = [
   {
     avaiblity: true,
