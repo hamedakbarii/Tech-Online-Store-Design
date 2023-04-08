@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { ArrowDown2, CloseIcon } from "./Icon";
 import { filterOptions } from "../utils";
 const Filter = ({ setShowFilter }) => {
   const [filter , setFilter] = useState([]) ; 
+  function a (category) {
+    let a = [...filter] ; 
+    a.splice(filter.findIndex(object => object.productCategoryItem === category) , 1)
+    setFilter(a) ; 
+  }
+  useEffect(()=>{console.log(filter)},[filter])
   return (
     <div>
       <div className="flex justify-between items-center border-b">
@@ -33,10 +39,13 @@ const Filter = ({ setShowFilter }) => {
               <>
                 {item.items.map((category) => (
                   <p className="p-2 text-sm" onClick={(e)=>{
-                    filter.some(Item => Item.productCategoryItem === category) ? console.log(54454) : (setFilter([...filter , {
+                    filter.some(Item => Item.productCategoryItem === category) ? (
+                      a(category)
+                    ) : (setFilter([...filter , {
                       productCategory : item.title , 
                       productCategoryItem : category , 
-                    }]))
+                    }])) ; 
+                    e.currentTarget.classList.toggle('bg-green-400')
                 }}>{category}</p>
                 ))}
               </>
