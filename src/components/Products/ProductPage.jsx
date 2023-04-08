@@ -151,7 +151,7 @@ const ProductPage = ({ data }) => {
         <div className="flex items-center">
           {ProductInformationChanger.map((item, index) =>
             item.active ? (
-              <div key={item} className="block cursor-pointer">
+              <div key={index} className="block cursor-pointer">
                 <span
                   activate--data={item.active ? "active" : "deactive"}
                   onClick={(e) => {

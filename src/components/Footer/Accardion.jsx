@@ -21,6 +21,7 @@ const Accardion = ({ Data }) => {
         Accardion.map((item, index) => (
           <>
             <div
+              key={index}
               className="flex justify-between items-center p-2"
               onClick={(e) => {
                 FooterAccardionHandler(index, e);
@@ -38,8 +39,8 @@ const Accardion = ({ Data }) => {
                 className={`flex flex-col text-white gap-2 pl-4 overflow-hidden transition-all [&>*:last-child]:pb-4`}
                 key="acc"
               >
-                {item.accardionContent.map((accardion) => (
-                  <a>
+                {item.accardionContent.map((accardion, index) => (
+                  <a key={index}>
                     <span>{accardion}</span>
                   </a>
                 ))}
@@ -50,8 +51,8 @@ const Accardion = ({ Data }) => {
                 className={`flex flex-col text-white gap-2 pl-4 overflow-hidden transition-all [&>*:last-child]:pb-4`}
                 key="acc"
               >
-                {item.accardionContent.map((accardion) => (
-                  <a>
+                {item.accardionContent.map((accardion,index) => (
+                  <a key={index}>
                     <span>{accardion}</span>
                   </a>
                 ))}
