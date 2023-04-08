@@ -39,7 +39,7 @@ function ProductDetails() {
       {ValidCategory === "wait" ? (
         <p>waiting</p>
       ) : ValidCategory ? (
-        <ProductPage data={result} {...products} paramsId = {id}/>
+        <ProductPage data={result} />
       ) : (
         <>
           <h1 className="text-red-500 text-4xl">Please Enter A Valid Url !</h1>

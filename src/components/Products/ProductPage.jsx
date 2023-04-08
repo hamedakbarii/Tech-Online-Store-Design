@@ -80,10 +80,10 @@ let ProductSpec = () => {
   );
 };
 
-const ProductPage = ({ data, paramsId, ...products }) => {
+const ProductPage = ({ data }) => {
   const [productCount, setProductCount] = useState(1);
   const [productSec, setProductSec] = useState("About Product");
-  console.log(products[paramsId].img);
+ 
   const [ProductInformationChanger, setProductInformationChanger] = useState([
     {
       title: "About Product",
@@ -129,10 +129,7 @@ const ProductPage = ({ data, paramsId, ...products }) => {
   return (
     <div className="flex flex-col container mx-auto mt-4">
       <div className=" relative flex flex-col items-center justify-center">
-        <img
-          src={`/${products[paramsId].img}`}
-          className="object-cover object-center "
-        />
+        <img src={`/${data[0].img}`} className="object-cover object-center " />
         <div className="absolute top-2 left-4 flex flex-col items-center gap-2">
           <HeartLike />
           <Comparison />
