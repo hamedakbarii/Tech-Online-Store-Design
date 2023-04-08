@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { ArrowDown2, CloseIcon } from "./Icon";
 import { filterOptions } from "../utils";
 const Filter = ({ setShowFilter }) => {
+  const [filter , setFilter] = useState([]) ; 
   return (
     <div>
       <div className="flex justify-between items-center border-b">
@@ -31,7 +32,12 @@ const Filter = ({ setShowFilter }) => {
             ) : (
               <>
                 {item.items.map((category) => (
-                  <p className="p-2 text-sm">{category}</p>
+                  <p className="p-2 text-sm" onClick={(e)=>{
+                    filter.some(Item => Item.productCategoryItem === category) ? console.log(54454) : (setFilter([...filter , {
+                      productCategory : item.title , 
+                      productCategoryItem : category , 
+                    }]))
+                }}>{category}</p>
                 ))}
               </>
             )}
@@ -40,7 +46,7 @@ const Filter = ({ setShowFilter }) => {
         </div>
       ))}
       <button className="text-white border-2 border-[#0156FF] bg-[#0156FF] px-10 py-2 font-semibold flex m-auto rounded-3xl transition-all ease-in-out duration-300 hover:bg-white hover:text-[#0156FF]">
-        Apply Filters(2)
+        Apply Filters {filter.length}
       </button>
     </div>
   );
