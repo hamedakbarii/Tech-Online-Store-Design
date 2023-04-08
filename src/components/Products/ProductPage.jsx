@@ -80,9 +80,10 @@ let ProductSpec = () => {
   );
 };
 
-const ProductPage = ({data}) => {
+const ProductPage = ({ data, paramsId, ...products }) => {
   const [productCount, setProductCount] = useState(1);
   const [productSec, setProductSec] = useState("About Product");
+  console.log(products[paramsId].img);
   const [ProductInformationChanger, setProductInformationChanger] = useState([
     {
       title: "About Product",
@@ -100,6 +101,7 @@ const ProductPage = ({data}) => {
       index: 2,
     },
   ]);
+
   const [ProductInformationChangerIndex, setProductInformationChangerIndex] =
     useState(0);
   let ProductInformationFunctionHandler = (index, item) => {
@@ -128,7 +130,7 @@ const ProductPage = ({data}) => {
     <div className="flex flex-col container mx-auto mt-4">
       <div className=" relative flex flex-col items-center justify-center">
         <img
-          src="/assets/CustomBuilds/case-2.png"
+          src={`/${products[paramsId].img}`}
           className="object-cover object-center "
         />
         <div className="absolute top-2 left-4 flex flex-col items-center gap-2">

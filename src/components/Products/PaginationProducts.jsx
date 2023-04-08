@@ -5,7 +5,7 @@ import ProductCard from "./ProductCard";
 
 const PaginationProducts = () => {
   const [showFilter, setShowFilter] = useState(false);
-
+ 
   return (
     <div className="p-2">
       <h4 className="text-[#94a3b8] p-2 mt-5 text-sm font-normal">
@@ -14,7 +14,7 @@ const PaginationProducts = () => {
 
       <div className="w-full grid grid-cols-2 gap-2 p-2">
         {products.map((product) => (
-          <Link to={`/product/${product.id}`}>
+          <Link to={`/product/${product.categoryTitle}/${product.id}`}>
           <ProductCard key={product.id} {...product} />
           </Link>
         ))}

@@ -5,33 +5,46 @@ import { useContext } from "react";
 import { ProductToBuy } from "../App";
 import { products } from "../utils";
 function ProductDetails() {
-let {category} = useParams();
-let {id} = useParams();
-const [ValidCategory , setValidCategory] = useState('wait') ; 
-useEffect(()=>{
-  let ProductCategories = ['newCategory' , "custombuilds" , "Msiproductinfo" , "Desktops" ,"gamingmonitor" ] ; 
-let result = ProductCategories.includes(category) ; 
-if(result){
-  console.log(1) ; 
-  setTimeout(()=>{setValidCategory(true)},5000)
-}else {
-  console.log(0)
-  setTimeout(()=>{setValidCategory(false)},5000)  
-}
-},[])
-const store = useContext(ProductToBuy) ; 
-let result = products.filter(item => item.id === Number(id) && item.categoryTitle === category) ; 
+  let { category } = useParams();
+  let { id } = useParams();
+  const [ValidCategory, setValidCategory] = useState("wait");
+  useEffect(() => {
+    let ProductCategories = [
+      "newCategory",
+      "custombuilds",
+      "Msiproductinfo",
+      "Desktops",
+      "gamingmonitor",
+    ];
+    let result = ProductCategories.includes(category);
+    if (result) {
+      console.log(1);
+      setTimeout(() => {
+        setValidCategory(true);
+      }, 3000);
+    } else {
+      console.log(0);
+      setTimeout(() => {
+        setValidCategory(false);
+      }, 3000);
+    }
+  }, []);
+  const store = useContext(ProductToBuy);
+  let result = products.filter(
+    (item) => item.id === Number(id) && item.categoryTitle === category
+  );
   return (
     <div>
-      {
-        store[0] 
-      }
-      {
-        ValidCategory === 'wait' ? <p>waiting</p> 
-        : ValidCategory ? <ProductPage data={result} /> :  <>
+      {store[0]}
+      {ValidCategory === "wait" ? (
+        <p>waiting</p>
+      ) : ValidCategory ? (
+        <ProductPage data={result} {...products} paramsId = {id}/>
+      ) : (
+        <>
           <h1 className="text-red-500 text-4xl">Please Enter A Valid Url !</h1>
         </>
-      }
+      )}
     </div>
   );
 }
