@@ -76,15 +76,15 @@ details[open] summary {
   margin-bottom: 10px;
 } */
 
-details {
+.userAccountDetails {
   transition: height 1s ease;
   overflow: hidden;
 }
 
-details:not([open]) {
+.userAccountDetails:not([open]) {
   height: 2.5rem;
 }
 
-details[open] {
+.userAccountDetails[open] {
   height: 23rem;
 }

@@ -5,7 +5,7 @@ import OurServices from "../components/OurServices";
 const UserAccount = () => {
   return (
     <>
-      <details className="flex list-none justify-between items-center bg-[#F5F7FF]  mx-2 my-4 p-2 open:transition-all open:duration-1000">
+      <details className="flex list-none userAccountDetails justify-between items-center bg-[#F5F7FF]  mx-2 my-4 p-2 open:transition-all open:duration-1000">
         <summary className="flex justify-between items-center font-semibold open:transition-all open:duration-1000">
           Account Dashboard
           <ArrowDown2 />
