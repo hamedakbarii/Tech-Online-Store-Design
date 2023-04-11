@@ -1,15 +1,157 @@
 import React, { useEffect, useState } from "react";
 
+
+
+
+
+
+
+/**
+ 
+
+  [
+    {
+      title : price , 
+      range : [1000,2000] ; 
+    }
+
+
+
+
+
+
+  ]
+  let item.title (range) {
+    product.filet 
+    product = prod
+  } ;
+  price() 
+array.map((item)=>item.title())
+
+product 
+producttemp = product
+setProduct(producttemp) ; 
+
+
+
+
+{products.length > 0 ? (
+            products
+              .filter(
+                (p) =>
+                  p.name.fa.toLowerCase().includes(search.text) &&
+                  p.price >= search.price?.start &&
+                  p.price <= search.price?.end &&
+                  (search.category[p.category] ||
+                    Object.values(search.category).every((c) => !c))
+              )
+              .map(({ id, name, price, category }) => (
+                <Link
+                  href={`/
+
+
+
+
+                  {products.length > 0 ? (
+            products
+              .filter(
+                (p) =>
+                  p.name.fa.toLowerCase().includes(search.text) &&
+                  p.price >= search.price?.start &&
+                  p.price <= search.price?.end &&
+                  (search.category[p.category] ||
+                    Object.values(search.category).every((c) => !c))
+              )
+              .map(({ id, name, price, category }) => (
+                <Link
+                  href={`/products/${name.en
+                    .toLowerCase()
+                    .replaceAll(" ", "-")}`}
+                  key={id}
+                >
+                  {" "}
+                  <ProductCard
+                    productImg={productImgs[category]}
+                    productTitle={name[i18n.language as keyof iMultiLangProp]}
+                    productPrice={price}
+                  />
+                </Link>
+              ))
+          ) : (
+            <div className="flex opacity-90 items-center w-full mt-10 flex-col gap-5">
+              <FlowerSpinner size={100} color="#646466" />
+              <p className="text-lg text-secondary font-medium">
+                {t("products-loading-text")}
+              </p>
+            </div>
+          )}
+        </div>
+
+
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import { ArrowDown2, CloseIcon } from "./Icon";
 import { filterOptions } from "../utils";
 const Filter = ({ setShowFilter }) => {
   const [filter , setFilter] = useState([]) ; 
-  function a (category) {
+  function HandleFilterRemover(category,CategoryContainIndex) {
     let a = [...filter] ; 
-    a.splice(filter.findIndex(object => object.productCategoryItem === category) , 1)
+    a[CategoryContainIndex].productCategoryItemRange.splice(a[CategoryContainIndex].productCategoryItemRange.indexOf(category),1) ; a[CategoryContainIndex].productCategoryItemRange.indexOf(category)
     setFilter(a) ; 
   }
   useEffect(()=>{console.log(filter)},[filter])
+  const AddFilterHandler = (filter , category , ItemTilte) => {
+    if(filter.some((Item)=> Item.productCategoryTitle === ItemTilte && Item.productCategoryItemRange.includes(category))) {
+      let CategoryInFilterArrayIndex = filter.findIndex(object => object.productCategoryTitle === ItemTilte) ; 
+      HandleFilterRemover(category , CategoryInFilterArrayIndex) ; 
+    }else if (filter.some((Item)=>Item.productCategoryTitle === ItemTilte && !(Item.productCategoryItemRange.includes(category)))){
+      let CategoryInFilterArrayIndex = filter.findIndex(object => object.productCategoryTitle === ItemTilte) ; 
+      filter[CategoryInFilterArrayIndex].productCategoryItemRange.push(category) ; 
+      setFilter(filter)
+    }
+    else {
+      setFilter([...filter , {
+        productCategoryTitle : ItemTilte , 
+        productCategoryItemRange : [category] , 
+      }])
+    }
+    
+    /*
+    
+    
+    (e)=>{
+                    filter.some(Item => Item.productCategoryItem === category) ? (
+                      a(category)
+                    ) : (setFilter([...filter , {
+                      productCategory : item.title , 
+                      productCategoryItem : category , 
+                    }])) ; 
+                    e.currentTarget.classList.toggle('bg-green-400')
+                }
+    */
+  }
   return (
     <div>
       <div className="flex justify-between items-center border-b">
@@ -38,15 +180,7 @@ const Filter = ({ setShowFilter }) => {
             ) : (
               <>
                 {item.items.map((category) => (
-                  <p className="p-2 text-sm" onClick={(e)=>{
-                    filter.some(Item => Item.productCategoryItem === category) ? (
-                      a(category)
-                    ) : (setFilter([...filter , {
-                      productCategory : item.title , 
-                      productCategoryItem : category , 
-                    }])) ; 
-                    e.currentTarget.classList.toggle('bg-green-400')
-                }}>{category}</p>
+                  <p className="p-2 text-sm" onClick={(e)=>{AddFilterHandler(filter,category,item.title)}}>{category}</p>
                 ))}
               </>
             )}

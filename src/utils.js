@@ -286,11 +286,11 @@ export let products = [
     categoryTitle: "gamingmonitor"
   },
 ];
- export let newProducts = products.filter(item => item.categoryTitle === 'newCategory');
- export let customBuildsProducts = products.filter(item => item.categoryTitle === "custombuilds");
- export let MsiProductsInfo = products.filter(item => item.categoryTitle === "Msiproductinfo");
- export let desktopProductsInfo = products.filter(item => item.categoryTitle === "Desktops");
- export let gamingMonitorProducts = products.filter(item => item.categoryTitle === "gamingmonitor");
+export let newProducts = products.filter(item => item.categoryTitle === 'newCategory');
+export let customBuildsProducts = products.filter(item => item.categoryTitle === "custombuilds");
+export let MsiProductsInfo = products.filter(item => item.categoryTitle === "Msiproductinfo");
+export let desktopProductsInfo = products.filter(item => item.categoryTitle === "Desktops");
+export let gamingMonitorProducts = products.filter(item => item.categoryTitle === "gamingmonitor");
  
 
 // fifth section product of home page 
