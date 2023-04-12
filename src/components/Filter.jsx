@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-
-
-
-
-
-
 /**
  
 
@@ -91,53 +85,58 @@ setProduct(producttemp) ;
 
  */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import { ArrowDown2, CloseIcon } from "./Icon";
 import { filterOptions } from "../utils";
 const Filter = ({ setShowFilter }) => {
-  const [filter , setFilter] = useState([]) ; 
-  function HandleFilterRemover(category,CategoryContainIndex) {
-    let a = [...filter] ; 
-    a[CategoryContainIndex].productCategoryItemRange.splice(a[CategoryContainIndex].productCategoryItemRange.indexOf(category),1) ; a[CategoryContainIndex].productCategoryItemRange.indexOf(category)
-    setFilter(a) ; 
+  const [filter, setFilter] = useState([]);
+  function HandleFilterRemover(category, CategoryContainIndex) {
+    let a = [...filter];
+    a[CategoryContainIndex].productCategoryItemRange.splice(
+      a[CategoryContainIndex].productCategoryItemRange.indexOf(category),
+      1
+    );
+    a[CategoryContainIndex].productCategoryItemRange.indexOf(category);
+    setFilter(a);
   }
-  useEffect(()=>{console.log(filter)},[filter])
-  const AddFilterHandler = (filter , category , ItemTilte) => {
-    if(filter.some((Item)=> Item.productCategoryTitle === ItemTilte && Item.productCategoryItemRange.includes(category))) {
-      let CategoryInFilterArrayIndex = filter.findIndex(object => object.productCategoryTitle === ItemTilte) ; 
-      HandleFilterRemover(category , CategoryInFilterArrayIndex) ; 
-    }else if (filter.some((Item)=>Item.productCategoryTitle === ItemTilte && !(Item.productCategoryItemRange.includes(category)))){
-      let CategoryInFilterArrayIndex = filter.findIndex(object => object.productCategoryTitle === ItemTilte) ; 
-      filter[CategoryInFilterArrayIndex].productCategoryItemRange.push(category) ; 
-      setFilter(filter)
+  useEffect(() => {
+    console.log(filter);
+  }, [filter]);
+  const AddFilterHandler = (filter, category, ItemTilte) => {
+    if (
+      filter.some(
+        (Item) =>
+          Item.productCategoryTitle === ItemTilte &&
+          Item.productCategoryItemRange.includes(category)
+      )
+    ) {
+      let CategoryInFilterArrayIndex = filter.findIndex(
+        (object) => object.productCategoryTitle === ItemTilte
+      );
+      HandleFilterRemover(category, CategoryInFilterArrayIndex);
+    } else if (
+      filter.some(
+        (Item) =>
+          Item.productCategoryTitle === ItemTilte &&
+          !Item.productCategoryItemRange.includes(category)
+      )
+    ) {
+      let CategoryInFilterArrayIndex = filter.findIndex(
+        (object) => object.productCategoryTitle === ItemTilte
+      );
+      filter[CategoryInFilterArrayIndex].productCategoryItemRange.push(
+        category
+      );
+      setFilter(filter);
+    } else {
+      setFilter([
+        ...filter,
+        {
+          productCategoryTitle: ItemTilte,
+          productCategoryItemRange: [category],
+        },
+      ]);
     }
-    else {
-      setFilter([...filter , {
-        productCategoryTitle : ItemTilte , 
-        productCategoryItemRange : [category] , 
-      }])
-    }
-    
+
     /*
     
     
@@ -151,7 +150,7 @@ const Filter = ({ setShowFilter }) => {
                     e.currentTarget.classList.toggle('bg-green-400')
                 }
     */
-  }
+  };
   return (
     <div>
       <div className="flex justify-between items-center border-b">
@@ -180,7 +179,14 @@ const Filter = ({ setShowFilter }) => {
             ) : (
               <>
                 {item.items.map((category) => (
-                  <p className="p-2 text-sm" onClick={(e)=>{AddFilterHandler(filter,category,item.title)}}>{category}</p>
+                  <p
+                    className="p-2 text-sm"
+                    onClick={(e) => {
+                      AddFilterHandler(filter, category, item.title);
+                    }}
+                  >
+                    {category}
+                  </p>
                 ))}
               </>
             )}

@@ -14,8 +14,8 @@ const PaginationProducts = () => {
 
       <div className="w-full grid grid-cols-2 gap-2 p-2">
         {products.map((product) => (
-          <Link to={`/product/${product.categoryTitle}/${product.id}`}>
-          <ProductCard key={product.id} {...product} />
+          <Link key={product.id} to={`/product/${product.categoryTitle}/${product.id}`}>
+          <ProductCard  {...product} />
           </Link>
         ))}
       </div>
