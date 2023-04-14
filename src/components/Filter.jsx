@@ -87,70 +87,17 @@ setProduct(producttemp) ;
 
 import { ArrowDown2, CloseIcon } from "./Icon";
 import { filterOptions } from "../utils";
-const Filter = ({ setShowFilter }) => {
-  const [filter, setFilter] = useState([]);
-  function HandleFilterRemover(category, CategoryContainIndex) {
-    let a = [...filter];
-    a[CategoryContainIndex].productCategoryItemRange.splice(
-      a[CategoryContainIndex].productCategoryItemRange.indexOf(category),
-      1
-    );
-    a[CategoryContainIndex].productCategoryItemRange.indexOf(category);
-    setFilter(a);
-  }
-  useEffect(() => {
-    console.log(filter);
-  }, [filter]);
-  const AddFilterHandler = (filter, category, ItemTilte) => {
-    if (
-      filter.some(
-        (Item) =>
-          Item.productCategoryTitle === ItemTilte &&
-          Item.productCategoryItemRange.includes(category)
-      )
-    ) {
-      let CategoryInFilterArrayIndex = filter.findIndex(
-        (object) => object.productCategoryTitle === ItemTilte
-      );
-      HandleFilterRemover(category, CategoryInFilterArrayIndex);
-    } else if (
-      filter.some(
-        (Item) =>
-          Item.productCategoryTitle === ItemTilte &&
-          !Item.productCategoryItemRange.includes(category)
-      )
-    ) {
-      let CategoryInFilterArrayIndex = filter.findIndex(
-        (object) => object.productCategoryTitle === ItemTilte
-      );
-      filter[CategoryInFilterArrayIndex].productCategoryItemRange.push(
-        category
-      );
-      setFilter(filter);
-    } else {
-      setFilter([
-        ...filter,
-        {
-          productCategoryTitle: ItemTilte,
-          productCategoryItemRange: [category],
-        },
-      ]);
+const Filter = ({ setShowFilter , filter , setFilter }) => {
+  const HandleSetFilter = (filter , setFilter , ItemTitle , Category) => {
+    if(filter[`${ItemTitle.toLowerCase()}`].indexOf(Category) !== -1){
+      setFilter(draft=>{draft[`${ItemTitle.toLowerCase()}`].splice(filter[`${ItemTitle.toLowerCase()}`].indexOf(Category) , 1)})
+    }else{
+      setFilter(draft=>{draft[`${ItemTitle.toLowerCase()}`]=[...draft[`${ItemTitle.toLowerCase()}`] , Category]}) 
     }
 
-    /*
-    
-    
-    (e)=>{
-                    filter.some(Item => Item.productCategoryItem === category) ? (
-                      a(category)
-                    ) : (setFilter([...filter , {
-                      productCategory : item.title , 
-                      productCategoryItem : category , 
-                    }])) ; 
-                    e.currentTarget.classList.toggle('bg-green-400')
-                }
-    */
-  };
+    // delete filter
+  }
+  useEffect(()=>{console.log(filter)},[filter]) ; 
   return (
     <div>
       <div className="flex justify-between items-center border-b">
@@ -180,9 +127,9 @@ const Filter = ({ setShowFilter }) => {
               <>
                 {item.items.map((category) => (
                   <p
-                    className="p-2 text-sm"
-                    onClick={(e) => {
-                      AddFilterHandler(filter, category, item.title);
+                    className="p-2 text-sm flex items-center before:block before:transition-all before:p-0 before:gap-0"
+                    onClick={(e)=>{
+                      HandleSetFilter(filter , setFilter , item.title , category) ; 
                     }}
                   >
                     {category}
@@ -195,7 +142,7 @@ const Filter = ({ setShowFilter }) => {
         </div>
       ))}
       <button className="text-white border-2 border-[#0156FF] bg-[#0156FF] px-10 py-2 font-semibold flex m-auto rounded-3xl transition-all ease-in-out duration-300 hover:bg-white hover:text-[#0156FF]">
-        Apply Filters {filter.length}
+        Apply Filters
       </button>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Filter from "./Filter";
 
-const FilterItems = () => {
+const FilterItems = ({filter , setFilter}) => {
   const [showFilter, setShowFilter] = useState(false);
   return (
     <div className="p-2 flex flex-col gap-4">
@@ -24,7 +24,7 @@ const FilterItems = () => {
           <option value="">Name</option>
         </select>
       </div>
-      {showFilter ? <Filter setShowFilter={setShowFilter}/> : null}
+      {showFilter ? <Filter filter={filter} setFilter={setFilter} setShowFilter={setShowFilter}/> : null}
     </div>
   );
 };

@@ -8,7 +8,8 @@ export let products = [
     offprice: 590,
     img: "assets/newproducts/newproduct.png",
     id: 19,
-    categoryTitle : "newCategory"
+    categoryTitle : "newCategory" , 
+    tags : ['custompcs']  ,
   },
   {
     avaiblity: true,
@@ -19,7 +20,8 @@ export let products = [
     offprice: 590,
     img: "assets/newproducts/newproduct (5).png",
     id: 20,
-    categoryTitle : "newCategory"
+    categoryTitle : "newCategory" , 
+    tags : ['custompcs']  ,
   },
   {
     avaiblity: false,
