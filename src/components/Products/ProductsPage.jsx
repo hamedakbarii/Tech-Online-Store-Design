@@ -6,12 +6,15 @@ import PaginationProducts from "./PaginationProducts";
 const ProductsPage = ({ children }) => {
   const [filter , setFilter] = useImmer({
     'category' : [] , 
-    'price' : [2000,3000,4000,1000] , 
+    'price' : [] , 
     'color' : [] , 
-    'filterName' : [] , 
-    'brand' : [] , 
-  })
-  useEffect(()=>{console.log(filter)},[filter])
+    'filtername' : [] , 
+    'brands' : [] , 
+    'filterprice' : [0,0] , 
+  }) ; 
+  useEffect(()=>{
+    console.log([...filter.price].sort((a, b) => a[0] - b[0])) ; 
+  },[filter])
   return (
     <>
       <ProductRouter />

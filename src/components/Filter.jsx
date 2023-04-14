@@ -94,8 +94,6 @@ const Filter = ({ setShowFilter , filter , setFilter }) => {
     }else{
       setFilter(draft=>{draft[`${ItemTitle.toLowerCase()}`]=[...draft[`${ItemTitle.toLowerCase()}`] , Category]}) 
     }
-
-    // delete filter
   }
   useEffect(()=>{console.log(filter)},[filter]) ; 
   return (
@@ -120,23 +118,50 @@ const Filter = ({ setShowFilter , filter , setFilter }) => {
             </summary>
             {item.title === "Color" ? (
               <div className="flex p-2 gap-2">
-                <div className="w-4 h-4 rounded-full bg-black"></div>
-                <div className="w-4 h-4 rounded-full bg-red-800"></div>
+                <div className="w-4 h-4 rounded-full bg-black" 
+                onClick={(e)=>{
+                  HandleSetFilter(filter,setFilter,item.title,'black')
+                }}></div>
+                <div className="w-4 h-4 rounded-full bg-red-800" 
+                onClick={(e)=>{
+                  HandleSetFilter(filter,setFilter,item.title,'red')
+                }}></div>
               </div>
-            ) : (
+            ) : item.title=== 'Price' ?  (
               <>
                 {item.items.map((category) => (
                   <p
-                    className="p-2 text-sm flex items-center before:block before:transition-all before:p-0 before:gap-0"
+                    className="p-2 text-sm flex items-center before:block before:transition-all before:p-0 "
                     onClick={(e)=>{
                       HandleSetFilter(filter , setFilter , item.title , category) ; 
+                      if(e.currentTarget.classList.contains('before:p-2')){
+                        e.currentTarget.classList.remove('before:p-2' , 'before:rounded-full' ,'before:mr-4' , 'before:bg-green-700') ; 
+                      }else {
+                        e.currentTarget.classList.add('before:p-2' , 'before:rounded-full' ,'before:mr-4' , 'before:bg-green-700') ; 
+                      }
                     }}
                   >
-                    {category}
+                    {category[0]}.00$ - {category[1]}.00$ 
                   </p>
                 ))}
               </>
-            )}
+            ):<>
+            {item.items.map((category) => (
+              <p
+                className="p-2 text-sm flex items-center before:block before:transition-all before:p-0 "
+                onClick={(e)=>{
+                  HandleSetFilter(filter , setFilter , item.title , category) ; 
+                  if(e.currentTarget.classList.contains('before:p-2')){
+                    e.currentTarget.classList.remove('before:p-2' , 'before:rounded-full' ,'before:mr-4' , 'before:bg-green-700') ; 
+                  }else {
+                    e.currentTarget.classList.add('before:p-2' , 'before:rounded-full' ,'before:mr-4' , 'before:bg-green-700') ; 
+                  }
+                }}
+              >
+                {category}
+              </p>
+            ))}
+          </>}
           </details>
           {/* <span>{item}</span> */}
         </div>
@@ -149,3 +174,8 @@ const Filter = ({ setShowFilter , filter , setFilter }) => {
 };
 
 export default Filter;
+
+
+
+/*
+*/
