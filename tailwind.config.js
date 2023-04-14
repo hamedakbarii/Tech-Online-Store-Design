@@ -17,9 +17,14 @@ module.exports = {
           '0%': { opacity : `${0}` },
           '100%': { opacity : `${1}` },
         },
+        Opacity : {
+          '0%' : {} ,
+          '100%' : {} , 
+        }
       },
       animation: {
         'Accardion': 'Accardion .3s ease forwards',
+        'Opacity': 'Opacity .6s ease forwards',
       },
     },
   },

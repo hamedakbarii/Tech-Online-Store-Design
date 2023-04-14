@@ -47,6 +47,17 @@ function FilterProduct(avaiblity){
               </Link></> : null
             ))
           }
+          {
+            filter.category.length || filter.brands.length || filter.price.length || filter.filtername.length || filter.color.length   > 0 ? null : <>
+              {
+                products.map((product)=>
+                <><Link key={product.id} to={`/product/${product.categoryTitle}/${product.id}`}>
+                <ProductCard  {...product} />
+                </Link></>
+                )
+              }
+            </>
+          }
       </div>
     </div>
   );

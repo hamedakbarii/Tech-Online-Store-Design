@@ -4,7 +4,7 @@ import { CalculateStars } from "./SwiperProduct";
 
 const ProductCard = (props) => {
   return (
-    <div className="mt-4 border p-5">
+    <div className="mt-4 border p-5 animate-Opacity">
       <div className="available flex items-center">
         <span className="flex items-center">
           {props.avaiblity ? <Aviable /> : <OutOfStock />}
