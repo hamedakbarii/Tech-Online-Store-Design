@@ -1,7 +1,7 @@
 import React from "react";
 import ZipBanner from "../components/ZipBanner";
 import CustomBuildsSection from "../components/Products/CustomBuildsSection";
-import Products from "../components/Products/Products";
+import NewProducts from "../components/Products/NewProducts";
 import Hero from "../components/Hero";
 import MsiProductSection from "../components/Products/MsiProductSection";
 import Desktop from "../components/Products/Desktop";
@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      <Products />
+      <NewProducts />
       <ZipBanner />
       <CustomBuildsSection />
       <MsiProductSection />

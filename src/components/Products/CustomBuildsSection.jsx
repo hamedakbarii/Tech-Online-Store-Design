@@ -1,11 +1,11 @@
 import React from "react";
 import SwiperProduct from "./SwiperProduct";
-import ProductsContainer from "./ProductsContainer";
+import BrandsContainer from "./BrandsContainer";
 import ProductSectionBanner from "./ProductSectionBanner";
-import {customBuildsProducts} from "./../../utils"
+import { customBuildsProducts } from "./../../utils";
 const ProductSection = (children) => {
   return (
-    <ProductsContainer>
+    <BrandsContainer>
       <ProductSectionBanner
         src={"assets/CustomBuilds/image30.png"}
         title={"Custom Builds"}
@@ -19,7 +19,7 @@ const ProductSection = (children) => {
           />
         }
       </div>
-    </ProductsContainer>
+    </BrandsContainer>
   );
 };
 

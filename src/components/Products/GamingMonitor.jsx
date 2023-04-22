@@ -1,10 +1,10 @@
-import ProductsContainer from "./ProductsContainer";
+import BrandsContainer from "./BrandsContainer";
 import ProductSectionBanner from "./ProductSectionBanner";
 import SwiperProduct from "./SwiperProduct";
-import {gamingMonitorProducts} from "./../../utils"
+import { gamingMonitorProducts } from "./../../utils";
 let GamingMonitor = () => {
   return (
-    <ProductsContainer>
+    <BrandsContainer>
       <ProductSectionBanner
         src={"./assets/GamingMonitor/GamingMonitorBanner.png"}
         title={"Gaming Monitor"}
@@ -18,7 +18,7 @@ let GamingMonitor = () => {
           />
         }
       </div>
-    </ProductsContainer>
+    </BrandsContainer>
   );
 };
 export default GamingMonitor;

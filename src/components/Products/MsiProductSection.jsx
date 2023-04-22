@@ -1,11 +1,10 @@
-import ProductsContainer from "./ProductsContainer";
+import BrandsContainer from "./BrandsContainer";
 import ProductSectionBanner from "./ProductSectionBanner";
 import SwiperProduct from "./SwiperProduct";
 import { MsiProductsInfo } from "../../utils";
 const ProductItem = () => {
- 
   return (
-    <ProductsContainer>
+    <BrandsContainer>
       <ProductSectionBanner
         src={"assets/MsiLaptops/MsiLaptopBanner.png"}
         title={"Msi Laptops"}
@@ -19,7 +18,7 @@ const ProductItem = () => {
           />
         }
       </div>
-    </ProductsContainer>
+    </BrandsContainer>
   );
 };
 

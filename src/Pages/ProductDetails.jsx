@@ -18,12 +18,10 @@ function ProductDetails() {
     ];
     let result = ProductCategories.includes(category);
     if (result) {
-      console.log(1);
       setTimeout(() => {
         setValidCategory(true);
       }, 3000);
     } else {
-      console.log(0);
       setTimeout(() => {
         setValidCategory(false);
       }, 3000);

@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import SwiperProduct from "./SwiperProduct";
-import {newProducts} from "./../../utils"
-let Products = () => {
-    
+import { newProducts } from "../../utils";
+let NewProducts = () => {
   return (
     <>
       <div className="relative container flex flex-col mx-auto px-2 tablet:px-0">
@@ -24,5 +23,4 @@ let Products = () => {
     </>
   );
 };
-export default Products;
-
+export default NewProducts;

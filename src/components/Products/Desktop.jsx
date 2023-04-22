@@ -1,10 +1,10 @@
-import ProductsContainer from "./ProductsContainer";
+import BrandsContainer from "./BrandsContainer";
 import ProductSectionBanner from "./ProductSectionBanner";
 import SwiperProduct from "./SwiperProduct";
-import {desktopProductsInfo} from "./../../utils"
+import { desktopProductsInfo } from "./../../utils";
 let Desktop = () => {
   return (
-    <ProductsContainer>
+    <BrandsContainer>
       <ProductSectionBanner
         src={"./assets/Desktop/DesktopLaptop.png"}
         title={"Desktops"}
@@ -18,7 +18,7 @@ let Desktop = () => {
           />
         }
       </div>
-    </ProductsContainer>
+    </BrandsContainer>
   );
 };
 export default Desktop;
