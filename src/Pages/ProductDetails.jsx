@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProductPage from "../components/Products/ProductPage";
-import { Navigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { ProductToBuy } from "../App";
 import { products } from "../utils";
@@ -17,14 +17,8 @@ function ProductDetails() {
       "gamingmonitor",
     ];
     let result = ProductCategories.includes(category);
-    if (result) {
-      setTimeout(() => {
-        setValidCategory(true);
-      }, 3000);
-    } else {
-      setTimeout(() => {
-        setValidCategory(false);
-      }, 3000);
+    {
+      result ? setValidCategory(true) : setValidCategory(false);
     }
   }, []);
   const store = useContext(ProductToBuy);

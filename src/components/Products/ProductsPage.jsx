@@ -13,7 +13,7 @@ const ProductsPage = ({ children }) => {
     'filterprice' : [0,0] , 
   }) ; 
   useEffect(()=>{
-    console.log([...filter.price].sort((a, b) => a[0] - b[0])) ; 
+    // console.log([...filter.price].sort((a, b) => a[0] - b[0])) ; 
   },[filter])
   return (
     <>

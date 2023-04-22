@@ -83,7 +83,7 @@ let ProductSpec = () => {
 const ProductPage = ({ data }) => {
   const [productCount, setProductCount] = useState(1);
   const [productSec, setProductSec] = useState("About Product");
- 
+ console.log(data[0].title)
   const [ProductInformationChanger, setProductInformationChanger] = useState([
     {
       title: "About Product",
@@ -129,7 +129,7 @@ const ProductPage = ({ data }) => {
   return (
     <div className="flex flex-col container mx-auto mt-4">
       <div className=" relative flex flex-col items-center justify-center">
-        <img src={`/${data[0].img}`} className="object-cover object-center " />
+        <img src={`/${data[0].img}`} className="object-cover object-center" />
         <div className="absolute top-2 left-4 flex flex-col items-center gap-2">
           <HeartLike />
           <Comparison />
@@ -178,7 +178,7 @@ const ProductPage = ({ data }) => {
           )}
         </div>
         <div className="block px-4 mt-2">
-          <h3 className="text-3xl font-bold mt-2">MSI MPG Trident 3</h3>
+          <h3 className="text-3xl font-bold mt-2">{data[0].title}</h3>
           <p className="text-secondaryBlue font-[400] mt-2">
             Be the first to review this product
           </p>
