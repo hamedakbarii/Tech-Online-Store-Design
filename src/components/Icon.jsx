@@ -1,9 +1,9 @@
-let Icon = ({ color , size }) => {
+let Icon = ({ color, size }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={size ? size :"41"}
-      height={size ? size :"41"}
+      width={size ? size : "41"}
+      height={size ? size : "41"}
       fill="none"
       viewBox="0 0 34 41"
     >
@@ -129,7 +129,7 @@ function ArrowDown({ color, size }) {
       <path
         stroke={color ? color : "white"}
         strokeLinecap="round"
-        strokeWidth="1.6"
+        strokeWidth="1"
         d="M5 1.77l-2 2-2-2"
       ></path>
     </svg>
@@ -192,24 +192,6 @@ function Search() {
   );
 }
 
-function Shop() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      className="w-6 h-6 cursor-pointer"
-      viewBox="0 0 24 24"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
-      ></path>
-    </svg>
-  );
-}
 function ShopingCart() {
   return (
     <svg
@@ -772,59 +754,56 @@ export function EditIcon() {
   );
 }
 
-const FillHeart = ({color,size}) => {
+const FillHeart = ({ color, size }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={size?size:'12'}
-      height={size?size:'12'}
+      width={size ? size : "12"}
+      height={size ? size : "12"}
       fill="none"
       viewBox="0 0 11 10"
     >
       <path
-        fill={color?color:'white'}
+        fill={color ? color : "white"}
         d="M5.315 1.727C3.624-.795.2.58.2 3.327c0 2.062 4.694 5.29 5.115 5.71.425-.42 4.885-3.648 4.885-5.71 0-2.727-3.19-4.122-4.885-1.6z"
       ></path>
     </svg>
   );
-}
+};
 
-const FillStar = ({color,size}) => {
+const FillStar = ({ color, size }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={size?size:'14'}
-      height={size?size:'14'}
+      width={size ? size : "14"}
+      height={size ? size : "14"}
       fill="none"
       viewBox="0 0 14 13"
     >
       <path
-        fill={color?color:"#fff"}
+        fill={color ? color : "#fff"}
         d="M6.701.418a.2.2 0 01.367 0L8.7 4.146a.2.2 0 00.163.119l4.05.401a.2.2 0 01.114.349L9.988 7.72a.2.2 0 00-.063.192l.87 3.976a.2.2 0 01-.297.216l-3.513-2.056a.2.2 0 00-.202 0l-3.512 2.056a.2.2 0 01-.297-.216l.87-3.976a.2.2 0 00-.062-.192L.74 5.015a.2.2 0 01.113-.349l4.05-.401a.2.2 0 00.164-.119L6.7.418z"
       ></path>
     </svg>
   );
-}
+};
 
-
-const Truck = ({color,size}) => {
+const Truck = ({ color, size }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={size?size:"13"}
-      height={size?size:"10"}
+      width={size ? size : "13"}
+      height={size ? size : "10"}
       fill="none"
       viewBox="0 0 13 10"
     >
       <path
-        fill={color?color:"#fff"}
+        fill={color ? color : "#fff"}
         d="M1.136.8A1.136 1.136 0 000 1.936v6.25h1.136a1.705 1.705 0 003.41 0h3.409a1.705 1.705 0 103.409 0H12.5v-2.84l-1.704-2.273H9.09V.8H1.136zm7.955 3.125h1.42l1.12 1.42H9.09v-1.42zm-6.25 3.41a.852.852 0 110 1.704.852.852 0 010-1.705zm6.818 0a.852.852 0 110 1.703.852.852 0 010-1.704z"
       ></path>
     </svg>
   );
-}
-
-
+};
 
 export {
   Icon,
@@ -838,7 +817,6 @@ export {
   Facebook,
   Instagram,
   Search,
-  Shop,
   ShopingCart,
   UserIcon,
   Magnfier,
@@ -856,7 +834,7 @@ export {
   LongArrow,
   IntelIconSvg,
   GraphicRtxIcon,
-  FillHeart , 
-  FillStar , 
-  Truck , 
+  FillHeart,
+  FillStar,
+  Truck,
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import Banner from "../components/Banner";
+import ZipBanner from "../components/ZipBanner";
 import CustomBuildsSection from "../components/Products/CustomBuildsSection";
 import Products from "../components/Products/Products";
 import Hero from "../components/Hero";
@@ -9,15 +9,15 @@ import GamingMonitor from "../components/Products/GamingMonitor";
 import ProductLogo from "../components/Products/ProductLogo";
 import UserFeedBack from "../components/UserFeedBack";
 import OurServices from "../components/OurServices";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 const Home = () => {
-  let params = useParams();
+  // let params = useParams();
   return (
     <div>
       <Hero />
       <Products />
-      <Banner />
+      <ZipBanner />
       <CustomBuildsSection />
       <MsiProductSection />
       <Desktop />

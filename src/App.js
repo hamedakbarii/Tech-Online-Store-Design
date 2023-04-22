@@ -28,8 +28,8 @@ export default function App() {
         {routes}
 
         <Footer />
-        <span className="absolute w-[20px] h-[20px] rounded-full z-20 bg-[#00000045]" style={{left : (pointerPos.clientX - 10) , top : (pointerPos.clientY - 10)}}></span>
-        <span className="absolute w-[6px] h-[6px] rounded-full z-20 bg-black" style={{left : (pointerPos.clientX - 3) , top : (pointerPos.clientY - 3)}}></span>
+        {/* <span className="absolute w-[20px] h-[20px] rounded-full z-20 bg-[#00000045]" style={{left : (pointerPos.clientX - 10) , top : (pointerPos.clientY - 10)}}></span>
+        <span className="absolute w-[6px] h-[6px] rounded-full z-20 bg-black" style={{left : (pointerPos.clientX - 3) , top : (pointerPos.clientY - 3)}}></span> */}
       </div>
     </ProductToBuy.Provider>
   );

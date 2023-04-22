@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Li(props) {
+export default function NavbarList(props) {
   return (
     <>
       <li className="px-2">{props.data}</li>
