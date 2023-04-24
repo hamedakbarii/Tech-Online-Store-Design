@@ -11,16 +11,15 @@ import {
   ZipIcon,
 } from "./../Icon";
 import WomanBehindLaptop from "../../WomanBehindLaptop.png";
-import OurServices from "../OurServices";
+
 import AboutProduct from "../ProductDetails/TabSection/AboutProduct";
 import Details from "../ProductDetails/TabSection/Details";
-import Specs from "../ProductDetails/TabSection/Specs"
-
+import Specs from "../ProductDetails/TabSection/Specs";
 
 const ProductPage = ({ data }) => {
   const [productCount, setProductCount] = useState(1);
   const [productSec, setProductSec] = useState("About Product");
- 
+
   const [ProductInformationChanger, setProductInformationChanger] = useState([
     {
       title: "About Product",
@@ -266,7 +265,6 @@ const ProductPage = ({ data }) => {
           </p>
         </div>
       </div>
-      <OurServices />
     </div>
   );
 };

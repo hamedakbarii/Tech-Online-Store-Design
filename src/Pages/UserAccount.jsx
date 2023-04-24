@@ -1,6 +1,5 @@
 import React from "react";
 import { ArrowDown2 } from "../components/Icon";
-import OurServices from "../components/OurServices";
 
 const UserAccount = () => {
   return (
@@ -107,8 +106,6 @@ const UserAccount = () => {
           <h3 className="font-normal">You have no items in your wish list.</h3>
         </div>
       </div>
-
-      <OurServices />
     </>
   );
 };

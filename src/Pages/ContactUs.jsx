@@ -1,5 +1,5 @@
 import { Email, Location, Phone, Watch } from "../components/Icon";
-import OurServices from "../components/OurServices";
+
 export default function ContactUs() {
   return (
     <>
@@ -109,7 +109,6 @@ export default function ContactUs() {
           </div>
         </div>
       </div>
-      <OurServices />
     </>
   );
 }

@@ -5,6 +5,7 @@ import router from "./routes";
 import { useRoutes } from "react-router-dom";
 import { useContext } from "react";
 import { createContext } from "react";
+import OurServices from "./components/OurServices";
 export const ProductToBuy = createContext(null);
 export default function App() {
   let routes = useRoutes(router);
@@ -17,7 +18,7 @@ export default function App() {
         <Header />
 
         {routes}
-
+        <OurServices />
         <Footer />
       </div>
     </ProductToBuy.Provider>

@@ -1,5 +1,4 @@
 import React from "react";
-import OurServices from "../components/OurServices";
 
 const Register = () => {
   return (
@@ -60,9 +59,6 @@ const Register = () => {
         <button className="mt-4 text-white border-2 self-start border-[#0156FF] cursor-pointer bg-[#0156FF] px-10 py-2 font-semibold flex rounded-3xl transition-all ease-in-out duration-300 hover:bg-white hover:text-[#0156FF]">
           Create An Account
         </button>
-      </section>
-      <section className="bg-[#F5F7FF] w-full p-2">
-        <OurServices />
       </section>
     </div>
   );
