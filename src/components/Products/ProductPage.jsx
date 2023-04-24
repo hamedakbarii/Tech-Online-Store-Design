@@ -2,10 +2,8 @@ import { useState } from "react";
 import {
   ArrowDown,
   Comparison,
-  GraphicRtxIcon,
   HeartLike,
   IntelIconSvg,
-  LongArrow,
   NovelLetter,
   PayPalIconSvg,
   ZipIcon,
@@ -15,6 +13,8 @@ import WomanBehindLaptop from "../../WomanBehindLaptop.png";
 import AboutProduct from "../ProductDetails/TabSection/AboutProduct";
 import Details from "../ProductDetails/TabSection/Details";
 import Specs from "../ProductDetails/TabSection/Specs";
+import ProductSupport from "../ProductDetails/ProductSupport";
+import Features from "../ProductDetails/Features";
 
 const ProductPage = ({ data }) => {
   const [productCount, setProductCount] = useState(1);
@@ -201,18 +201,9 @@ const ProductPage = ({ data }) => {
         style={{ backgroundImage: `url(${WomanBehindLaptop})` }}
       >
         <div className="flex flex-col gap-4 mt-10">
-          <div className="flex items-center justify-between w-[80%] max-w-[15rem] border border-gray-400 rounded p-2">
-            <span>Product Support</span>
-            <LongArrow />
-          </div>
-          <div className="flex items-center justify-between w-[80%] max-w-[15rem] border border-gray-400 rounded p-2">
-            <span>Product Support</span>
-            <LongArrow />
-          </div>
-          <div className="flex items-center justify-between w-[80%] max-w-[15rem] border border-gray-400 rounded p-2">
-            <span>Product Support</span>
-            <LongArrow />
-          </div>
+          <ProductSupport title="Product Support" />
+          <ProductSupport title="FAQ" />
+          <ProductSupport title="Our Buyer Guide" />
         </div>
       </div>
       <div className="px-4 flex flex-col items-center justify-center py-6 gap-8 lineargradiant text-white">
@@ -224,45 +215,9 @@ const ProductPage = ({ data }) => {
             synchronization.
           </p>
         </div>
-        <div className="flex flex-col items-center justify-center gap-4">
-          <div className="w-20 h-20 flex items-center justify-center bg-black rounded-full">
-            <IntelIconSvg />
-          </div>
-          <p className="text-center">
-            <span className="font-semibold">Intel® Core™ i7</span> processor
-            with the upmost computing power to bring you an unparalleled gaming
-            experience.
-          </p>
-        </div>
-        <div className="flex flex-col items-center justify-center gap-4">
-          <div className="w-20 h-20 flex items-center justify-center bg-black rounded-full">
-            <GraphicRtxIcon />
-          </div>
-          <p className="text-center">
-            The new <span className="font-semibold">GeForce® RTX SUPER™</span>{" "}
-            Series has more cores and higher clocks for superfast performance
-            compared to previous-gen GPUs.
-          </p>
-        </div>
-        <div className="flex flex-col items-center justify-center gap-4">
-          <div className="w-20 h-20 flex items-center justify-center bg-black rounded-full">
-            <IntelIconSvg />
-          </div>
-          <p className="text-center">
-            <span className="font-semibold">Intel® Core™ i7</span> processor
-            with the upmost computing power to bring you an unparalleled gaming
-            experience.
-          </p>
-        </div>
-        <div className="flex flex-col items-center justify-center gap-4">
-          <div className="w-20 h-20 flex items-center justify-center bg-black rounded-full">
-            <GraphicRtxIcon />
-          </div>
-          <p className="text-center">
-            The new <span className="font-semibold">GeForce® RTX SUPER™</span>{" "}
-            Series has more cores and higher clocks for superfast performance
-            compared to previous-gen GPUs.
-          </p>
+
+        <div className="flex flex-col items-center justify-center gap-4 p-4">
+          <Features />
         </div>
       </div>
     </div>
