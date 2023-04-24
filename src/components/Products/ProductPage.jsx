@@ -12,78 +12,15 @@ import {
 } from "./../Icon";
 import WomanBehindLaptop from "../../WomanBehindLaptop.png";
 import OurServices from "../OurServices";
+import AboutProduct from "../ProductDetails/TabSection/AboutProduct";
+import Details from "../ProductDetails/TabSection/Details";
+import Specs from "../ProductDetails/TabSection/Specs"
 
-let AboutProduct = () => {
-  return (
-    <div className="flex flex-col px-4 pt-4 animate-Accardion origin-top overflow-hidden">
-      <p className="font-[400] mt-2">
-        MSI MPG Trident 3 10SC-005AU Intel i7 10700F, 2060 SUPER, 16GB RAM,
-        512GB SSD, 2TB HDD, Windows 10 Home, Gaming Keyboard and Mouse 3 Years
-        Warranty Gaming Desktop
-      </p>
-      <div className="flex items-center gap-4 px-4 mt-4">
-        <div className="p-[.05rem] border-2 border-secondaryBlue rounded-full flex items-center justify-center">
-          <div className="w-10 h-10 bg-[#4B4D4F] rounded-full"></div>
-        </div>
-        <div className="p-[.05rem] border-2 border-transparent rounded-full flex items-center justify-center">
-          <div className="w-10 h-10 bg-[#EAE8EB] rounded-full"></div>
-        </div>
-        <div className="p-[.05rem] border-2 border-transparent rounded-full flex items-center justify-center">
-          <div className="w-10 h-10 bg-[#F2E9DC] rounded-full"></div>
-        </div>
-      </div>
-      <div className="px-4 mt-2 flex items-center justify-between">
-        <p className="text-lg font-semibold flex flex-col justify-center items-center tablet:flex-row">
-          Have a Question?
-          <span className="font-[500] text-secondaryBlue underline tablet:ml-2">
-            {" "}
-            Contanct Us{" "}
-          </span>
-        </p>
-        <span>SKU D5515AI</span>
-      </div>
-    </div>
-  );
-};
-let ProductDetails = () => {
-  return (
-    <div className="px-4 flex flex-col gap-2 mt-4 animate-Accardion origin-top overflow-hidden">
-      <p>• Intel Core i7-10700F</p>
-      <p>• Intel H410</p>
-      <p>• NVIDIA MSI GeForce RTX 2060 SUPER 8GB AERO ITX GDDR6 </p>
-      <p>• SO-DIMM 16GB (16GB x 1) DDR4 2666MHz </p>
-      <p>• 2 total slots (64GB Max) </p>
-      <p>• 512GB (1 x 512GB) M.2 NVMe PCIe GEN3x4 SSD 2TB (2.5) 5400RPM </p>
-      <p>• Gaming Keyboard GK30 + Gaming Mouse GM11 </p>
-      <p>• 3.5 HDD (0/0), 2.5 HDD/SSD(1/0), M.2 (1/0) </p>
-      <p>• Intel WGI219Vethernet (10/100/1000M) </p>
-      <p>• AX200 (WIFI 6)+BT5.1 </p>
-      <p>• PSU 330W </p>
-      <p>• Fan Cooler </p>
-    </div>
-  );
-};
-let ProductSpec = () => {
-  return (
-    <div className="px-4 mt-4 w-full animate-Accardion origin-top overflow-hidden">
-      <table className="w-full">
-        <tr>
-          <td>CPU</td>
-          <td>Intel I5</td>
-        </tr>
-        <tr>
-          <td>Graphic</td>
-          <td>Geforce</td>
-        </tr>
-      </table>
-    </div>
-  );
-};
 
 const ProductPage = ({ data }) => {
   const [productCount, setProductCount] = useState(1);
   const [productSec, setProductSec] = useState("About Product");
- console.log(data[0].title)
+ 
   const [ProductInformationChanger, setProductInformationChanger] = useState([
     {
       title: "About Product",
@@ -186,9 +123,9 @@ const ProductPage = ({ data }) => {
         {productSec === "About Product" ? (
           <AboutProduct />
         ) : productSec === "Details" ? (
-          <ProductDetails />
+          <Details />
         ) : productSec === "Specs" ? (
-          <ProductSpec />
+          <Specs />
         ) : null}
         <div className="px-4 flex flex-col gap-2">
           <div className="flex items-center justify-between gap-4 mt-4">
