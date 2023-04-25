@@ -23,8 +23,9 @@ export let CalculateStars = ({ stars }) => {
   return <p className="flex items-center">{b}</p>;
 };
 let SwiperProduct = ({ ItemList, spaceBetween, slidesPerView }) => {
-  const store = useContext(ProductToBuy) ; 
+  const store = useContext(ProductToBuy) ;
   return (
+
     <Swiper
       modules={[Navigation]}
       spaceBetween={spaceBetween}

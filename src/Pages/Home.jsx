@@ -9,10 +9,7 @@ import GamingMonitor from "../components/Products/GamingMonitor";
 import ProductLogo from "../components/Products/ProductLogo";
 import UserFeedBack from "../components/UserFeedBack";
 
-// import { useParams } from "react-router-dom";
-
 const Home = () => {
-  // let params = useParams();
   return (
     <div>
       <Hero />

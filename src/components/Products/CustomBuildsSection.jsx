@@ -3,7 +3,7 @@ import SwiperProduct from "./SwiperProduct";
 import BrandsContainer from "./BrandsContainer";
 import ProductSectionBanner from "./ProductSectionBanner";
 import { customBuildsProducts } from "./../../utils";
-const ProductSection = (children) => {
+const ProductSection = () => {
   return (
     <BrandsContainer>
       <ProductSectionBanner
