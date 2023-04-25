@@ -14,7 +14,15 @@ const ProductSection = () => {
         {
           <SwiperProduct
             ItemList={customBuildsProducts}
-            slidesPerView={1.5}
+            slidesPerView={
+              window.innerWidth <= 550
+                ? 1.2
+                : window.innerWidth <= 720
+                ? 3
+                : window.innerWidth > 720
+                ? 4
+                : 0
+            }
             spaceBetween={30}
           />
         }
