@@ -9,11 +9,19 @@ let GamingMonitor = () => {
         src={"./assets/GamingMonitor/GamingMonitorBanner.png"}
         title={"Gaming Monitor"}
       />
-      <div className="pl-2 mt-4">
+      <div className="pl-2 mt-4 md:w-full">
         {
           <SwiperProduct
             ItemList={gamingMonitorProducts}
-            slidesPerView={1.5}
+            slidesPerView={
+              window.innerWidth <= 550
+                ? 1.2
+                : window.innerWidth <= 768
+                ? 3
+                : window.innerWidth > 768
+                ? 4
+                : 0
+            }
             spaceBetween={50}
           />
         }

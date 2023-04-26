@@ -17,9 +17,9 @@ const ProductSection = () => {
             slidesPerView={
               window.innerWidth <= 550
                 ? 1.2
-                : window.innerWidth <= 720
+                : window.innerWidth <= 768
                 ? 3
-                : window.innerWidth > 720
+                : window.innerWidth > 768
                 ? 4
                 : 0
             }
