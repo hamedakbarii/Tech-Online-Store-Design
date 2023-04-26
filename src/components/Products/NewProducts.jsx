@@ -15,7 +15,15 @@ let NewProducts = () => {
         {
           <SwiperProduct
             ItemList={newProducts}
-            slidesPerView={2}
+            slidesPerView={
+              window.innerWidth <= 550
+                ? 1.2
+                : window.innerWidth <= 720
+                ? 3
+                : window.innerWidth > 720
+                ? 4
+                : 0
+            }
             spaceBetween={10}
           />
         }
