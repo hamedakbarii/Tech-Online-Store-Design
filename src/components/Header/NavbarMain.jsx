@@ -1,31 +1,31 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import NavbarList from "./NavbarList";
 import Logo from "../Logo";
 import {
-    ArrowDown,
-    CloseIcon,
-    Magnfier,
-    Search,
-    Shop,
-    UserIcon,
-    ShopingCart,
-    Icon,
-  } from "../Icon";
-  import HamburgerMenue from "./HamburgerMenu";
+  ArrowDown,
+  CloseIcon,
+  Magnfier,
+  Search,
+  Shop,
+  UserIcon,
+  ShopingCart,
+  Icon,
+} from "../Icon";
+import HamburgerMenue from "./HamburgerMenu";
 import UserProfileMenu from "./UserProfileMenu";
 const NavbarMain = () => {
-    let navUl = [
-        "Laptops",
-        "Desktop PCs",
-        "Networking devices",
-        "Printers & Scanners",
-        "Pc parts",
-        "All Other Products",
-        "Repairs",
-      ];
-      const [ActiveHamburger, setActiveHamburger] = useState(false);
-      const [ActiveUserProfileMenu, setActiveUserProfileMenu] = useState(false);
+  let navUl = [
+    "Laptops",
+    "Desktop PCs",
+    "Networking devices",
+    "Printers & Scanners",
+    "Pc parts",
+    "All Other Products",
+    "Repairs",
+  ];
+  const [ActiveHamburger, setActiveHamburger] = useState(false);
+  const [ActiveUserProfileMenu, setActiveUserProfileMenu] = useState(false);
   return (
     <>
       <nav
@@ -36,9 +36,9 @@ const NavbarMain = () => {
           <div className="flex items-center gap-2">
             <HamburgerMenue HandleHamburgerActivation={setActiveHamburger} />
             {ActiveHamburger ? (
-              <div className="absolute top-0 left-0 w-full bg-white px-5 py-2 ">
+              <div className="absolute top-0 left-0 w-full md:h-screen md:w-1/2 bg-white px-5 py-2 ">
                 <div className="flex flex-col">
-                  <div className="flex items-center justify-between ">
+                  <div className="flex items-center justify-between border-b border-gray-300 py-2 ">
                     <span>
                       <Icon color={"#0156FF"} />
                     </span>
@@ -51,13 +51,11 @@ const NavbarMain = () => {
                     </span>
                   </div>
 
-                  <span className="border-b-2 border-gray-400 mt-4"></span>
-
                   <div className="flex flex-col mt-4 gap-2">
                     {navUl.map((item) => (
                       <div
                         key={item}
-                        className="flex items-center justify-between"
+                        className="flex items-center justify-between md:p-2"
                       >
                         <p className="text-lg font-base">{item}</p>
                         <span className="-rotate-[90deg]">
@@ -67,13 +65,14 @@ const NavbarMain = () => {
                     ))}
                   </div>
 
-                  <button className="text-secondaryBlue border-2 border-secondaryBlue w-max py-1 px-4 mt-6 mb-4 text-lg font-semibold rounded-full transation-all duration-[.2s] bg-white hover:bg-secondaryBlue hover:text-white">
+                  <button className="text-secondaryBlue border-2 border-secondaryBlue w-max md:w-52 py-1 px-4 my-6 text-lg font-semibold rounded-full transation-all duration-[.2s] bg-white hover:bg-secondaryBlue hover:text-white">
                     Our Deals
                   </button>
                 </div>
               </div>
             ) : null}
           </div>
+
           <div className="flex items-center w-full bg-white p-2 py-1 rounded-full">
             <Magnfier />
             <input

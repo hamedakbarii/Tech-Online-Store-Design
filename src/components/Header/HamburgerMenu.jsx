@@ -6,9 +6,9 @@ let HamburgerMenue = ({ HandleHamburgerActivation }) => {
         HandleHamburgerActivation(true);
       }}
     >
-      <span className="absolute top-0 w-full h-[.1rem] bg-white"></span>
-      <span className="absolute top-[50%] -translate-y-[50%] w-full h-[.1rem] bg-white"></span>
-      <span className="absolute bottom-0  w-full h-[.1rem] bg-white"></span>
+      <span className="absolute top-0 w-full h-[.2rem] bg-white"></span>
+      <span className="absolute top-[50%] -translate-y-[50%] w-full h-[.2rem] bg-white"></span>
+      <span className="absolute bottom-0  w-full h-[.2rem] bg-white"></span>
     </div>
   );
 };
