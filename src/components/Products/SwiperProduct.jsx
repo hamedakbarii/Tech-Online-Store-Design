@@ -38,7 +38,7 @@ let SwiperProduct = ({ ItemList, spaceBetween, slidesPerView }) => {
       {ItemList &&
         ItemList.map((item,id) => (
           <SwiperSlide className="flex flex-col p-2 bg-[#F5F7FF] rounded-lg">
-            <Link key={item.id} to={`/product/${item.categoryTitle}/${item.id}`} data-cate={item.categoryTitle} data-id={item.id} onClick={()=>{store[1]('4343334')}}>
+            <Link key={item.id} to={`/product/${item.categoryTitle}/${item.id}`} data-cate={item.categoryTitle} data-id={item.id}>
             <p className="tablet:hidden flex items-center">
               {item.avaiblity ? <Aviable /> : <OutOfStock />}
               <span className="ml-1 text-sm">
