@@ -10,7 +10,7 @@ const ProductSection = () => {
         src={"assets/CustomBuilds/image30.png"}
         title={"Custom Builds"}
       />
-      <div className="pl-2 mt-4 md:pl-0 md:w-full md:mt-0">
+      <div className="pl-2 md:pl-0 md:w-full  md:mt-0">
         {
           <SwiperProduct
             ItemList={customBuildsProducts}

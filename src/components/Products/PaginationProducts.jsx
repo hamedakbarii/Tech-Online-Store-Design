@@ -2,17 +2,10 @@ import React, { useState } from "react";
 import { products } from "../../utils.js";
 import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
-import { useEffect } from "react";
+
 
 const PaginationProducts = ({filter}) => {
-/*
-products.filter(product=>
-    product.tags.map(tag=>
-      tag.toLowerCase()).some((tag) => {
-        filter.category.map(item=>item.toLowerCase()).includes(tag) ||
-        filter.brands.map(item=>item.toLowerCase()).includes(tag)
-      }) && !product.avaiblity
-    ) */
+
 function FilterProduct(avaiblity){
   function LowerCaser(array){
     return array.map(item=>item.toLowerCase()) ; 
@@ -31,7 +24,7 @@ function FilterProduct(avaiblity){
 }
   return (
     <div className="p-2">
-      <h4 className="text-[#94a3b8] p-2 mt-5 text-sm font-normal">
+      <h4 className="text-[#94a3b8] p-2 mt-5 text-sm font-normal md:hidden">
         Items 1-35 of 61
       </h4>
       <div className="w-full grid grid-cols-2 gap-2 p-2">

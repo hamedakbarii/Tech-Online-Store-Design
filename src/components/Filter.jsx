@@ -24,12 +24,18 @@ const Filter = ({ setShowFilter, filter, setFilter }) => {
     console.log(filter);
   }, [filter]);
   return (
-    <div>
+    <div className="md:flex flex-col">
       <div className="flex justify-between items-center border-b">
-        <h3 className="text-xl font-semibold  p-2">Filter By</h3>
-        <span onClick={() => setShowFilter(false)}>
+        <h3 className="text-xl font-semibold p-2 w-full text-center">Filter By</h3>
+
+        <span className="md:hidden" onClick={() => setShowFilter(false)}>
           <CloseIcon />
         </span>
+      </div>
+      <div className="text-center flex justify-center mt-2">
+        <button className="hidden md:block p-2 border-2 border-[#A2A6B0] rounded-3xl w-[180px] text-[#A2A6B0]">
+          Clear Filter
+        </button>
       </div>
       {filterOptions.map((item) => (
         <div
@@ -119,7 +125,7 @@ const Filter = ({ setShowFilter, filter, setFilter }) => {
           {/* <span>{item}</span> */}
         </div>
       ))}
-      <button className="text-white border-2 border-[#0156FF] bg-[#0156FF] px-10 py-2 font-semibold flex m-auto rounded-3xl transition-all ease-in-out duration-300 hover:bg-white hover:text-[#0156FF]">
+      <button className="text-white border-2 border-[#0156FF] bg-[#0156FF] px-10 py-2 font-semibold flex m-auto rounded-3xl transition-all ease-in-out duration-300 hover:bg-white hover:text-[#0156FF] md:my-2">
         Apply Filters
       </button>
     </div>

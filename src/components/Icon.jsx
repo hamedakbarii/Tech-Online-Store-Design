@@ -773,6 +773,44 @@ const Truck = ({ color, size }) => {
   );
 };
 
+export function GridView() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="40"
+      height="40"
+      fill="none"
+      viewBox="0 0 40 40"
+    >
+      <path fill="#fff" d="M0 0H40V40H0z"></path>
+      <path fill="#000" d="M10 10H14.762V14.762H10z"></path>
+      <path fill="#000" d="M10 17.619H14.762V22.381H10z"></path>
+      <path fill="#000" d="M10 25.238H14.762V30H10z"></path>
+      <path fill="#000" d="M17.619 17.619H22.381V22.381H17.619z"></path>
+      <path fill="#000" d="M17.619 25.238H22.381V30H17.619z"></path>
+      <path fill="#000" d="M17.619 10H22.381V14.762H17.619z"></path>
+      <path fill="#000" d="M25.238 17.619H30V22.381H25.238z"></path>
+      <path fill="#000" d="M25.238 25.238H30V30H25.238z"></path>
+      <path fill="#000" d="M25.238 10H30V14.762H25.238z"></path>
+    </svg>
+  );
+}
+export function ListView() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="40"
+      height="40"
+      fill="none"
+      viewBox="0 0 40 40"
+    >
+      <path fill="#fff" d="M0 0H40V40H0z"></path>
+      <path fill="#A2A6B0" d="M9 25.334H17.810000000000002V27.977H9z"></path>
+      <path fill="#A2A6B0" d="M9 13H30.143V15.643H9z"></path>
+      <path fill="#A2A6B0" d="M9 19.167H24.857V21.810000000000002H9z"></path>
+    </svg>
+  );
+}
 export {
   Icon,
   LeftSideIcon,

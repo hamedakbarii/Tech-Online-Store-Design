@@ -17,6 +17,9 @@ const ProductsPage = ({ children }) => {
   },[filter])
   return (
     <>
+      <div className="hidden md:block">
+        <img className="w-full" src="assets/TabletView/Products/image 26.png" alt="" />
+      </div>
       <ProductRouter />
       <FilterItems filter={filter} setFilter={setFilter} />
 
