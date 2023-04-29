@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { ArrowDown2, CloseIcon } from "./Icon";
 import { filterOptions } from "../utils";
@@ -20,9 +20,7 @@ const Filter = ({ setShowFilter, filter, setFilter }) => {
       });
     }
   };
-  useEffect(() => {
-    console.log(filter);
-  }, [filter]);
+ 
   return (
     <div className="md:flex flex-col">
       <div className="flex justify-between items-center border-b">
