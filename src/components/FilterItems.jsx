@@ -6,7 +6,7 @@ const FilterItems = ({ filter, setFilter }) => {
   return (
     <div className="p-2 flex flex-col gap-4">
       <div>
-        <h3>MSI PS Series (20)</h3>
+        <h3 className="font-bold text-xl">MSI PS Series (20)</h3>
       </div>
       <div className="flex justify-between items-center gap-2 md:hidden">
         <button
@@ -36,8 +36,8 @@ const FilterItems = ({ filter, setFilter }) => {
           <div className="flex justify-between items-center">
             <div>items 1-35 of 61</div>
             <div className="flex items-center">
-              <select className="w-48 h-16 text-center border border-[#CACDD8]">
-                <option value=""> Position</option>
+              <select className="p-4 rounded-lg text-center border border-[#CACDD8]">
+                <option value="">Position</option>
                 <option value="">Category</option>
                 <option value="">Price</option>
                 <option value="">Color</option>
