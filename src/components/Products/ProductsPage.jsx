@@ -26,8 +26,10 @@ const ProductsPage = ({ children }) => {
       </div>
       <ProductRouter />
       <FilterItems filter={filter} setFilter={setFilter} />
+      <div className="md:hidden">
 
       <PaginationProducts filter={filter} />
+      </div>
     </>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Filter from "./Filter";
 import { GridView, ListView } from "./Icon";
+import PaginationProducts from "./Products/PaginationProducts";
 const FilterItems = ({ filter, setFilter }) => {
   const [showFilter, setShowFilter] = useState(false);
   return (
@@ -34,18 +35,11 @@ const FilterItems = ({ filter, setFilter }) => {
         </div>
         <div className="col-span-4 w-full">
           <div className="flex justify-between items-center">
-            <div>items 1-35 of 61</div>
-            <div className="flex items-center">
-              <select className="p-4 rounded-lg text-center border border-[#CACDD8]">
-                <option value="">Position</option>
-                <option value="">Category</option>
-                <option value="">Price</option>
-                <option value="">Color</option>
-                <option value="">Name</option>
-              </select>
-              <GridView />
-              <ListView />
-            </div>
+            
+         
+          </div>
+          <div>
+            <PaginationProducts filter={filter}/>
           </div>
         </div>
       </div>
