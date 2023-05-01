@@ -231,7 +231,7 @@ export let products = [
     avaiblity: false,
     stars: 5,
     review: 10,
-    title: "Fractal Design North ATX mATX Mid Tower PC Case",
+    title: "Fractal Design North ATX mATX Mid",
     price: 600,
     offprice: 590,
     img: "assets/Desktop/Desktop.png",

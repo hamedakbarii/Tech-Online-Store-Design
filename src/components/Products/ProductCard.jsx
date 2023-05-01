@@ -4,7 +4,7 @@ import { CalculateStars } from "./SwiperProduct";
 
 const ProductCard = (props) => {
   return (
-    <div className="mt-4 border p-5 animate-Opacity">
+    <div className="mt-4 border p-3 animate-Opacity">
       <div className="available flex items-center">
         <span className="flex items-center">
           {props.avaiblity ? <Aviable /> : <OutOfStock />}
@@ -32,7 +32,8 @@ const ProductCard = (props) => {
         <span className="text-gray-400 text-sm">Reviews({props.review})</span>
       </div>
       <div className="product-info mt-2">
-        <p>{props.title}</p>
+        <p className="md:h-[50px] md:text-sm">{props.title}</p>
+        {console.log(props.title.length)}
         <p className="flex flex-col">
           <del className="text-sm text-gray-700">${props.price}</del>
           <span className="text-lg font-semibold">${props.offprice}</span>

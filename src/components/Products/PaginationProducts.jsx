@@ -51,7 +51,7 @@ const PaginationProducts = ({ filter }) => {
           <ListView />
         </div>
       </div>
-      <div className="w-full grid grid-cols-2 gap-2 p-2">
+      <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-2 p-2">
         {FilterProduct(true).map((product) =>
           product.avaiblity ? (
             <>

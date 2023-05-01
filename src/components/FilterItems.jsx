@@ -42,6 +42,15 @@ const FilterItems = ({ filter, setFilter }) => {
           <div>
             <ProductLogo gridCols={"md:grid-cols-2"}/>
           </div>
+          <div className="md:bg-[#F5F7FF] mt-2 p-2 flex flex-col justify-center items-center gap-3">
+            <h3 className="font-bold">Compare Products</h3>
+            <h4>You have no items to compare.</h4>
+          </div>
+          <div className="md:bg-[#F5F7FF] mt-2 p-2 flex flex-col justify-center items-center gap-3">
+            <h3 className="font-bold">My Wish List</h3>
+            <h4>You have no items in your wish list.</h4>
+          </div>
+          <img src="assets/tabletView/Products/image 49.png" alt="chair" className="w-full bg-cover mt-2" />
         </div>
         {/* leftSide */}
         {/* rightSide */}
