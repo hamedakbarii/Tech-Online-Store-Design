@@ -29,18 +29,21 @@ const FilterItems = ({ filter, setFilter }) => {
       <div className="hidden md:grid grid-cols-6 gap-1 w-full">
         {/* leftSide */}
         <div className=" col-span-2 p-2 overflow-scroll w-full">
-          
           <Filter
             filter={filter}
             setFilter={setFilter}
             setShowFilter={setShowFilter}
           />
+          {/* brands */}
           <div className="md:bg-[#F5F7FF] mt-2 p-2 flex flex-col justify-center items-center gap-3">
             <h3 className="font-bold">Brands</h3>
-            <button className="w-[200px] text-[#A2A6B0] border-2 border-[#A2A6B0] p-2 rounded-2xl">All Brands</button>
+            <button className="w-[200px] text-[#A2A6B0] border-2 border-[#A2A6B0] p-2 rounded-2xl">
+              All Brands
+            </button>
           </div>
+          {/* brands */}
           <div>
-            <ProductLogo gridCols={"md:grid-cols-2"}/>
+            <ProductLogo gridCols={"md:grid-cols-2"} />
           </div>
           <div className="md:bg-[#F5F7FF] mt-2 p-2 flex flex-col justify-center items-center gap-3">
             <h3 className="font-bold">Compare Products</h3>
@@ -50,7 +53,11 @@ const FilterItems = ({ filter, setFilter }) => {
             <h3 className="font-bold">My Wish List</h3>
             <h4>You have no items in your wish list.</h4>
           </div>
-          <img src="assets/tabletView/Products/image 49.png" alt="chair" className="w-full bg-cover mt-2" />
+          <img
+            src="assets/tabletView/Products/image 49.png"
+            alt="chair"
+            className="w-full bg-cover mt-2"
+          />
         </div>
         {/* leftSide */}
         {/* rightSide */}
@@ -60,9 +67,7 @@ const FilterItems = ({ filter, setFilter }) => {
         {/* rightSide */}
       </div>
       {/* TabletView */}
-      {/* brands */}
 
-      {/* brands */}
       {showFilter ? (
         <Filter
           filter={filter}
