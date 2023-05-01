@@ -22,7 +22,7 @@ const Filter = ({ setShowFilter, filter, setFilter }) => {
   };
  
   return (
-    <div className="md:flex flex-col">
+    <div className="md:flex flex-col md:bg-[#F5F7FF] md:p-2 md:max-h-[500px] md:overflow-scroll">
       <div className="flex justify-between items-center border-b">
         <h3 className="text-xl font-semibold p-2 w-full text-center">Filter By</h3>
 

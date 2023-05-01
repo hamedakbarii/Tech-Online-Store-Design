@@ -19,7 +19,7 @@ const Home = () => {
       <MsiProductSection />
       <Desktop />
       <GamingMonitor />
-      <ProductLogo />
+      <ProductLogo gridCols = {"md:grid-cols-3"}/>
       <UserFeedBack />
     </div>
   );

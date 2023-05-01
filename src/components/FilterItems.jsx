@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Filter from "./Filter";
 import { GridView, ListView } from "./Icon";
 import PaginationProducts from "./Products/PaginationProducts";
+import ProductLogo from "./Products/ProductLogo";
 const FilterItems = ({ filter, setFilter }) => {
   const [showFilter, setShowFilter] = useState(false);
   return (
@@ -26,24 +27,33 @@ const FilterItems = ({ filter, setFilter }) => {
       </div>
       {/* TabletView */}
       <div className="hidden md:grid grid-cols-6 gap-1 w-full">
-        <div className="bg-[#F5F7FF] col-span-2 p-2 overflow-scroll w-full">
+        {/* leftSide */}
+        <div className=" col-span-2 p-2 overflow-scroll w-full">
+          
           <Filter
             filter={filter}
             setFilter={setFilter}
             setShowFilter={setShowFilter}
           />
-        </div>
-        <div className="col-span-4 w-full">
-          <div className="flex justify-between items-center">
-            
-         
+          <div className="md:bg-[#F5F7FF] mt-2 p-2 flex flex-col justify-center items-center gap-3">
+            <h3 className="font-bold">Brands</h3>
+            <button className="w-[200px] text-[#A2A6B0] border-2 border-[#A2A6B0] p-2 rounded-2xl">All Brands</button>
           </div>
           <div>
-            <PaginationProducts filter={filter}/>
+            <ProductLogo gridCols={"md:grid-cols-2"}/>
           </div>
         </div>
+        {/* leftSide */}
+        {/* rightSide */}
+        <div className="col-span-4 w-full">
+          <PaginationProducts filter={filter} />
+        </div>
+        {/* rightSide */}
       </div>
       {/* TabletView */}
+      {/* brands */}
+
+      {/* brands */}
       {showFilter ? (
         <Filter
           filter={filter}
