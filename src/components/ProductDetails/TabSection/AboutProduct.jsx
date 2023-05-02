@@ -20,15 +20,14 @@ const AboutProduct = () => {
             <div className="w-10 h-10 bg-[#F2E9DC] rounded-full"></div>
           </div>
         </div>
-        <div className="px-4 mt-2 flex items-center justify-between">
-          <p className="text-lg font-semibold flex flex-col justify-center items-center tablet:flex-row">
-            Have a Question?
-            <span className="font-[500] text-secondaryBlue underline tablet:ml-2">
-              {" "}
-              Contact Us{" "}
+        <div className=" mt-2 flex items-center justify-between md:w-full">
+          <div className="flex flex-col md:flex-row md:pt-8 md:gap-2 md:w-full ">
+            <p className="font-semibold text-lg">Have a Question ? </p>
+            <span className="text-secondaryBlue font-semibold underline">
+              Contact Us
             </span>
-          </p>
-          <span>SKU D5515AI</span>
+          </div>
+          <span className="text-sm">SKU D5515AI</span>
         </div>
       </div>
     </>
