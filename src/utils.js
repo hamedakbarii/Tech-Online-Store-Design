@@ -297,7 +297,7 @@ export let products = [
     img: "assets/GamingMonitor/GamingMonitor1.png",
     id: 25,
     categoryTitle: "gamingmonitor" ,
-    tags : ['Monitor' , 'Msi' , 'Razor' , 'Gigabyte']  ,
+    tags : ['Monitor' , 'Msi' , 'Razor' , 'Gigabyte'] ,
   },
   {
     avaiblity: false,

@@ -64,38 +64,4 @@ const Accardion = ({ Data }) => {
   );
 };
 export default Accardion;
-/*
 
-              Accardion.map((item , id)=>
-                <>
-                  {
-                    item.isAccardionOpen ?                   <div className={`flex flex-col text-white gap-1 pl-4 overflow-hidden transition-all duration-[.3s]`} style={{height : `${item.accardionContentHeight}px`}}> 
-                    {
-                      item.accardionContent.map((accardion)=>
-                      <a>
-                        <span>
-                          {
-                            accardion
-                          }
-                        </span>
-                      </a>)
-                    }
-                  </div> :                   <div className="flex flex-col text-white gap-1 pl-4 overflow-hidden h-0 transition-all duration-[.3s]"> 
-                    {
-                      item.accardionContent.map((accardion)=>
-                      <a>
-                        <span>
-                          {
-                            accardion
-                          }
-                        </span>
-                      </a>)
-                    }
-                  </div>
-                  }
-                </>
-              )
-
-
-
-*/

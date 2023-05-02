@@ -37,7 +37,7 @@ let SwiperProduct = ({ ItemList, spaceBetween, slidesPerView }) => {
     >
       {ItemList &&
         ItemList.map((item,id) => (
-          <SwiperSlide className="flex flex-col p-2 bg-[#F5F7FF] rounded-lg">
+          <SwiperSlide className="flex flex-col p-2 bg-[#F5F7FF] rounded-lg" key={item.id}>
             <Link key={item.id} to={`/product/${item.categoryTitle}/${item.id}`} data-cate={item.categoryTitle} data-id={item.id}>
             <p className="tablet:hidden flex items-center">
               {item.avaiblity ? <Aviable /> : <OutOfStock />}
@@ -87,9 +87,4 @@ let SwiperProduct = ({ ItemList, spaceBetween, slidesPerView }) => {
   );
 };
 export default SwiperProduct;
-/*
 
-
-
-
-*/

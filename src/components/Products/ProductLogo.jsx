@@ -12,7 +12,7 @@ let ProductLogo = (props) => {
    
       <div className={`grid grid-cols-2 ${props.gridCols} px-2 gap-3 container mx-auto place-items-center mt-8`}>
       {ProductLogoArray.map((itemLogo) => (
-        <div className="p-1 transation-all duration-[.2s] hover:bg-[#F5F7FF] rounded-lg hover:-translate-y-[.5rem]">
+        <div className="p-1 transation-all duration-[.2s] hover:bg-[#F5F7FF] rounded-lg hover:-translate-y-[.5rem]" key={itemLogo.length + 1}>
           <img src={itemLogo} className="object-center object-cover" />
         </div>
       ))}
