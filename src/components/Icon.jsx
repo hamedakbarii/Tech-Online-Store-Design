@@ -773,7 +773,7 @@ const Truck = ({ color, size }) => {
   );
 };
 
-export function GridView() {
+export function GridViewIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -795,7 +795,7 @@ export function GridView() {
     </svg>
   );
 }
-export function ListView() {
+export function ListViewIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

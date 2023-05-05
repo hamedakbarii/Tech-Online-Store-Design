@@ -33,7 +33,6 @@ const ProductCard = (props) => {
       </div>
       <div className="product-info mt-2">
         <p className="md:h-[50px] md:text-sm">{props.title}</p>
-        {console.log(props.title.length)}
         <p className="flex flex-col">
           <del className="text-sm text-gray-700">${props.price}</del>
           <span className="text-lg font-semibold">${props.offprice}</span>

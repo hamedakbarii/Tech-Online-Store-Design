@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { products } from "../../utils.js";
-import { Link } from "react-router-dom";
-import ProductCard from "./ProductCard";
-import { GridView, ListView } from "../Icon.jsx";
+import { GridViewIcon, ListViewIcon } from "../Icon.jsx";
+import GridView from "../Products/TabletDisplayView/GridView";
+import ListView from "../Products/TabletDisplayView/ListView";
 
 const PaginationProducts = ({ filter }) => {
   function FilterProduct(avaiblity) {
@@ -33,9 +33,13 @@ const PaginationProducts = ({ filter }) => {
     console.log(a);
     return a;
   }
+
+  const [displayView, setDisplayView] = useState("Grid");
+
+  
   return (
     <div className="p-2">
-      <div className="hidden md:flex justify-between "> 
+      <div className="hidden md:flex justify-between ">
         <h4 className="text-[#94a3b8] p-2 mt-5 text-sm font-normal md:mt-0 ">
           Items 1-35 of 61
         </h4>
@@ -47,55 +51,21 @@ const PaginationProducts = ({ filter }) => {
             <option value="">Color</option>
             <option value="">Name</option>
           </select>
-          <GridView />
-          <ListView />
+          <div onClick={()=>setDisplayView("Grid")}>
+            <GridViewIcon />
+          </div>
+          <div onClick={()=>setDisplayView("List")}>
+            <ListViewIcon />
+          </div>
         </div>
       </div>
-      <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-2 p-2">
-        {FilterProduct(true).map((product) =>
-          product.avaiblity ? (
-            <>
-              <Link
-                key={product.id}
-                to={`/product/${product.categoryTitle}/${product.id}`}
-              >
-                <ProductCard {...product} />
-              </Link>
-            </>
-          ) : null
-        )}
-        {FilterProduct(false).map((product) =>
-          product.avaiblity === false ? (
-            <>
-              <Link
-                key={product.id}
-                to={`/product/${product.categoryTitle}/${product.id}`}
-              >
-                <ProductCard {...product} />
-              </Link>
-            </>
-          ) : null
-        )}
-        {filter.category.length ||
-        filter.brands.length ||
-        filter.price.length ||
-        filter.filtername.length ||
-        filter.color.length > 0 ? null : (
-          <>
-            {products.map((product) => (
-              <>
-                <Link
-                  key={product.id}
-                  to={`/product/${product.categoryTitle}/${product.id}`}
-                >
-                  <ProductCard {...product} />
-                </Link>
-              </>
-            ))}
-          </>
-        )}
-      </div>
-      {/* gridIcons */}
+
+      {displayView === "Grid" && (
+        <GridView FilterProduct={FilterProduct} filter={filter} />
+      )}
+      {displayView === "List" && (
+        <ListView FilterProduct={FilterProduct} filter={filter} />
+      )}
     </div>
   );
 };
