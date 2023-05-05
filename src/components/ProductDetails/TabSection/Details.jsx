@@ -3,7 +3,7 @@ import React from "react";
 const Details = () => {
   return (
     <>
-      <div className="px-4 flex flex-col gap-2 mt-4 animate-Accardion origin-top overflow-hidden">
+      <div className="px-4 flex flex-col gap-2 mt-4 animate-Accardion origin-top overflow-hidden md:overflow-scroll">
         <p>• Intel Core i7-10700F</p>
         <p>• Intel H410</p>
         <p>• NVIDIA MSI GeForce RTX 2060 SUPER 8GB AERO ITX GDDR6 </p>
