@@ -68,14 +68,20 @@ const ProductPage = ({ data }) => {
         className="md:flex md:flex-row-reverse md:justify-center md:items-center md:my-2
       "
       >
-        <div className="relative flex flex-col items-center justify-center md:w-[40%] md:h-[30rem]">
-          <img src={`/${data[0].img}`} className="object-cover object-center" />
-          <div className="absolute top-2 left-4 flex flex-col items-center gap-2">
-            <HeartLike />
-            <Comparison />
-            <NovelLetter />
+        <div className="relative flex flex-col items-center justify-center md:justify-start md:w-[40%] md:h-[30rem]">
+          <div className="md:flex md:flex-row-reverse md:justify-between md:items-start md:w-full">
+            <img
+              src={`/${data[0].img}`}
+              className="object-cover object-center md:w-64"
+            />
+            <div className="absolute md:static top-2 left-4 flex flex-col items-center gap-2">
+              <HeartLike />
+              <Comparison />
+              <NovelLetter />
+            </div>
           </div>
-          <div className="flex items-center gap-2 mt-4">
+
+          <div className="flex items-center gap-2 mt-4 md:pt-8">
             <ZipIcon />
             <a className="max-w-[12rem] text-sm leading-5 flex items-center before:h-7 before:mr-2 before:block before:content-[''] before:border before:rounded-full before:border-secondaryBlue ">
               <span>
@@ -87,6 +93,7 @@ const ProductPage = ({ data }) => {
         {/*
                 about product section
             */}
+
         <div className="flex flex-col mt-4 w-[60%] md:h-[30rem]">
           <div className="flex items-center">
             {ProductInformationChanger.map((item, index) =>
@@ -173,6 +180,7 @@ const ProductPage = ({ data }) => {
             </div>
           </div>
         </div>
+
         {/*
                 OutPlay Section */}
       </div>
@@ -202,6 +210,7 @@ const ProductPage = ({ data }) => {
           </div>
         </div>
       </div>
+
       <div
         className="px-4 h-[18rem] bg-[length:100%_100%] bg-no-repeat bg-right-bottom"
         style={{ backgroundImage: `url(${WomanBehindLaptop})` }}
