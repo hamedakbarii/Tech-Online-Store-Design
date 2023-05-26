@@ -64,6 +64,47 @@ const ProductPage = ({ data }) => {
   };
   return (
     <div className="flex flex-col container mx-auto mt-4 ">
+      <div className="md:flex hidden justify-center items-center gap-4">
+        <div className="flex justify-center text-lg font-semibold">
+          <p className="w-32 flex flex-col justify-center items-center">
+            On Sale from <span className="font-[600]">$6,000.43</span>
+          </p>
+        </div>
+        <div className="flex items-center gap-2">
+          <span>{productCount}</span>
+          <div className="flex flex-col">
+            <span
+              onClick={() => {
+                setProductCount(productCount + 1);
+              }}
+              className="rotate-[180deg] p-2"
+            >
+              <ArrowDown color="gray" size="10" />
+            </span>
+            <span
+              onClick={() => {
+                if (productCount <= 1) {
+                  return null;
+                } else {
+                  setProductCount(productCount - 1);
+                }
+              }}
+              className="p-2"
+            >
+              <ArrowDown color="gray" size="10" />
+            </span>
+          </div>
+        </div>
+        <div className="flex w-full gap-2">
+          <button className="h-12 px-6 w-[100%] flex items-center justify-center bg-secondaryBlue text-white border-2 border-transparent transation-all duration-[.2s] hover:text-secondaryBlue hover:bg-transparent hover:border-secondaryBlue rounded-full text-lg font-semibold">
+            Add to Cart
+          </button>
+          <button className="h-12 px-6 w-[100%] flex items-center justify-center bg-[#FFB800] text-white border-2 border-transparent transation-all duration-[.2s] hover:text-secondaryBlue hover:bg-transparent hover:border-[#FFB800] rounded-full text-lg font-semibold">
+            <PayPalIconSvg />
+          </button>
+        </div>
+      </div>
+
       <div
         className="md:flex md:flex-row-reverse md:justify-center md:items-center md:my-2
       "
@@ -90,9 +131,6 @@ const ProductPage = ({ data }) => {
             </a>
           </div>
         </div>
-        {/*
-                about product section
-            */}
 
         <div className="flex flex-col mt-4 w-[60%] md:h-[30rem]">
           <div className="flex items-center">
@@ -180,11 +218,9 @@ const ProductPage = ({ data }) => {
             </div>
           </div>
         </div>
-
-        {/*
-                OutPlay Section */}
       </div>
 
+      {/* -----start--------- bottom ---------start------- */}
       <div className="relative grid grid-cols-1 grid-rows-[1.5fr_1fr] pb-6">
         <span className="gradientBlack w-full h-full top-0 left-0 absolute z-[+1]"></span>
         <div className="clip-path-inset0 relative">
@@ -221,6 +257,7 @@ const ProductPage = ({ data }) => {
           <ProductSupport title="Our Buyer Guide" />
         </div>
       </div>
+
       <div className="px-4 flex flex-col items-center justify-center py-6 gap-8 lineargradiant text-white">
         <div className="flex flex-col items-center justify-center gap-4">
           <h2 className="text-2xl font-semibold">Features</h2>
@@ -235,6 +272,7 @@ const ProductPage = ({ data }) => {
           <Features />
         </div>
       </div>
+      {/* -----End--------- bottom ---------End------- */}
     </div>
   );
 };
