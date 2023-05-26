@@ -12,27 +12,29 @@ const CartShoppingCart = (props) => {
         </span>
       </div>
       <div>
-        <ul className="p-4 m-2 flex flex-col gap-2 border-b border-gray-300">
+        <ul className="w-full p-4 m-2 flex flex-col gap-2 border-b border-gray-300 text-center">
           <div className="grid grid-cols-4 w-full font-bold">
             <li>Price</li>
             <li>Qty</li>
             <li>Subtotal</li>
-            <li>
-              <DeleteIcon />
+            <li className="w-full text-center">
+              <DeleteIcon/>
             </li>
           </div>
           <div className="grid grid-cols-4 w-full font-bold">
             <li>$4,349.00</li>
             <li>
-              <input type="number" defaultValue={1} min={1} />
+              <input className="w-full text-center" type="number" defaultValue={1}  />
             </li>
             <li>$13,047.00</li>
             <li>
               <EditIcon />
             </li>
           </div>
+          
         </ul>
       </div>
+     
     </div>
   );
 };

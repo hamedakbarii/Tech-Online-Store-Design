@@ -674,6 +674,7 @@ function IntelIconSvg() {
 export function DeleteIcon() {
   return (
     <svg
+      className="text-center w-full"
       xmlns="http://www.w3.org/2000/svg"
       width="27"
       height="27"
@@ -700,6 +701,7 @@ export function DeleteIcon() {
 export function EditIcon() {
   return (
     <svg
+    className="text-center w-full"
       xmlns="http://www.w3.org/2000/svg"
       width="27"
       height="27"
